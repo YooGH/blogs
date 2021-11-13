@@ -1,0 +1,125 @@
+<html>
+	<head>
+		<style>
+		 * {
+			 margin: 0;
+			 padding: 0;
+		 }
+			.text-white {
+				margin-top: 60px;
+				color: #fff;
+			}
+			.item-info {
+				display: flex;
+				width: 100%;
+				padding: 10px;
+				background: #fff;
+			}
+			.info-img {
+				height: 260px;
+				flex: 0 0 260px;
+				background: #999;
+			}
+			.info-main {
+				flex: 1;
+				padding: 20px;
+				background: #eee;
+			}
+			
+			/* 主 */
+			.info-main {
+				display: flex;
+				width: 100%;
+				background: #fff;
+				color: #fff;
+			}
+			.main-left {
+				background: #333;
+				flex: 1;
+			}
+			.main-right {
+				background: #666;
+				flex: 0 0 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="background: #333;width: 100%;height: 100vh;padding: 100px 10px;">
+			<!-- col -->
+			<div class="text-white">Flex布局：<span><br/><br/>display: flex;width: 100%;<br/>padding: 10rpx;background: #fff;</span></div>
+			<div class="item-info">
+				<div class="info-img">flex: 0 0 200rpx; height:200rpx;</div>
+				<div class="info-main"><span>flex: 1;<br/>padding: 20rpx;撑开图片距离<br/>color: #333;(总颜色)<br/>font-size: 28rpx;(总字体)</span></div>
+			</div>
+			
+			
+			<div class="text-white">内容左右两列Flex布局：<span>左边撑满，右边固定</span></div>
+			<div class="item-info">
+				<div class="info-img"></div>
+				<div class="info-main">
+					<div class="main-left">flex: 1;</div>
+					<div class="main-right">flex: 0 0 20rpx;</div>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+	<style>
+	/*
+		.text-white {
+			margin-top: 60rpx;
+			color: #fff;
+		}
+		.item-info {
+			display: flex;
+			width: 100%;
+			padding: 10rpx;
+			background: #fff;
+			.info-img {
+				height: 260rpx;
+				flex: 0 0 260rpx;
+				background: #999;
+			}
+			.info-main {
+				flex: 1;
+				padding: 20rpx;
+				background: #eee;
+			}
+		}
+		
+		
+		.info-main {
+			display: flex;
+			width: 100%;
+			background: #fff;
+			color: #fff;
+			.main-left {
+				background: #333;
+				flex: 1;
+			}
+			.main-right {
+				background: #666;
+				flex: 0 0 100rpx;
+			}
+		} 
+		*/
+	</style>
+	<script>
+	// item: {
+	// 	activityPrice: 0,
+	// 	goodsId: "6e46eb529ab24fce8d38f846502a47bd",
+	// 	goodsName: "eve更新测试商品",
+	// 	goodsType: 2,
+	// 	isProprietary: true,
+	// 	buttonStatus: 2,
+	// 	providerId: "",
+	// 	show: false,
+	// 	templatePrice: 1,
+	// 	thumbnail: "http://testapi.huoban168.com.cn/public/upload/getFile?id=7805d7588a0b4d1cb5883d7f212252ca",
+	// }
+	</script>
+</html>
+
+
+
+				

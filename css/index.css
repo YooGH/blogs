@@ -1,0 +1,58 @@
+.main-block {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* color: #eee; */
+  /* background: #f1f1f1; */
+}
+
+.main-flex {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+.text-a {
+  display: block;
+  font-size: 12px;
+  line-height: 24px;
+  text-decoration:none;
+  color: #0a7ac6;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.text-a:hover {
+  font-weight: bold;
+  color: #033a57;
+  
+}
+.text-b {
+  color: #033a57;
+  font-weight: bold;
+}
+div {
+  /* margin: 20px 0; */
+}
+.section-left {
+  height: 100%;
+  background: #eee;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.section-right {
+  height: 100%;
+  background: #ddd;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.category {
+  height: 310px;
+  overflow-y: auto;
+}
+
+/* 其他 */
+.other-model {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

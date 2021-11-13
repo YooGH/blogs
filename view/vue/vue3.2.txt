@@ -1,0 +1,26 @@
+
+1.升级3.2
+```
+npm init vite@latest
+npm i vue
+npm i @vue/compiler-sfc -D
+```
+
+
+（volar插件提示hook语法）
+> SFC特性：<script setup>直接在里面写js语法 （不用引入在套娃）
+  useContext(上下文去除, useContext().emit()  ) => 转为三个：definExpose({})/defineProps({})/defineEmits({})
+> 新增2个： useAttrs, useSlots
+> style加了"v-bind"绑定变量的能力 
+> 导入defineCustomElement创建原生组件<my-div>类似
+> 新指令v-memo, 缓存渲染
+
+> 性能提升！！！
+> 服务器渲染
+
+
+[在线写vue](https://sfc.vuejs.org
+
+[3.2官方](https://blog.vuejs.org/posts/vue-3.2.html)
+[3.2中文解析](https://mp.weixin.qq.com/s/-PCCt3s2aA2aKY72bu-qwA)
+[杨村长的视频](https://www.bilibili.com/video/BV1sU4y1E7fF?from=search&seid=6172818381661672102&spm_id_from=333.337.0.0)

@@ -1,0 +1,5 @@
+（operate-management/provider-management/provider-list/provider-set）三个下拉框，其中某个下拉框选择“全部”就要遍历所有当前下拉框选项
+
+
+
+

@@ -1,0 +1,20 @@
+let [startTime,endTime] = ['',''];
+let now = new Date();
+let year = now.getFullYear()
+let month = now.getMonth() + 1
+let date = now.getDate() < 10 ? '0'+now.getDate() : now.getDate();
+if(month === 1) {
+  startTime = `${year-1}-12-${date<10 ? '0' + date : date}`
+} else {
+  let lastMonth = (month-1)<10 ? '0'+(month-1) : (month-1);
+  if([5,7,8,10,12].includes(month) && (date===31)) {
+    startTime = `${year}-${lastMonth}-30`
+  } else if(month===3 && (date>=28)) {
+    startTime = `${year}-${lastMonth}-28`
+    // year % 4 == 0 && year % 100 != 0 || year % 400 == 0
+  } else {
+    startTime = `${year}-${lastMonth}-${date}`
+  }
+}
+console.log([startTime, `${year}-${month}-${date}`])
+this.ruleForm.time = [startTime, `${year}-${month}-${date}`];

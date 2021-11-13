@@ -1,0 +1,11 @@
+{
+  "name": "tt",
+  "version": "2.2.3",
+  "description": "hahahahah",
+  "main": "node.js",
+  "scripts": {
+    "test": "node node.js"
+  },
+  "author": "Yo",
+  "license": "ISC"
+}
