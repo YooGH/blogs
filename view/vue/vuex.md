@@ -51,7 +51,7 @@ modules => 模块化Vuex
 ## <h1 id="h3"> 1. state </h1>
 > ①、直接调用：this.$store.state.变量
 > ②、组件引入调用
-一级(二级命名modules,要加namespaced: true,)
+一级(二级命名modules,要加***namespaced: true***)
 ```
 import {mapState} from 'vuex'
 computed: {
