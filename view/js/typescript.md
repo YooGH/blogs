@@ -1,14 +1,16 @@
-> 1. <a href="#h1"> 声明 </a>
+﻿> 1. <a href="#h1"> 声明 </a>
 > 2. <a href="#h2"> 类型 </a>
 > 3. <a href="#h3"> 接口 </a>
 > 4. <a href="#h4"> 函数 </a>
 > 5. <a href="#h5"> 类 </a>
-> 0. <a href="#ck"> 参考 </a>
+> 6. <a href="#ck"> 参考 </a>
 
 
  - [ ] [Typescript](整合这里的)还有类没整理
-<br/><br/><br/><br/>
+   <br/><br/><br/><br/>
+
 ### 介绍
+
 > TS趋势:
 > 静态类型和面向对象、
 > 应用程序、
@@ -20,12 +22,14 @@
 > 2.类型确定逻辑判断更快，减少弱转化，提升页面响应 a == 'a'
 
 ###  <h1 id="h1"> 1.声明 </h1>
+
 > 区别：变量名**加类型**
 
 ```
 let name = 'hello world' // js
 let name: string = 'hello word' // ts
 ```
+
 <br/><br/>
 
 
@@ -63,6 +67,7 @@ let list: Array<number> = [1,2,3]; // 数组泛型(Array<元素类型>)
 
 
 ### <h1 id="h3"> 3.接口 </h1>
+
 > ``interface``关键字,对对象的属性提前预判就是接口
 
 ```
@@ -80,21 +85,28 @@ interface Apidata {
 <br/><br/>
 
 ### <h1 id="h4"> 4.函数 </h1>
+
 > 1/4. 返回可**多种类型**
+
 ```
 function fn(age:any):string/void {return '括号后面的两种类型'}
 ```
+
 > 2/4. 可选参数的函数 (**?**)
+
 ```
 function fn(age:number, status?:string):void {return ''}
 ```
+
 > 3/4. 有默认参数的函数
+
 ```
 function fn(age:number=13, status:string=true):void {return ''}
 ```
 
 
 ###  <h1 id="ck"> 参考 </h1>
+
 [TS中文手册](https://typescript.bootcss.com/)
 
 [TS](https://www.tslang.cn/docs/home.html/)
@@ -103,4 +115,4 @@ function fn(age:number=13, status:string=true):void {return ''}
 
 ```
 
-```
+```-

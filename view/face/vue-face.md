@@ -1,4 +1,4 @@
-1. [Vue(ES6)中的data属性为什么不能是一个对象？](https://blog.csdn.net/sinat_17775997/article/details/83757985)
+﻿1. [Vue(ES6)中的data属性为什么不能是一个对象？](https://blog.csdn.net/sinat_17775997/article/details/83757985)
 > data是个对象存在浅拷贝，方法的话就有作用域
 
 2. [v-if与v-for不能放在同一级]https://blog.csdn.net/namechenfl/article/details/83987488
