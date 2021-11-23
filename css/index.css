@@ -64,5 +64,6 @@ div {
 @media (max-width: 768px) {
   .col-sm {
     flex: 0 0 100%;
+    font-size: 14px;
   }
 }
