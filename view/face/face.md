@@ -114,11 +114,19 @@ localstorage/(2)vuex-persistedstate/(3)cookie
 
     ```
     let arr = [10, 22, 39, 18]
-    Math.max.call(null, arr) // NaN
-    Math.max.apply(null, arr) // 39
+    Math.max.call(null, arr) // NaN  call不传是就是null环境
+    Math.max.apply(null, arr) // 39  apply不传是就是window
+    
+    1 call的语法：函数名.call(obj,参数1,参数2,参数3……); 
+    2 apply的语法：函数名.apply(obj,[参数1,参数2,参数3……]); 
     ```
 
+
+
     
+
+
+​    
 
 
 
