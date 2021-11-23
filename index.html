@@ -10,6 +10,9 @@
 </head>
 <body>
   <div id="app">
+    {{ `height:${heightt}` }}
+    {{ `availHeight:${availHeight}` }}
+    <!-- <div class="kkk" v-for="item of screenObj" :key="item"> {{item}}</div> -->
     <div class="main-flex">
       <div class="col-12">
         <section class="section-left front-end">
@@ -53,6 +56,13 @@
     const Counter = {
       setup() {
         const availHeight = window.screen.availHeight;
+        const heightt = window.screen.height;
+        // const screenObj = window.screen.keys();
+        console.log(window.screen)
+        // for(let key of window.screen) {
+        //   console.log(key)
+        // }
+        
         let showLongName = '';
         // console.log(Counter)
         // // let showLongName = setShowLongNamd('');
@@ -61,10 +71,9 @@
         }
         return {
           showLongFn,
-
-
           availHeight,
           FrontEndList,
+          heightt,
           BackEndList,
           showLongName,
           OtherModel,
