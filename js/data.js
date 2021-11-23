@@ -83,15 +83,15 @@ const FrontEndList = [
     {id: 3.2, name: 'compositionApi', href: './view/vue/compositionApi.md'}, 
     {id: 3.3, name: 'vue3', href: './view/vue/vue3.2.txt'}, 
   ]},
-  {id: 4, categoryName: 'react', children: [
-    {id: 5, name: 'react/taro', href: 'https://www.cnblogs.com/lgyong/p/13220525.html'}, 
-  ]},
   {id: 5, categoryName: '框架', children: [
     {id: 0, name: '微信小程序', href: 'https://www.cnblogs.com/lgyong/p/9959023.html'}, 
     {id: 1, name: 'node笔记', href: 'https://www.cnblogs.com/lgyong/p/10421749.html'}, 
     {id: 2, name: 'nuxt （多页面vue）', href: 'https://www.cnblogs.com/lgyong/p/10608214.html'}, 
     {id: 3, name: 'uniapp', href: 'https://www.cnblogs.com/lgyong/p/11579340.html'}, 
     {id: 4, name: '微信云开发', href: 'https://www.cnblogs.com/lgyong/p/13152133.html'}, 
+  ]},
+  {id: 4, categoryName: 'react', children: [
+    {id: 5, name: 'react/taro', href: 'https://www.cnblogs.com/lgyong/p/13220525.html'}, 
   ]},
   
 ];

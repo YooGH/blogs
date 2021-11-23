@@ -10,43 +10,32 @@
 </head>
 <body>
   <div id="app">
-    {{ `height:${heightt}` }}
-    {{ `availHeight:${availHeight}` }}
-    <!-- <div class="kkk" v-for="item of screenObj" :key="item"> {{item}}</div> -->
-    <div class="main-flex">
-      <div class="col-12">
-        <section class="section-left front-end">
-          <article class="flex">
-            <div class="col-8" v-for="item of FrontEndList" :key="item.id"> 
-              <h1 @click="showLongFn(item.categoryName)"> <a :href="item.href">{{ item.categoryName }}{{showLongName}}</a> </h1>
-              <section class="category" :style="`height: ${availHeight/2-30}px`">
-                <a class="text-a" target="_blank" :class="{'text-b': itemSon.grade}" :href="itemSon.href" v-for="(itemSon, indexSon) of item.children" :key="indexSon"> {{ itemSon.showId ? itemSon.id+'. ' : '' }}{{ itemSon.name }} </a>
-              </section>
-            </div>
-          </article>
-        </section>
-      </div>
-      <div class="col-12">
-        <section class="section-right front-end">
-          <article class="flex">
-            <div class="col-8" v-for="item of BackEndList" :key="item.id"> 
-              <h1 @click="showLongFn(item.categoryName)"> {{ item.categoryName }} </h1>  
-              <section class="category" :style="`height: ${availHeight/2-30}px`">
-                <a class="text-a" target="_blank" :class="{'text-b': itemSon.grade}" :href="itemSon.href" v-for="(itemSon, indexSon) of item.children" :key="indexSon"> {{ itemSon.name }} </a>
-              </section>
-            </div>
-          </article>
-        </section>
-      </div>
+    <!-- <div class="kkk" v-for="item in screenArr" :key="item"> {{`${item.key}:${item.value}`}}</div> -->
+      <article class="flex">
+        <div class="col-4 col-sm" v-for="item of FrontEndList" :key="item.id"> 
+          <h1 @click="showLongFn(item.categoryName)"> <a :href="item.href">{{ item.categoryName }}{{showLongName}}</a> </h1>
+          <section class="category" :style="`height: ${availHeight-40}px`">
+            <a class="text-a" target="_blank" :class="{'text-b': itemSon.grade}" :href="itemSon.href" v-for="(itemSon, indexSon) of item.children" :key="indexSon"> {{ itemSon.showId ? itemSon.id+'. ' : '' }}{{ itemSon.name }} </a>
+          </section>
+        </div>
+      </article>
+
+      <article class="flex">
+        <div class="col-4 col-sm" v-for="item of BackEndList" :key="item.id"> 
+          <h1 @click="showLongFn(item.categoryName)"> {{ item.categoryName }} </h1>  
+          <section class="category" :style="`height: ${availHeight/2-30}px`">
+            <a class="text-a" target="_blank" :class="{'text-b': itemSon.grade}" :href="itemSon.href" v-for="(itemSon, indexSon) of item.children" :key="indexSon"> {{ itemSon.name }} </a>
+          </section>
+        </div>
+      </article>
 
       <article class="other-model">
-        <div class="col-8" v-for="item of OtherModel" :key="item.id"> 
+        <div class="col-8 col-sm" v-for="item of OtherModel" :key="item.id"> 
           <a class="text-a" target="_blank" :href="item.href" :key="item.id"> {{ item.name }} </a>
         </div>
       </article>
     </div>
     
-  </div>
 
   <!-- <script src="https://unpkg.com/vue@next"></script> -->
   <script src="./vue.global.js"></script>
@@ -56,12 +45,13 @@
     const Counter = {
       setup() {
         const availHeight = window.screen.availHeight;
-        const heightt = window.screen.height;
-        // const screenObj = window.screen.keys();
-        console.log(window.screen)
-        // for(let key of window.screen) {
-        //   console.log(key)
-        // }
+        let screenArr = [];
+        for(let key in window.screen) {
+          screenArr.push({
+            key,
+            value: window.screen[key]
+          })
+        }
         
         let showLongName = '';
         // console.log(Counter)
@@ -73,7 +63,7 @@
           showLongFn,
           availHeight,
           FrontEndList,
-          heightt,
+          screenArr,
           BackEndList,
           showLongName,
           OtherModel,

@@ -4,7 +4,10 @@
   /* color: #eee; */
   /* background: #f1f1f1; */
 }
-
+h1 {
+  height: 30px;
+  line-height: 30px;
+}
 .main-flex {
   display: flex;
   flex-wrap: wrap;
@@ -55,4 +58,11 @@ div {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+
+@media (max-width: 768px) {
+  .col-sm {
+    flex: 0 0 100%;
+  }
 }
