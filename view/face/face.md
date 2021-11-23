@@ -89,35 +89,40 @@ localstorage/(2)vuex-persistedstate/(3)cookie
 - 节流：不断触发只执行一次(吸顶(配合transform和transition)，顶部导航栏)
 
 2. 继承的方法有多少种(https://www.cnblogs.com/gwf93/p/10384352.html)
+
 3. 深浅拷贝方法（深拷贝数据类型是不是一样） https://www.cnblogs.com/hyns/p/12405328.html
+
 4. js为什么万物都是对象（基本类型可以new出来，数组是对象继承的）
+
 5. 循环有多少种(https://www.cnblogs.com/dianzan/p/12898882.html)(https://blog.csdn.net/haochuan9421/article/details/81414532/)
+
 6. 数组（push/unshift   pop/shift  splice  slice   concat   split）(find(), fill(), flat(), includes, )
+
 7. 闭包（vue里面的data）
+
 8. 原型链（https://www.cnblogs.com/manhuai/p/14281967.html）
+
 9. eatchart（等比例缩放）
+
 10. 页面到服务器输入流程： 1.DNS域名解析；2.建立TCP连接； 3.http请求；4.服务器处理相关的请求；5.返回响应的结果；6关闭TCP连接；7.浏览器解析HTML；8浏览器渲染
+
 11. es6（filter,find,map     ...，includes, 箭头函数，）
+
 12. AMD和CMD的区别：https://blog.csdn.net/qq_38912819/article/details/80597101?ivk_sa=1024320u
 
+13. call和apply
+
+    ```
+    let arr = [10, 22, 39, 18]
+    Math.max.call(null, arr) // NaN
+    Math.max.apply(null, arr) // 39
+    ```
+
+    
 
 
-#### CSS
-
-1. iphoneX及以上苹果底部横条 小程序（wx.getSystemInfo -> safeArea.bottom与可视区相减）
-
-2. (两边固定，中间自适应)[https://blog.csdn.net/lemaktub/article/details/107138319]
-
-- ***flex***: 父--display: flex;   左右两边--flex 0 0 100px;   中--flex: 1;padding: 0 100px;box-sizing: border-box;
-
-- ***position***: 父--position: relative;   左右两边--position: absolute;top: 0;left/right: 0; width: 100px;   中--width: 100%;padding: 0 100px;box-sizing: border-box;
-- ***float***: 父--清浮动；左右两边--float: left/right; 中间: width: 100%;padding: 0 100px;box-sizing: border-box;    （中间元素标签放最后）
-- ***table***
 
 
-3. em相对于父元素(设置font-size)，rem相对于根元素（html）
-4. 选择器排序： id选择器 > 类选择器 > 标签选择器
-5. 自适应高度https://jingyan.baidu.com/article/37bce2bec2171c5003f3a221.html
 
 
 
