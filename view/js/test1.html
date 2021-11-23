@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<body>
+    <script>
+      /*
+      let arr1 = [10, 22, 39, 18];
+
+      console.log(Math.max.call(null, arr1))
+      console.log(Math.max.apply(null, arr1))
+
+      document.addEventListener('click', function (e) {
+        setTimeout(() => {
+          console.log(this)
+        }, 200);
+        console.log(this)
+      })*/
+  </script>
+  <script>
+    /* 闭包
+    https://blog.csdn.net/weixin_40051325/article/details/102796843
+
+    三要素：
+    – 必须有一个内嵌函数;
+    – 内嵌函数必须引用外部函数中的变量;
+    – 外部函数返回值必须是内嵌函数（不带括号）
+    */
+    function fn() {
+      var arrFn = new Array();
+      for(var i = 0; i<5; i++) {
+        arrFn[i] = function() {
+          return i;
+        }
+      }
+      return arrFn
+    }
+    var box = fn();
+    console.log(box[0])
+    for(var j = 0; j<box.length; j++) {
+      console.log(box[j]())
+    }
+
+    function rr() {
+      return 43;
+    }
+    var df = rr()
+    console.log(df)
+  </script>
+</body>
+</html>

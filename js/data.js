@@ -126,6 +126,7 @@ const BackEndList = [
   ]},
   {id: 3, categoryName: '非逻辑', children: [
     {id: 5, name: 'face', href: 'https://www.cnblogs.com/lgyong/p/11604172.html'}, 
+    {id: 7, name: 'face', href: './view/face/face.md'}, 
     {id: 0, name: '兼容 yu 比较', href: 'https://www.cnblogs.com/lgyong/p/8881870.html'}, 
     {id: 1, name: '软件 | 网站   (echarts、base64图片、图片压缩、face++、swiper、snipate截图、vue.js和axios.js......)', href: 'https://www.cnblogs.com/lgyong/p/9987256.html'}, 
     {id: 2, name: '杂 (Nuxt.js多页面的vue;  WEEX vue的原生;  Flutter是谷歌的移动UI框架; deno)', href: 'https://www.cnblogs.com/lgyong/p/9845792.html'}, 
