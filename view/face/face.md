@@ -1,11 +1,10 @@
-1. 生命周期
-beforeCreate,created（做页面权限判断；可以用于页面请求）
-beforeMount,mounted（方法）
-beforeUpdate,updated（数据变动）
-beforeDestroy,destroyed（页面缓存不触发，用路由钩子beforeRouteLeave）
-
-2. vuex
-   ①
+﻿- 生命周期
+  beforeCreate,created（做页面权限判断；可以用于页面请求）
+  beforeMount,mounted（方法）
+  beforeUpdate,updated（数据变动）
+  beforeDestroy,destroyed（页面缓存不触发，用路由钩子beforeRouteLeave）
+- vuex
+  ①
 
 - state相当于data
 
@@ -24,13 +23,13 @@ beforeDestroy,destroyed（页面缓存不触发，用路由钩子beforeRouteLeav
 - ```
   import {mapState,} from 'vuex'
   ```
-  
+
 - ```
   
   ```
-  
+
 - 
-  
+
   
 
 3. 组件传值
@@ -45,7 +44,7 @@ beforeDestroy,destroyed（页面缓存不触发，用路由钩子beforeRouteLeav
 
 5. v-for和v-if
    v-show和v-if（show是初始渲染消耗，之后通过样式display来展示，而if是判断是否需要渲染，操纵dom元素）
-   
+
 6. 路由
 
 - 两种模式: hash, history(默认hash)
@@ -92,6 +91,7 @@ beforeDestroy,destroyed（页面缓存不触发，用路由钩子beforeRouteLeav
 1. iphoneX及以上苹果底部横条 小程序（wx.getSystemInfo -> safeArea.bottom与可视区相减）
 
 2. (两边固定，中间自适应)[https://blog.csdn.net/lemaktub/article/details/107138319]
+
 - ***flex***: 父--display: flex;   左右两边--flex 0 0 100px;   中--flex: 1;padding: 0 100px;box-sizing: border-box;
 
 - ***position***: 父--position: relative;   左右两边--position: absolute;top: 0;left/right: 0; width: 100px;   中--width: 100%;padding: 0 100px;box-sizing: border-box;
