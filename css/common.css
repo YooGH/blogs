@@ -44,7 +44,9 @@ a {
 .col-1{  flex: 0 0 4.166666666666667%;}
 .col-2{  flex: 0 0 8.333333333333334%;}
 .col-3{  flex: 0 0 12.5%;}
-.col-4{  flex: 0 0 16.666666666666668%;}
+.col-4{  flex: 0 0 16.666666666666668%; overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;}
 .col-5{  flex: 0 0 20.833333333333336%;}
 .col-6{  flex: 0 0 25%;}
 .col-7{  flex: 0 0 29.166666666666668%;}

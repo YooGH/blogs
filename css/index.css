@@ -64,6 +64,9 @@ div {
 @media (max-width: 768px) {
   .col-sm {
     flex: 0 0 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     font-size: 14px;
   }
 }
