@@ -1,0 +1,43 @@
+https://taro-docs.jd.com/taro/docs/README/index.html
+## 0.用小程序组件差异
+ - 大驼峰
+ - 引入``@tarojs/components``
+
+
+
+
+
+## 2. 路由
+
+
+
+## 1.转移(小程序转taro)
+0. class => className
+1. app.wxss -> src/app.scss
+2. images -> src/images  [不能直接写要先引入](https://www.cnblogs.com/tufei7/p/12159882.html)
+3. 模板中的绑定是不用引号的 => {}
+> vue{}``<image src="{{img}}">`` => react``<image src={img}>``
+4. 动态class样式要引入classNames包
+https://www.cnblogs.com/qianyy/p/11247478.html
+5. 样式单位
+> rpx -> px
+6. input
+placeholder-class => placeholderClass
+7. 导入导出替换
+module.exports => export default
+require => import
+
+
+
+
+## 2. react(从vue转过来的差异)
+> class => className
+> 生命周期
+> 上面图片问题
+> hook(16.8新增)
+
+
+
+
+
+[小程序转taro](https://taro-docs.jd.com/taro/docs/taroize) => taro convert
