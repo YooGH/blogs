@@ -7,3 +7,6 @@
 
 [vm虚拟机安装centOs7系统并安装jenkins自动化部署vue项目](https://dsx2016.com/?p=1405)
 1. [下载linuxs镜像](https://mirrors.tuna.tsinghua.edu.cn/centos/7/isos/x86_64/）
+
+
+https://www.cnblogs.com/wangzhichao/p/12692188.html
