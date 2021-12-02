@@ -1,4 +1,4 @@
-﻿- > 1. <a href="#h1"> 生命周期 </a>
+﻿﻿- > 1. <a href="#h1"> 生命周期 </a>
   > 2. <a href="#h2"> 路由 </a>
   > 3. <a href="#h3">  </a>
   >    <a href="#ck"> 参考 </a>
@@ -51,6 +51,8 @@
   <br/><br/><br/><br/>
 
   ###  <h1 id="ck"> 参考 </h1>
+
+vue2支持到ie9及以上(核心的object.defineProperty ie8及以下不支持，Promise也是)
 
   ```
   this.$data.msg = this.msg

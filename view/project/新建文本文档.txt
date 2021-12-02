@@ -3,3 +3,7 @@
 样式 less还是scss
 路由是后端控制还是前端控制
 全局样式
+
+
+[vm虚拟机安装centOs7系统并安装jenkins自动化部署vue项目](https://dsx2016.com/?p=1405)
+1. [下载linuxs镜像](https://mirrors.tuna.tsinghua.edu.cn/centos/7/isos/x86_64/）

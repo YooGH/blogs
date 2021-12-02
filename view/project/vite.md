@@ -1,7 +1,7 @@
-﻿- > 1. <a href="#h1"> 安装 </a>
-  > 2. <a href="#h2"> vite.config文件  </a>
-  > 3. <a href="#h3">  </a>
-  > 4. <a href="#ck"> 参考 </a>
+﻿ 1. <a href="#h1"> 安装 </a>
+ 2. <a href="#h2"> vite.config文件  </a>
+ 3. <a href="#h3">  </a>
+ 4. <a href="#ck"> 参考 </a>
 
   
 

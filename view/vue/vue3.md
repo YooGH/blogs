@@ -1,4 +1,4 @@
-﻿> 1. <a href="#h1"> 框架安装 </a>
+﻿﻿> 1. <a href="#h1"> 框架安装 </a>
 > 2. <a href="#h2"> 引入vuex </a>
 > 3. <a href="#h3"> 引入router </a>
 > 引入router有问题待解决
@@ -175,6 +175,8 @@ app.mount('#app')
 
 
 ##### 参考
+**vue3不支持ie11**
+
 [vue3中文文档]('https://vue3js.cn/docs/zh/')
 
 https://blog.51cto.com/u_15291238/2983150

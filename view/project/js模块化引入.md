@@ -1,7 +1,7 @@
-﻿- > 1. <a href="#h1"> commonjs -> node.js （服务端) </a>
-  > 2. <a href="#h2"> amd -> requirejs(浏览器端)  | cmd -> sea.js（浏览器端） </a>
-  > 3. <a href="#h3"> es6 modules => es6（两端）</a>
-  >    <a href="#ck"> 参考 </a>
+﻿1. <a href="#h1"> commonjs -> node.js （服务端) </a>
+ 2. <a href="#h2"> amd -> requirejs(浏览器端)  | cmd -> sea.js（浏览器端） </a>
+3. <a href="#h3"> es6 modules => es6（两端）</a>
+    <a href="#ck"> 参考 </a>
 
   > 模块化是防止变量的冲突
 
