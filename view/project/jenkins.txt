@@ -1,0 +1,9 @@
+[1.虚拟机安装centOS7](https://blog.csdn.net/qq_39135287/article/details/83993574)21.9.24
+[cent阿里镜像](https://mirrors.aliyun.com/centos/7/isos/x86_64/)
+
+
+https://blog.csdn.net/weixin_43279032/article/details/90675968
+
+https://blog.csdn.net/lizhiyuan_eagle/article/details/90692228
+
+https://www.cnblogs.com/cangqinglang/p/11100639.html

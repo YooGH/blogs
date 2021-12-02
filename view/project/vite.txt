@@ -1,0 +1,23 @@
+# 为什么选Vite
+> esbuild构建比传统的webpack更快
+
+
+webpack使用HMR VS Vite使用是ES6快支持的ES模块
+## 缓慢的服务器启动(模块区分为 依赖 和 源码 两类)
+> **依赖**使用 esbuild 预构建依赖
+> **源码**Vite 以 原生 ESM 方式提供源码
+
+# 开始
+> index.html直接套js用type="module"
+
+#
+
+
+
+# 蒙蔽专业词
+> [esbuild](http://esbuild.github.io/)
+> [依赖预构建](https://cn.vitejs.dev/guide/dep-pre-bundling.html)
+
+
+
+
