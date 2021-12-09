@@ -8,6 +8,10 @@ CICD： jenkins（服务环境）+ gitlab（代码存储库）
 
 4. ssh
 
+    ```
+    ssh root@192.168.x.x
+    ```
+
 5. java
 
    ```
@@ -32,7 +36,7 @@ CICD： jenkins（服务环境）+ gitlab（代码存储库）
     ##### 安装jenkins  -- Jenkins站点的默认监听端口是8080 -- 启动
 
     ```
-    sudo yum install -y jenkins
+    sudo yum install -y jenkins  （解决依赖https://blog.csdn.net/ichen820/article/details/120353829）
     
     sudo firewall-cmd --add-port=8080/tcp --permanent
     sudo firewall-cmd --reload
@@ -41,6 +45,12 @@ CICD： jenkins（服务环境）+ gitlab（代码存储库）
     ```
 
     打开 http://192.168.73.135:8080/
+
+    ```
+    
+    ```
+
+    
 
 8. git
 
@@ -83,7 +93,7 @@ CICD： jenkins（服务环境）+ gitlab（代码存储库）
 
 
 
-
+https://dsx2016.com/?p=1405
 
 1. [虚拟机安装centOS7](https://blog.csdn.net/qq_39135287/article/details/83993574)21.9.24
 2. [cent阿里镜像](https://mirrors.aliyun.com/centos/7/isos/x86_64/)
@@ -98,9 +108,18 @@ CICD： jenkins（服务环境）+ gitlab（代码存储库）
    查看ip: ip addr
    启动jenkins: sudo systemctl start jenkins
 
+
 7. 删除文件夹 https://www.cnblogs.com/maoriaty/p/8922271.html
 8. CI全名Continuous Integration，就是我们经常听到的持续集成概念。
    当开发每天会提交多次代码到主干上，会做一些重复性的动作时，就可以用持续集成环境来操作
    有集成了，就肯定少不了它的好基友，没错就是CD。
    CD全名是Continuous Deployment，是持续部署。
    CD还有个小号，交持续交付，英文全称是Continuous delivery，缩写也是CD。
+   =======
+   NetworkManaer 未运行。： systemctl start NetworkManager 
+   查看ip: ip addr
+   启动jenkins: sudo systemctl start jenkins
+
+删除文件夹 https://www.cnblogs.com/maoriaty/p/8922271.html
+
+强制重启**reboot -f**
