@@ -85,18 +85,22 @@ CICD： jenkins（服务环境）+ gitlab（代码存储库）
 
 
 
-﻿[1.虚拟机安装centOS7](https://blog.csdn.net/qq_39135287/article/details/83993574)21.9.24
-[cent阿里镜像](https://mirrors.aliyun.com/centos/7/isos/x86_64/)
+1. [虚拟机安装centOS7](https://blog.csdn.net/qq_39135287/article/details/83993574)21.9.24
+2. [cent阿里镜像](https://mirrors.aliyun.com/centos/7/isos/x86_64/)
 
+3. https://blog.csdn.net/weixin_43279032/article/details/90675968
 
-https://blog.csdn.net/weixin_43279032/article/details/90675968
+4. https://blog.csdn.net/lizhiyuan_eagle/article/details/90692228
 
-https://blog.csdn.net/lizhiyuan_eagle/article/details/90692228
+5. https://www.cnblogs.com/cangqinglang/p/11100639.html
 
-https://www.cnblogs.com/cangqinglang/p/11100639.html
+6. NetworkManaer 未运行。： systemctl start NetworkManager 
+   查看ip: ip addr
+   启动jenkins: sudo systemctl start jenkins
 
-NetworkManaer 未运行。： systemctl start NetworkManager 
-查看ip: ip addr
-启动jenkins: sudo systemctl start jenkins
-
-删除文件夹 https://www.cnblogs.com/maoriaty/p/8922271.html
+7. 删除文件夹 https://www.cnblogs.com/maoriaty/p/8922271.html
+8. CI全名Continuous Integration，就是我们经常听到的持续集成概念。
+   当开发每天会提交多次代码到主干上，会做一些重复性的动作时，就可以用持续集成环境来操作
+   有集成了，就肯定少不了它的好基友，没错就是CD。
+   CD全名是Continuous Deployment，是持续部署。
+   CD还有个小号，交持续交付，英文全称是Continuous delivery，缩写也是CD。
