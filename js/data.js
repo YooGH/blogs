@@ -122,6 +122,9 @@ const BackEndList = [
     {id: 5, name: '功能5 -- 圆圈动态加载', href: 'https://www.cnblogs.com/lgyong/p/12691200.html'}, 
     { id: 6, name: '功能6 -- 选项卡数据缓存', href: 'https://www.cnblogs.com/lgyong/p/13226070.html' },
     { id: 7, name: '功能7 -- 全球快递物流查询', href: './view/func/功能7--全球快递物流查询.md' },
+    { id: 8, name: '功能8 -- JS实现下拉刷新、上拉加载', href: './view/func/JS实现下拉刷新、上拉加载.md' },
+
+
     {id: 110, name: 'bug记录', href: 'https://www.cnblogs.com/lgyong/p/12931035.html'}, 
     {id: 111, name: 'bug1 -- inline-block间隙', href: 'https://www.cnblogs.com/lgyong/p/14149631.html'}, 
     {id: 112, name: 'bug2 -- 小程序ios 密码类型的input焦后再输入丢失内容', href: 'https://www.cnblogs.com/lgyong/p/14557230.html'},
@@ -155,6 +158,9 @@ const BackEndList = [
   {id: 5, categoryName: '脑图', children: [
     // {id: 0, name: '脑图', href: 'https://naotu.baidu.com/'}, 
     {id: 0, name: '脑图', href: 'https://naotu.baidu.com/file/b2c14b8301fe08e11db283b2b3788935'}, 
+    {id: 1, name: '后台资料', href: './view/tools/backstageSystem.md'},
+    {id: 2, name: 'px转rpx', href: './view/tools/pxChangeRpx.html'},
+    
     
   ]},
   

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#main {
+			height: 1000vh;
+		}
+		.refresh-block, .load-block {
+			display: none;
+			line-height: 100px;
+			height: 100px;
+			color: #fff;
+			background: #999;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<!-- 下拉刷新，上拉加载
+		移动端
+		下拉刷新： 开始位置(20px内)，最后位置-开始位置>100
+		上拉加载： 开始位置(内容高度-20px内)，最后位置-开始位置<100
+		addEventListener:监听元素滚动,做元素动画(transform)
+		touchstart(触碰开始)、touchmove(触碰移动, )、touchend(触碰结束)三个触摸获取数据
+		参考：https://www.jianshu.com/p/0631f85eb1a7
+	 -->
+	<div id="main">
+		<div class="refresh-block">刷新</div>
+	</div>
+	<div class="load-block">加载</div>
+
+	<script type="text/javascript">
+		let [
+			startY, // 记录鼠标点击的位置
+			moveY, // 记录鼠标移动的位置
+			endY, // 记录鼠标抬起的位置
+			distance, // 移动距离
+			openDistance, // 触发距离
+		] = [
+			0,
+			0,
+			0,
+			0,
+			100
+		]
+		let body = document.body || document.documentElement;
+		let refreshBlock = document.querySelector('.refresh-block');
+		let loadBlock = document.querySelector('.load-block');
+		// let body = document.getElementById('main')
+		body.addEventListener('touchstart', e => { // 开始点击
+			startY = e.touches[0].pageY // 可视区Y轴
+			 // 可视区Y轴 e.touches[0].clientY
+			 // 可视区Y轴+滚动高度 e.touches[0].pageY
+			 // 屏幕Y轴，不管浏览器 e.touches[0].screenY
+		})
+		body.addEventListener('touchmove', e => {
+			distance = e.touches[0].pageY - startY
+		})
+		body.addEventListener('touchend', e => {
+			if(startY < 200 && distance>openDistance) {
+				console.log('刷新',refreshBlock)
+				refreshBlock.style.display = 'block';
+				setTimeout(()=>{
+					refreshBlock.style.display = 'none';
+				},2000)
+			}
+			if((startY > body.clientHeight-openDistance) && distance < openDistance) {
+				console.log('加载')
+				loadBlock.style.display = 'block';
+				setTimeout(()=>{
+					loadBlock.style.display = 'none';
+				},2000)
+			}
+		})
+
+
+
+		
+
+
+
+
+
+	</script>
+</body>
+</html>
