@@ -10,12 +10,11 @@
 </head>
 <body>
   <div id="app">
-    <!-- <div class="kkk" v-for="item in screenArr" :key="item"> {{`${item.key}:${item.value}`}}</div> -->
       <article class="flex">
         <div class="col-4 col-sm" v-for="item of FrontEndList" :key="item.id"> 
           <h1 @click="showLongFn(item.categoryName)"> <a :href="item.href">{{ item.categoryName }}{{showLongName}}</a> </h1>
           <section class="category" :style="`height: ${availHeight-40}px`">
-            <a class="text-a" target="_blank" :class="{'text-b': itemSon.grade}" :href="itemSon.href" v-for="(itemSon, indexSon) of item.children" :key="indexSon"> {{ itemSon.showId ? itemSon.id+'. ' : '' }}{{ itemSon.name }} </a>
+            <a class="text-a" target="_blank" :class="{'text-b': itemSon.grade, 'text-done': itemSon.done}" :href="itemSon.href" v-for="(itemSon, indexSon) of item.children" :key="indexSon"> {{ itemSon.showId ? itemSon.id+'. ' : '' }}{{ itemSon.name }} </a>
           </section>
         </div>
       </article>
@@ -29,11 +28,11 @@
         </div>
       </article>
 
-      <article class="other-model">
+     <!--  <article class="other-model">
         <div class="col-8 col-sm" v-for="item of OtherModel" :key="item.id"> 
           <a class="text-a" target="_blank" :href="item.href" :key="item.id"> {{ item.name }} </a>
         </div>
-      </article>
+      </article> -->
     </div>
     
 

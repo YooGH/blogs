@@ -1,5 +1,5 @@
 const OtherModel = [
-  {id: 1, name: 'plan', href: './other/plan.html'},
+  { id: 1, name: 'plan', href: './other/plan.html'},
   { id: 2, name: 'vc', href: './other/vc.html' },
   { id: 2, name: 'vcsss', href: './other/vc.md' },
   // { id: 2, name: 'health', href: './other/vc.html', detail: '人体所必需的营养素有蛋白质、脂类、糖类、维生素、水和无机盐（矿物质）、膳食纤维（纤维素）7类' },

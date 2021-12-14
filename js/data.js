@@ -37,7 +37,7 @@ const FrontEndList = [
   ]},
   {id: 3, categoryName: 'JS/jQ', children: [
     // {id: 110, name: 'JS (javascript)', href: 'https://www.cnblogs.com/lgyong/p/8711510.html'}, 
-    {id: 111, name: 'ES6~(ES2015)', href: 'https://www.cnblogs.com/lgyong/p/8711550.html', grade: 1}, 
+    {id: 111, name: 'ES6~(ES2015)', href: './view/js/ES6.md', grade: 1, done: true}, 
     {id: 112, name: 'ECMAScript', href: 'https://www.cnblogs.com/lgyong/p/8711614.html', grade: 1}, 
     {id: 115, name: 'BOM', href: 'https://www.cnblogs.com/lgyong/p/8998944.html', grade: 1}, 
     {id: 116, name: 'DOM', href: 'https://www.cnblogs.com/lgyong/p/8998967.html', grade: 1}, 

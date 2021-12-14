@@ -60,6 +60,10 @@ div {
   right: 0;
 }
 
+.text-done:after {
+  content: '-';
+}
+
 
 @media (max-width: 768px) {
   .col-sm {
