@@ -4,27 +4,37 @@
   /* color: #eee; */
   /* background: #f1f1f1; */
 }
-h1 {
-  height: 30px;
-  line-height: 30px;
-}
+
 .main-flex {
   display: flex;
   flex-wrap: wrap;
   height: 100%;
+}
+/*标题*/
+.category {
+  height: 310px;
+  overflow-y: auto;
+}
+h1 {
+  height: 30px;
+  line-height: 30px;
+}
+/*字体*/
+.text-white {
+  color: #fff;
 }
 .text-a {
   display: block;
   font-size: 12px;
   line-height: 24px;
   text-decoration:none;
-  color: #0a7ac6;
-
+  color: #060a09;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 .text-a:hover {
+  font-size: 14px;
   font-weight: bold;
   color: #033a57;
   
@@ -33,10 +43,7 @@ h1 {
   color: #033a57;
   font-weight: bold;
 }
-div {
-  /* margin: 20px 0; */
-}
-.section-left {
+/*.section-left {
   height: 100%;
   background: #eee;
   padding: 10px;
@@ -47,11 +54,8 @@ div {
   background: #ddd;
   padding: 10px;
   box-sizing: border-box;
-}
-.category {
-  height: 310px;
-  overflow-y: auto;
-}
+}*/
+
 
 /* 其他 */
 .other-model {
@@ -63,6 +67,19 @@ div {
 .text-done:after {
   content: '-';
 }
+.padding-bottom {
+  padding-bottom: 16px;
+}
+
+/*solo*/
+.solo {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height： 100vh;
+}
+
 
 
 @media (max-width: 768px) {

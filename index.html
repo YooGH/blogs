@@ -10,62 +10,67 @@
 </head>
 <body>
   <div id="app">
-      <article class="flex">
-        <div class="col-4 col-sm" v-for="item of FrontEndList" :key="item.id"> 
-          <h1 @click="showLongFn(item.categoryName)"> <a :href="item.href">{{ item.categoryName }}{{showLongName}}</a> </h1>
-          <section class="category" :style="`height: ${availHeight-40}px`">
-            <a class="text-a" target="_blank" :class="{'text-b': itemSon.grade, 'text-done': itemSon.done}" :href="itemSon.href" v-for="(itemSon, indexSon) of item.children" :key="indexSon"> {{ itemSon.showId ? itemSon.id+'. ' : '' }}{{ itemSon.name }} </a>
-          </section>
-        </div>
-      </article>
+    <!-- 上半部分 -->
+    <article class="flex">
+      <div class="col-4 col-sm" v-for="item of FrontEndList" :key="item.id">
+        <!-- 标题 -->
+        <h1>
+          <a :href="item.href">{{ item.categoryName }}{{showLongName}}</a>
+          <span @click="openItem(item)">+</span>
+        </h1>
+        <!-- 内容 -->
+        <section class="category" :style="`height: ${availHeight-40}px`">
+          <a
+            target="_blank"
+            class="text-a text-b"
+            :class="{
+              'text-done': itemSon.done
+            }"
+            :href="itemSon.href"
+            v-for="(itemSon, indexSon) of item.children"
+            :key="indexSon">
+            {{ itemSon.name }}
+          </a>
+          <a
+            target="_blank"
+            class="text-a"
+            :class="{
+              'text-done': itemSon.done,
+              'padding-bottom': (1+indexSon)%5 == 0
+            }"
+            :href="itemSon.href"
+            v-for="(itemSon, indexSon) of item.itemsChildren"
+            :key="indexSon">
+            {{ `${1+indexSon}. ${itemSon.name}` }}
+          </a>
+        </section>
+      </div>
+    </article>
 
-      <article class="flex">
-        <div class="col-4 col-sm" v-for="item of BackEndList" :key="item.id"> 
-          <h1 @click="showLongFn(item.categoryName)"> {{ item.categoryName }} </h1>  
-          <section class="category" :style="`height: ${availHeight/2-30}px`">
-            <a class="text-a" target="_blank" :class="{'text-b': itemSon.grade}" :href="itemSon.href" v-for="(itemSon, indexSon) of item.children" :key="indexSon"> {{ itemSon.name }} </a>
-          </section>
-        </div>
-      </article>
+    <!-- 下半部分 -->
+    <article class="flex">
+      <div class="col-4 col-sm" v-for="item of BackEndList" :key="item.id"> 
+        <h1> {{ item.categoryName }} </h1>  
+        <section class="category" :style="`height: ${availHeight/2-30}px`">
+          <a class="text-a" target="_blank" :class="{'text-b': itemSon.grade}" :href="itemSon.href" v-for="(itemSon, indexSon) of item.children" :key="indexSon"> {{ itemSon.name }} </a>
+        </section>
+      </div>
+    </article>
+  </div>
 
-     <!--  <article class="other-model">
-        <div class="col-8 col-sm" v-for="item of OtherModel" :key="item.id"> 
-          <a class="text-a" target="_blank" :href="item.href" :key="item.id"> {{ item.name }} </a>
-        </div>
-      </article> -->
-    </div>
-    
 
   <!-- <script src="https://unpkg.com/vue@next"></script> -->
   <script src="./vue.global.js"></script>
-  <script src="./js/data.js"></script>
-  <script src="./js/other.js"></script>
+  <script src="./js/frontEndList.js"></script>
+  <script src="./js/backEndList.js"></script>
   <script>
     const Counter = {
       setup() {
         const availHeight = window.screen.availHeight;
-        let screenArr = [];
-        for(let key in window.screen) {
-          screenArr.push({
-            key,
-            value: window.screen[key]
-          })
-        }
-        
-        let showLongName = '';
-        // console.log(Counter)
-        // // let showLongName = setShowLongNamd('');
-        function showLongFn(name){
-          showLongName = name
-        }
         return {
-          showLongFn,
-          availHeight,
           FrontEndList,
-          screenArr,
           BackEndList,
-          showLongName,
-          OtherModel,
+          availHeight,
         }
       }
     }
