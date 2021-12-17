@@ -50,6 +50,7 @@ const FrontEndList = [
     {id: 0, name: 'JS0 -- 去重', href: 'https://www.cnblogs.com/lgyong/p/8490610.html'}, 
     {id: 1, name: 'JS1 -- 闭包', href: 'https://www.cnblogs.com/lgyong/p/8559775.html'}, 
     {id: 2, name: 'JS2 -- 继承：（封装、多态、抽象）', href: 'https://www.cnblogs.com/lgyong/p/8566279.html'}, 
+    {id: 2.2, name: 'JS2 -- 构造函数', href: './view/js/构造函数.md'}, 
     {id: 3, name: 'JS3 -- 模块(cmd amd)', href: 'https://www.cnblogs.com/lgyong/p/8586283.html'}, 
     {id: 4, name: 'JS4 -- 事件流（冒泡和捕获）', href: 'https://www.cnblogs.com/lgyong/p/9521226.html'}, 
     {id: 5, name: 'JS5 -- 回调', href: 'https://www.cnblogs.com/lgyong/p/9695224.html'}, 
