@@ -12,7 +12,12 @@ const BackEndList = [
       { id: 6, name: '算法2 -- 字符串', href: 'https://www.cnblogs.com/lgyong/p/10600992.html' },
 			{ id: 999, name: '————————',},
       { id: 3, name: 'mockjs', href: 'https://www.cnblogs.com/lgyong/p/12221720.html'}, 
-      { id: 4, name: 'md', href: 'https://www.cnblogs.com/lgyong/p/13072516.html'}, 
+      { id: 4, name: 'md', href: 'https://www.cnblogs.com/lgyong/p/13072516.html' }, 
+			{ id: 999, name: '————————',},
+      { id: 12, name: 'cent7-搭建', href: './view/project/cent7环境搭建.md' },
+      { id: 13, name: 'jenkins', href: './view/project/jenkins.md' },
+      { id: 14, name: 'jenkins-github', href: './view/project/jenkins-github.md' },
+      
     ]
   },
   {

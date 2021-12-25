@@ -1,12 +1,12 @@
-﻿
-CICD： jenkins（服务环境）+ gitlab（代码存储库）
-1. centOS 7 (清华大学开源软件镜像站)
+﻿    CICD： jenkins（服务环境）+ gitlab（代码存储库）
 
-2. vmware
+>  编码 --> 构建 --> 集成 --> 测试 --> 交付 --> 部署
 
-3. ``yum update``(更新系统)   -- yum 是安装解压工具
+1. 环境看 “cent7环境搭建”
 
-4. ssh
+3. ``yum update``(更新系统,yum 是安装解压工具)
+
+4. ssh(安全协议)
 
     ```
     ssh root@192.168.x.x
@@ -16,7 +16,7 @@ CICD： jenkins（服务环境）+ gitlab（代码存储库）
 
    ```
    yum install java
-   java -version
+   java -version（查看是否安装，及版本号）
    ```
 
 6. wget  （下载github/gitlab项目）
@@ -31,24 +31,33 @@ CICD： jenkins（服务环境）+ gitlab（代码存储库）
 
    
 
-7. jenkins
+6. jenkins
 
     ##### 安装jenkins  -- Jenkins站点的默认监听端口是8080 -- 启动
 
+    
+
     ```
-    sudo yum install -y jenkins  （解决依赖https://blog.csdn.net/ichen820/article/details/120353829）
+    sudo yum install -y jenkins  （[解决依赖](https://blog.csdn.net/ichen820/article/details/120353829):
+       yum -y install epel-release
+       yum -y install daemonize
+    ）
     
     sudo firewall-cmd --add-port=8080/tcp --permanent
     sudo firewall-cmd --reload
     
-    sudo systemctl start jenkins
+    sudo systemctl start jenkins   // 开启jenkins服务
     ```
 
     打开 http://192.168.73.135:8080/
 
     ```
-    
+    输入密码后，选择第一个“安装推荐的插件”
     ```
+
+    
+
+    
 
     
 
@@ -93,7 +102,7 @@ CICD： jenkins（服务环境）+ gitlab（代码存储库）
 
 
 
-https://dsx2016.com/?p=1405
+[vm虚拟机安装centOs7系统并安装jenkins自动化部署vue项目](https://dsx2016.com/?p=1405)
 
 1. [虚拟机安装centOS7](https://blog.csdn.net/qq_39135287/article/details/83993574)21.9.24
 2. [cent阿里镜像](https://mirrors.aliyun.com/centos/7/isos/x86_64/)
@@ -116,10 +125,7 @@ https://dsx2016.com/?p=1405
    CD全名是Continuous Deployment，是持续部署。
    CD还有个小号，交持续交付，英文全称是Continuous delivery，缩写也是CD。
    =======
-   NetworkManaer 未运行。： systemctl start NetworkManager 
-   查看ip: ip addr
+   启动网络： systemctl start NetworkManager 
    启动jenkins: sudo systemctl start jenkins
 
-删除文件夹 https://www.cnblogs.com/maoriaty/p/8922271.html
-
-强制重启**reboot -f**
+    强制重启**reboot -f**
