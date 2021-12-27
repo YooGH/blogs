@@ -1,4 +1,4 @@
-﻿1. <a href="#h1"> 新类型 </a>
+﻿﻿1. <a href="#h1"> 新类型 </a>
 2. <a href="#h2"> 声明变量 </a>
 3. <a href="#h3"> 解构赋值</a>
 4. <a href="#h4"> 字符串</a>
@@ -137,15 +137,23 @@
 
 ###  <h1 id="h6"> 6.数组</h1>
 
-- 
+- ...（扩展运算符）
+
+- Array.from() / Array.of()
 
   ```
-json => array:
-Array.form(json);      // 类数组转成真正数组， 如new set([1,1,12,3,45])
-数字、文本、变量　　Array.of(1,2,3);
+  json => array:
+  Array.form(json);      // 类数组转成真正数组， 如new set([1,1,12,3,45])
+  数字、文本、变量　　Array.of(1,2,3);
   ```
   
-- find()　
+- copyWithin()
+
+  ```
+  666
+  ```
+  
+- find() / findIndex()
 
   ```
   let arr=[1,2,3,4,5,6,7,8,9];
@@ -158,8 +166,8 @@ Array.form(json);      // 类数组转成真正数组， 如new set([1,1,12,3,45
 
   ```
   let arr=[0,1,2,3,4,5,6,7,8,9];
-arr.fill('jspang',2,5);                     //填充内容  start  end
-console.log(arr);
+  arr.fill('jspang',2,5);                     //填充内容  start  end
+  console.log(arr);
   ```
   
 
@@ -187,7 +195,9 @@ console.log(list.next().value);
   ```
 
 - forEach、filter、some、map(替换)、
+
 - toString();
+
 - arr.map(function (arrItem) { /**/ })　　循环数组
 
 
