@@ -105,5 +105,14 @@ SMTP服务：smtp.qq.com(qq邮箱固定写法)
 4. 构建环境
 
    **勾选“Provide Node & npm bin/ folder to PATH”**
+   
 5. 构建
    **选择“添加构建步骤”：execute shell**
+   
+   ```
+   node --version
+   npm i
+   npm run build
+   ```
+   
+   
