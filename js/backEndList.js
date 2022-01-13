@@ -80,6 +80,7 @@ const BackEndList = [
       {id: 0, name: '脑图', href: 'https://naotu.baidu.com/file/b2c14b8301fe08e11db283b2b3788935'}, 
       {id: 1, name: '后台资料', href: './view/tools/backstageSystem.md'},
       {id: 2, name: 'px转rpx', href: './view/tools/pxChangeRpx.html'},
+      {id: 3, name: 'English', href: './view/window/english.md'},
     ]
   }
 ];

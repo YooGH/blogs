@@ -23,7 +23,7 @@ const FrontEndList = [
     href: './view/face/css-face.md',
     children: [
       { name: 'CSS', href: 'https://www.cnblogs.com/lgyong/p/8617044.html',}, 
-      { name: 'SASS', href: 'https://www.cnblogs.com/lgyong/p/8758702.html',}, 
+      { name: 'SCSS', href: './view/css/scss.md', grade: 1, done: true}, 
       { name: '————————',}, 
       { name: '样式属性', href: 'https://www.cnblogs.com/lgyong/p/8617501.html',}, 
       { name: '选择器', href: 'https://www.cnblogs.com/lgyong/p/8617055.html',}, 

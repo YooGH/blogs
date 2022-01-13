@@ -1,4 +1,4 @@
-﻿﻿1. <a href="#h1"> 新类型 </a>
+﻿﻿﻿﻿﻿1. <a href="#h1"> 新类型 </a>
 2. <a href="#h2"> 声明变量 </a>
 3. <a href="#h3"> 解构赋值</a>
 4. <a href="#h4"> 字符串</a>
@@ -137,53 +137,125 @@
 
 ###  <h1 id="h6"> 6.数组</h1>
 
-- ...（扩展运算符）
+- ...     : <small>扩展运算符</small>
 
-- Array.from() / Array.of()
+- Array.from()：<small>转为数组，不改变原来遍历; [详细](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from)</small>
 
   ```
-  json => array:
-  Array.form(json);      // 类数组转成真正数组， 如new set([1,1,12,3,45])
-  数字、文本、变量　　Array.of(1,2,3);
+  字符串转数组:
+  const Str = 'yes';
+  Array.of(Str)  // ["y", "e", "s"]
+  
+  Set转数组:
+  const set = new Set(['one', 'two', 'three', 'two']);
+  Array.of(set) // ["one", "two", "three"]
+  
+  对象转数组(要有length,不然不能转)：
+  let arrayLike = {
+      '0': 'a',
+      '1': 'b',
+      '2': 'c',
+      length: 3
+  };
+  Array.from(arrayLike) // ["a", "b", "c"]
   ```
   
-- copyWithin()
+- Array.of()：<small>数值转为数组，不改变原来遍历; [详细](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/of);   可以用于替换new Array()的问题</small>
 
   ```
-  666
+  Array.of(1,2,3,4)  // [1,2,3,4]  数值转为数组
+  '1,2,3,4'.split(',')  // [1,2,3,4]  字符串转为数组
+  
+  Array.of(3) // [3]
+  Array(3)    // [,,,]
   ```
   
-- find() / findIndex()
+- copyWithin()替换 ，**改变原数组**
 
   ```
-  let arr=[1,2,3,4,5,6,7,8,9];
-  console.log(arr.find(function(value,index,arr){
+  copyWithin 替换，数组长度不变，改变原数组
+  [1,2,3,4,5].copyWithin(0, 3) // [4, 5, 3, 4, 5]
+  
+  splice 添加，数组长度改变，改变原数组
+  [1,2,3,4,5].splice(0, 0, '外来数据1') // ['外来数据1', 1, 2, 3, 4, 5]
+  ```
+- find() / findIndex()  <small>返回值/键，undefind/-1</small>
+
+  > findIndex()参数是函数
+  >
+  > indexOf()参数是字符串/数字
+
+  ```
+  const Arr =[1,2,3,4,5,6,7,8,9];
+  let value1 = Arr.find(function(value,index,arr){
       return value > 5;
-  }))
+  })
+  console.log(value1) // 6(返回值，没有返回undefind)
+  let value1 = Arr.findIndex(function(value,index,arr){
+      return value > 5;
+  })
+  console.log(value1) // 5(返回键，没有返回-1)  
   ```
 
-- fill()
+- fill() 填充，改变原数组
 
   ```
   let arr=[0,1,2,3,4,5,6,7,8,9];
-  arr.fill('jspang',2,5);                     //填充内容  start  end
-  console.log(arr);
+  arr.fill('Hi',2,5);              // 填充内容  start  end
+  console.log(arr);                // [0,1,"Hi","Hi","Hi",5,6,7,8,9]
   ```
-  
+
+- keys()/values()/entries()
 
 ````
-for (let item of arr )
-for (let item of arr.keys() )
-for (let [ index, val ] of arr.entries() )
+let arr = ['a', 'b', 'c'];
+for (let key of arr.keys()) {  console.log(key);  }
+> 0
+> 1
+> 2
+for (let val of arr.values()) {  console.log(val);  }
+> a
+> b
+> c
+for (let item of arr.entries()) {  console.log(item)  }
+> [0,"a"]
+> [1,"b"]
+> [2,"c"]
 ````
+> 不借助for...of,可以用**next**
+```
+let arr = ['a', 'b', 'c'];
+let list= arr.entries();
+console.log(list.next().value);  // [0,"a"]
+console.log(list.next().value);  // [0,"a"]
+console.log(list.next().value);  // [0,"a"]
+
+let keyList = arr.keys();
+console.log(keyList.next().value);  // 0
+```
+
+- inculdes()  
+
+> 参1：查询的值 （NaN为true）
+>
+> 参2：从哪里开始查（默认，0开始/大于数组是也是0）
+>
+> ES7， 返回布尔值
+>
+> 而indexOf()，返回是键
 
 ```
-let arr=['jspang','技术胖','大胖逼逼叨']
-let list=arr.entries();
-console.log(list.next().value);
-console.log(list.next().value);
-console.log(list.next().value);
+const Arr = [1,2,3, NaN];
+Arr.includes(2)  // true
+Arr.includes(NaN) // true（用indexOf(NaN)则是-1）
+Arr.inculdes(3,5) // false(从键第5位开始查)
 ```
+
+
+
+
+
+
 
 - in（对象和数组是否存在）
 

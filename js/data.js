@@ -10,7 +10,7 @@ const FrontEndList = [
   ]},
   {id: 2, categoryName: 'CSS', href: './view/face/css-face.md',  children: [
     {id: 11, name: 'CSS', href: 'https://www.cnblogs.com/lgyong/p/8617044.html', grade: 1}, 
-    {id: 12, name: 'SASS', href: 'https://www.cnblogs.com/lgyong/p/8758702.html', grade: 1}, 
+    {id: 12, name: 'SCSS', href: './view/css/scss.md', grade: 1, done: true}, 
     {id: 991, name: '————————',}, 
     {id: 14, name: '样式属性', href: 'https://www.cnblogs.com/lgyong/p/8617501.html', grade: 1}, 
     {id: 15, name: '选择器', href: 'https://www.cnblogs.com/lgyong/p/8617055.html', grade: 1}, 

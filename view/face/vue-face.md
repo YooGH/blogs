@@ -1,3 +1,5 @@
+﻿> vue2.0 不支持IE8及以下(Object.definepropey)
+> vue3.0 不支持IE11及以下(Object.definepropey)
 ﻿1. [Vue(ES6)中的data属性为什么不能是一个对象？](https://blog.csdn.net/sinat_17775997/article/details/83757985)
 > data是个对象存在浅拷贝，方法的话就有作用域
 
