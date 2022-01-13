@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>framework</title>
+	<link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+	header{
+		border:1px solid #000;
+	}
+	.row:nth-child(even)>div{
+		background: #ddd;
+	}
+	</style>
+</head>
+<body>
+	<header class="container">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-5 text-center"><a href="./wx.html" target="_blank">wx</a></div>
+			<div class="col-md-5 text-center">vue</div>
+		</div>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2">数据绑定</div>
+			<div class="col-md-10 text-center">{{}}</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">列表渲染</div>
+			<div class="col-md-5 text-center">wx:for&nbsp;&nbsp;&nbsp;(有index/item),wx:for-item="itemname"</div>
+			<div class="col-md-5 text-center">v-for&nbsp;&nbsp;&nbsp;,v-for="aNews in news"(vue2版:$index and $key 移除)</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">条件渲染</div>
+			<div class="col-md-5 text-center">wx:if</div>
+			<div class="col-md-5 text-center">v-if</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">模板</div>
+			<div class="col-md-5">
+<pre>
+	&lt;template name="msgItem"&gt;
+	  &lt;view&gt;
+	    &lt;text&gt; {{index}}: {{msg}} &lt;/text&gt;
+	    &lt;text&gt; Time: {{time}} &lt;/text&gt;
+	  &lt;/view&gt;
+	&lt;/template&gt;
+</pre>
+			</div>
+			<div class="col-md-5 text-center">vue</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">事件</div>
+			<div class="col-md-5 text-center">&lt;view data-hi="{{item.name}}" id="{{item.id}}" bindtap="tapName"&gt; Click me! &lt;/view&gt;(e.target.dataset)</div>
+			<div class="col-md-5 text-center">v-on:click="tapName(item.id)"<br><s>v-on:click="tapName({{item.id}})"</s></div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">引用</div>
+			<div class="col-md-5 text-center">wx</div>
+			<div class="col-md-5 text-center">vue</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-5 text-center">
+				在微信小程序中，是没有dom对象的，根节点是page，使用page{height:100%}<br />
+			</div>
+			<div class="col-md-5 text-center">:&nbsp;&nbsp;&nbsp;v-bind<br>@&nbsp;&nbsp;&nbsp;v-on</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">CSS</div>
+			<div class="col-md-5 text-center">
+			button::after{border:0;}（现在的微信）
+				
+			</div>
+			<div class="col-md-5 text-center">
+				:focus{outline: 0;}(以前的浏览器)</div>
+		</div>
+	</div>
+
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<!-- 生命周期 -->
+	<footer class="container">
+		<div class="row">
+			<div class="col-md-2">生命周期</div>
+			<!-- wx -->
+			<div class="col-md-5 text-center">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4">data</div>
+						<div class="col-md-2">Object</div>
+						<div class="col-md-6">页面的初始数据</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">onLoad</div>
+						<div class="col-md-2"></div>
+						<div class="col-md-6">生命周期函数--监听页面加载</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">onReady</div>
+						<div class="col-md-2"></div>
+						<div class="col-md-6">生命周期函数--监听页面初次渲染完成</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">onShow</div>
+						<div class="col-md-2"></div>
+						<div class="col-md-6">生命周期函数--监听页面显示</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">onHide</div>
+						<div class="col-md-2"></div>
+						<div class="col-md-6">生命周期函数--监听页面隐藏</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">onUnload</div>
+						<div class="col-md-2"></div>
+						<div class="col-md-6">生命周期函数--监听页面卸载</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">onPullDownRefresh</div>
+						<div class="col-md-2"></div>
+						<div class="col-md-6">页面相关事件处理函数--监听用户下拉动作</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">onReachBottom</div>
+						<div class="col-md-2"></div>
+						<div class="col-md-6">页面上拉触底事件的处理函数</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">onShareAppMessage</div>
+						<div class="col-md-2"></div>
+						<div class="col-md-6">用户点击右上角转发</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">onPageScroll</div>
+						<div class="col-md-2"></div>
+						<div class="col-md-6">页面滚动触发事件的处理函数</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">onTabItemTap</div>
+						<div class="col-md-2"></div>
+						<div class="col-md-6">当前是 tab 页时，点击 tab 时触发</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">其他</div>
+						<div class="col-md-2">Any</div>
+						<div class="col-md-6">开发者可以添加任意的函数或数据到 object 参数中，在页面的函数中用 this 可以访问</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">https://blog.csdn.net/u014360817/article/details/52650973</div>
+					</div>
+				</div>
+			</div>
+			<!-- vue -->
+			<div class="col-md-5 text-center">
+				<div class="container">
+  					<div class="row">
+						<div class="col-md-6">
+<pre>
+data () {
+    return {
+      nav: [],
+      bottomNav: []
+    }
+}
+</pre>
+						</div>
+						<!-- <div class="col-md-4"></div> -->
+						<div class="col-md-6">页面的初始数据</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">beforeCreate</div>
+						<div class="col-md-2"></div>
+						<div class="col-md-6">创建前</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">created</div>
+						<div class="col-md-2"></div>
+						<div class="col-md-6">创建后</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">beforeMount</div>
+						<div class="col-md-2"></div>
+						<div class="col-md-6">载入前</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">mounted</div>
+						<div class="col-md-2"></div>
+						<div class="col-md-6">载入后</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">beforeUpdate</div>
+						<div class="col-md-2"></div>
+						<div class="col-md-6">更新前</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">updated</div>
+						<div class="col-md-2"></div>
+						<div class="col-md-6">更新后</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">beforeDestroy</div>
+						<div class="col-md-2"></div>
+						<div class="col-md-6">销毁前</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">destroyed</div>
+						<div class="col-md-2"></div>
+						<div class="col-md-6">销毁后</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<br />
+	<br />
+	<br />
+	<hr />
+	<br />
+	<br />
+	<br />
+	<div class="framework">
+		视图层到逻辑层(mvc衍生出mvvm / mvp：Model、View、Controller、ViewModel)<br />
+		&nbsp;&nbsp;&nbsp;&nbsp;html+css 到 js(视图（View）：用户界面。 | 控制器（Controller）：业务逻辑 | 模型（Model）：数据保存)<br />
+		&nbsp;&nbsp;&nbsp;&nbsp;http://www.ruanyifeng.com/blog/2015/02/mvcmvp_mvvm.html<br />
+		<br />
+		<dt>一</dt>
+		<dl>
+			<dd>① @import '../index/index.wxss';</dd>
+			<dd>② const Index = require('../index/index.js')</dd>
+			<dd>  module.exports = {}</dd>
+		</dl>
+		<br />
+		<dt>二</dt>
+		<dl>
+			<dd>.性能消耗：v-if有更高的切换消耗；v-show(display:none)有更高的初始渲染消耗；</dd>
+			<dd>.使用场景：v-if适合运营条件不大可能改变；v-show适合频繁切换。</dd>
+			<dd>.https://www.cnblogs.com/echolun/p/7803943.html</dd>
+		</dl>
+
+		<dt>一 this.data.val，this.setData，that.setData，三者之间的区别和作用</dt>
+		<dl>
+			<dd>this.data.val，this.setData，that.setData</dd>
+			<dd>this.data	this.setData({})	that.data(onLoad里)</dd>
+			<dd>改数据层	改数据层和逻辑层	改数据层和逻辑层</dd>
+			<dd>（https://blog.csdn.net/qq_35713752/article/details/78879984）/dd>
+		</dl>
+		<br />
+		<dt>二</dt>
+		<dl>
+			<dd>height:  1334 = 1206+128</dd>
+			<dd>width:  750</dd>
+		</dl>
+		<dt>三.组件scroll-view</dt>
+		<dl>
+			<dd>使用竖向滚动时，需要给<scroll-view/>一个固定的高度(可以是e.windowHeight),通过wxss设置height</dd>
+		</dl>
+	</div>
+</body>
+</html>

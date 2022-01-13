@@ -96,8 +96,6 @@ SMTP服务：smtp.qq.com(qq邮箱固定写法)
 
 2. 源码管理
 
-<<<<<<< HEAD
-=======
    **选'Git' -> 添加git地址 -> 添加凭证 -> 选择“Username with password”后输入用户名(输入邮箱)和密码**
    
 3. 构建触发器
@@ -107,6 +105,14 @@ SMTP服务：smtp.qq.com(qq邮箱固定写法)
 4. 构建环境
 
    **勾选“Provide Node & npm bin/ folder to PATH”**
+   
 5. 构建
    **选择“添加构建步骤”：execute shell**
->>>>>>> 386eee71e3fc1822c2ffb0dd1a95453e8573078d
+   
+   ```
+   node --version
+   npm i
+   npm run build
+   ```
+   
+   

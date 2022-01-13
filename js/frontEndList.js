@@ -113,7 +113,7 @@ const FrontEndList = [
       {id: 3.1, name: 'vue3搭建', href: './view/vue/vue3搭建.md'}, 
       {id: 3.2, name: 'compositionApi', href: './view/vue/compositionApi.md'}, 
       {id: 3.3, name: 'vue3', href: './view/vue/vue3.2.txt'}, 
-    ],
+    ],  
     itemsChildren: []
   },
 
@@ -126,6 +126,8 @@ const FrontEndList = [
       {id: 3, name: 'uniapp', href: 'https://www.cnblogs.com/lgyong/p/11579340.html'}, 
       {id: 1, name: 'node笔记', href: 'https://www.cnblogs.com/lgyong/p/10421749.html'}, 
       {id: 4, name: '微信云开发', href: 'https://www.cnblogs.com/lgyong/p/13152133.html'}, 
+      {name: '微信云开发', href: './view/other/wxyun.md', done: true, }, 
+      {name: '框架比较', href: './view/frame/frame.html', done: true, }, 
       {id: 2, name: 'nuxt （多页面vue）', href: 'https://www.cnblogs.com/lgyong/p/10608214.html'}, 
     ]
   },
