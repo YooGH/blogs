@@ -79,6 +79,13 @@
 	开发工具nw.js（C++实现的web转桌面应用）
 	为什么wx不直接运行在浏览器（webview）中，而要绕过浏览器直接调用内核呢？因为运行在浏览器中的webapp是做不了监控的，而wx的表现是半native app，半web app,而native app与web app和一个很重要的区别就是native app 有自己的生命周期。
   ```
+- 原生组件覆盖问题
+  ```
+    ①、聚焦时，展示原生组件，不聚焦时，模仿原生组件写个view
+    ②、覆盖时display:none; / position:absolute;left:-1000rpx; / v-if进行隐藏   (小程序地图tab情况用v-if，会出现多个未知地图,用position: absolute;)
+    ③、input框可以用z-index的view覆盖（基础库2.8.1）
+    ④/小程序图层兼容（input用cover-view或view替换；image圆边用view套一层）
+  ```
 
 　　
 
