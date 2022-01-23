@@ -122,7 +122,17 @@ const FrontEndList = [
     id: 5,
     categoryName: '框架',
     children: [
-      {id: 0, name: '微信小程序', href: 'https://www.cnblogs.com/lgyong/p/9959023.html'}, 
+      {id: 0, name: '微信小程序', href: './view/wx/wx.md', done: true, },  // href: 'https://www.cnblogs.com/lgyong/p/9959023.html'
+      {id: 1, name: '小程序功能',}, 
+      {id: 1, name: '功能-map', href: './view/wx/fn-map.md', done: true, }, 
+      {id: 2, name: '功能-h5跳转', href: './view/wx/fn-h5.md', done: true, }, 
+      {id: 3, name: '功能-登录授权', href: './view/wx/fn-login.md', done: true, }, 
+      {id: 4, name: '功能-模板消息接口', href: './view/wx/fn-message.md', done: true, }, 
+      {id: 5, name: '功能-摄像头', href: './view/wx/fn-camera.md', done: true, }, 
+
+      {id: 6, name: '功能-其他', href: './view/wx/fn-other.md', done: true, }, 
+
+
       {id: 3, name: 'uniapp', href: 'https://www.cnblogs.com/lgyong/p/11579340.html'}, 
       {id: 1, name: 'node笔记', href: 'https://www.cnblogs.com/lgyong/p/10421749.html'}, 
       {id: 4, name: '微信云开发', href: 'https://www.cnblogs.com/lgyong/p/13152133.html'}, 
