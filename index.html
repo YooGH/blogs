@@ -22,9 +22,10 @@
         <section class="category" :style="`height: ${availHeight-40}px`">
           <a
             target="_blank"
-            class="text-a text-b"
+            class="text-a"
             :class="{
-              'text-done': itemSon.done
+              'text-done': itemSon.done,
+              'text-b': itemSon.href
             }"
             :href="itemSon.href"
             v-for="(itemSon, indexSon) of item.children"

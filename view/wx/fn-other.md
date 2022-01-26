@@ -3,6 +3,9 @@
 3. <a href="#h3"> 小程序跳转小程序 </a>
 4. <a href="#h4"> 开发工具中不执行的函数 </a>
 5. <a href="#h5"> 下来刷新api </a>
+6. <a href="#h6"> WEPY框架 </a>
+7. <a href="#h7"> 。。。 </a>
+
 
 
 
@@ -80,6 +83,60 @@ wx.getSystemInfo({
 uni.showNavigationBarLoading()
 uni.stopPullDownRefresh();  （onPullDownRefresh() {}）
 ```
+
+
+<br/><br/>
+###  <h1 id="h6"> 6、WEPY框架 </h1>
+- wpy文件中的script、template、style这三个标签都支持lang和src属性
+-（config、components、data、methods、events、其他函数）
+  ```
+    import wepy from 'wepy';
+    // 声明一个App小程序实例
+    export default class MyAPP extends wepy.app {}
+    // 声明一个Page页面实例
+    export default class IndexPage extends wepy.page {}
+    // 声明一个Component组件实例
+    export default class MyComponent extends wepy.component {}
+  ```
+- this.$parent =》 getApp()
+- WePY中的methods属性只能声明页面wxml标签的bind、catch事件，不能声明自定义方法，这与Vue中的用法是不一致的。
+  ![wepy](./img/wepy.jpg)
+
+
+
+<br/><br/>
+###  <h1 id="h7"> 。。。 </h1>
+ ```
+  1.买域名
+  2.域名备案，加白名单（线下）
+  3.网上加白名单(线上)
+  4.域名与ipA记录
+   
+   
+   
+  小程序跳公众号文章或公众号
+  1.公众号邀请小程序关联(小程序appid)
+  2.小程序最高管理者在手机上确认即可
+   
+   
+   
+   
+   
+  official-account
+  1.设置的公众号需与小程序主体一致。
+   
+  2.限制
+  当小程序从扫 二维码场/小程序码 景（场景值1011/场景值1047）打开时
+  当小程序从聊天顶部场景（场景值1089）中的「最近使用」内打开时，若小程序之前未被销毁，则该组件保持上一次打开小程序时的状态
+  当从其他小程序返回小程序（场景值1038）时，若小程序之前未被销毁，则该组件保持上一次打开小程序时的状态
+   
+  3.组件大小（最小宽度为300px，高度为定值84px。）
+  4.
+  公众号可关联
+  同主体的10个小程序
+  不同主体的3个小程序
+  同一个小程序可关联最多500个公众号
+ ```
 
 
 
