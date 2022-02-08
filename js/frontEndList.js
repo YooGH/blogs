@@ -122,7 +122,7 @@ const FrontEndList = [
     id: 5,
     categoryName: '框架',
     children: [
-      {name: '微信云开发', href: './view/wx/wxyun.md', done: false, }, 
+      {name: '微信云开发', href: './view/wx/wxyun.md', done: true, }, 
       {id: 0, name: '微信小程序', href: './view/wx/wx.md', done: true, },  // href: 'https://www.cnblogs.com/lgyong/p/9959023.html'
       {id: 1, name: '————————',}, 
       {id: 1, name: '功能1-map', href: './view/wx/fn-map.md', done: true, }, 
