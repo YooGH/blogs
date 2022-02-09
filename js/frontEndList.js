@@ -57,7 +57,7 @@ const FrontEndList = [
     children: [
       // {id: 110, name: 'JS (javascript)', href: 'https://www.cnblogs.com/lgyong/p/8711510.html'}, 
       { name: 'ES6(ES2015)', href: './view/js/ES6.md', done: true},
-      { name: 'ES5', href: 'https://www.cnblogs.com/lgyong/p/8711614.html'},
+      { name: 'ES5', href: './view/js/ES5.md', done: true},
       { name: 'BOM', href: 'https://www.cnblogs.com/lgyong/p/8998944.html'},
       { name: 'DOM', href: 'https://www.cnblogs.com/lgyong/p/8998967.html'},
       { name: '————————',},
@@ -91,7 +91,7 @@ const FrontEndList = [
       { name: '高阶函数', href: 'https://www.cnblogs.com/lgyong/p/12696651.html', },
       { name: '循环和遍历各方法比较', href: 'https://www.cnblogs.com/lgyong/p/12704162.html', },
       
-      { name: '深拷贝', href: 'https://www.cnblogs.com/lgyong/p/12710862.html', },
+      { name: '深拷贝', href: './view/js/js1.md', done: true},
       { name: '数字转汉数字', href: 'https://www.cnblogs.com/lgyong/p/13921834.html', },
     ]
   },

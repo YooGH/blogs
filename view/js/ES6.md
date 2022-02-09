@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿1. <a href="#h1"> 新类型 </a>
+﻿1. <a href="#h1"> 新类型 </a>
 2. <a href="#h2"> 声明变量 </a>
 3. <a href="#h3"> 解构赋值</a>
 4. <a href="#h4"> 字符串</a>
@@ -6,9 +6,9 @@
 6. <a href="#h6"> 数组 </a>
 7. <a href="#h7"> 函数</a>
 8. <a href="#h8"> 对象 </a>
-9. <a href="#h9">数据结构 </a>
+9. <a href="#h9"> 数据结构 </a>
 10. <a href="#h10"> 历史</a>
--. <a href="#ck"> 参考 </a>
+<br/><a href="#ck"> 参考 </a>
 
 
 
@@ -450,3 +450,16 @@ m.set('Adam', 67)
 https://www.cnblogs.com/lgyong/p/8711550.html
 
 [E6 ~ E10](https://www.cnblogs.com/miaSlady/p/10955729.html)
+
+[ES2021](https://h3manth.com/ES2021/)
+
+#### (ES2022)[https://h3manth.com/ES2020/]
+1. top-level await（不在需要与async配合，可以单独）
+2. 类
+3. Temporal(完善Date(), 提前体验包：@js-temporal/polyfill)
+4. 内置对象
+
+ - Object.hasOwn()
+ - at()
+ - cause
+ - /d
