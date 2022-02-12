@@ -6,6 +6,7 @@
 6. <a href="#h6"> 微格式</a>
 7. <a href="#h7"> 编码方式</a>
 8. <a href="#h8"> manifest</a>
+9. <a href="#h9"> 折叠标签<summary> </a>
    <br/><a href="#ck">  参考 </a>
 
   
@@ -171,6 +172,25 @@ http://www.w3school.com.cn/tags
 <meta name="mobile-web-app-capable" content="yes" />
 <link rel="shortcut icon" sizes="256x256" href="icon-256.png" />
 ```
+
+<br/><br/>
+
+###  <h1 id="h9"> 9. 折叠标签``<summary>`` </h1>   
+> details里面除了summary(HTML 5)是展示的，其他折叠([summary](https://www.w3school.com.cn/tags/tag_summary.asp))
+<details>
+  <summary>HTML 5</summary>
+  This document teaches you everything you have to learn about HTML 5.
+  <p>hi!</p>
+</details>
+
+```
+<details>
+  <summary>HTML 5</summary>
+  This document teaches you everything you have to learn about HTML 5.
+  <p>hi!</p>
+</details>
+```
+
 
 
 

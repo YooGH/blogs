@@ -1,1 +1,1 @@
-﻿img标签 {display: block; width: 200px;}; 苹果手机真机是自适应不了高度，要套一层块级标签，里面img{display: block;宽高100%}
+﻿``img``标签 ``{display: block; width: 200px;};`` 苹果手机真机是自适应不了高度，要套一层块级标签，里面``img{display: block;宽高100%}``

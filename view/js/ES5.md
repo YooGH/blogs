@@ -22,12 +22,31 @@
 <br/><br/><br/>
 ###  <h1 id="h2"> 2.数字 </h1>
 [Date](https://blog.csdn.net/qq_39759115/article/details/78893853)
-```
-toFixed()　　 // 四舍五入，0-20保存后面小数点
-Number()　　  // 强制转化数字
-```
+> [toFixed()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed)
 
-> Math: 　　　　abs　　ceil/floor/round（Math.round四舍五入取整，　　toFixed四舍六入五考虑）　　max/min　　pow/sqrt　　random
+    输入： 数字类型(不会弱转化)
+    规则：
+        ①. 四舍五入 （0.2357.toFixed(2) => 0.24）
+        ②. 保存后面小数点0-20，实际看浏览器可能更多，默认0, （0.2357.toFixed() => 0）
+    输出: 字符串类型，不改变原值
+
+> [Number()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number)
+
+    输入： 所有类型
+    规则： 
+        ①. 纯数字的字符串/数字，可转数字 (Number('01456446') => 1456446; Number(1456446) => 1456446; )
+        ②. 字符串包含除数字和除数字/字符串,返回NaN（Number('01456446也') => NaN; Number({a:1}) => NaN）
+        ③. '', null, false返回0 (Number(null) => 0)
+
+    输出: 数字类型/NaN
+
+> Math: 
+abs<br/>
+ceil/floor/round（Math.round四舍五入取整)<br/>
+max/min<br/>
+pow/sqrt<br/>
+random<br/>
+
 ```
 小明考试考砸，第一次被他爸打10，下次双倍，一年中被打了13次，总共到了多少下？
 let sum = 0;
@@ -68,12 +87,14 @@ console.log(`${six} = ${sum}(总和)`)  // 10+20+40+80+160+320+640+1280+2560+512
 
 > ④. 
 查(值 => 键)
+> <br/>search和indexOf: search支持正则，indexOf不支持，但性能高（字符串优选用indexOf,要用到正则用search）
 ```
 indexOf(值,开始检索键可选) // 返检索的键，没有则返-1(可用于数组)
 lastIndexOf(值)           // 返检索的键，没有则返-1(可用于数组)
 search(值/正则)           // 返检索的键，没有则返-1
 ```
-查(键 => 值)
+
+> 查(键 => 值)
 ```
 charAt(键)
 ```
