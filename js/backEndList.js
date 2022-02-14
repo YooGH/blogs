@@ -35,10 +35,11 @@ const BackEndList = [
       { id: 8, name: '功能8 -- JS实现下拉刷新、上拉加载', href: './view/func/JS实现下拉刷新、上拉加载.md' },
       { id: 9, name: '功能9 -- 腾讯地图map', href: './view/func/map.md', done: true },
       { id: 8, name: '_____', href: '' },
-      { id: 8, name: 'Ele0 -- table', href: './view/func/ele.md'},
+      { id: 8, name: 'Ele0 -- form', href: './view/func/ele-form.md'},
       { id: 8, name: 'Ele1 -- table', href: './view/func/ele-table.md', done: true,},
-      { id: 8, name: 'Ele2 -- table', href: './view/func/ele-form.md', done: true,},
-
+      { id: 8, name: 'Ele2 -- bug', href: './view/func/ele-bug.md', done: true,},
+      
+      { id: 8, name: '_____', href: '' },
       {id: 110, name: 'bug记录', href: 'https://www.cnblogs.com/lgyong/p/12931035.html'}, 
       {id: 111, name: 'bug1 -- inline-block间隙', href: 'https://www.cnblogs.com/lgyong/p/14149631.html'}, 
       {id: 112, name: 'bug2 -- 小程序ios 密码类型的input焦后再输入丢失内容', href: 'https://www.cnblogs.com/lgyong/p/14557230.html'},

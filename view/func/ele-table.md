@@ -110,7 +110,7 @@ this.$refs.multipleTable.toggleRowSelection(row);
 
 # 提示
 
-prop: <template slot-scope="scope">创建自定义的不要用属性prop，不然渲染会乱序
+prop: ``<template slot-scope="scope">``创建自定义的不要用属性prop，不然渲染会乱序
 
 
 
