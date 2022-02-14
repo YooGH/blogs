@@ -255,7 +255,7 @@ JSON: JSON.parse() / JSON.stringify()
 数字: Number()　　  // 强制转化数字
 
 
-取整:　~~
+取整:　~~（浮点转化为整数）
 ```
 
 
