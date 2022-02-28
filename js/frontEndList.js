@@ -82,7 +82,7 @@ const FrontEndList = [
       { name: '跨域', href: 'https://www.cnblogs.com/lgyong/p/9928062.html', },
       { name: 'switch', href: 'https://www.cnblogs.com/lgyong/p/10374324.html', },
       { name: 'url问号后的数据', href: 'https://www.cnblogs.com/lgyong/p/10384904.html', },
-      { name: '同步异步', href: 'https://www.cnblogs.com/lgyong/p/12095137.html', },
+      { name: 'promise', href: './view/js/promise.md', done: true },
       { name: 'break', href: 'https://www.cnblogs.com/lgyong/p/12493894.html', },
 
       { name: '小数（保留小数点后几位，小数点失精）', href: 'https://www.cnblogs.com/lgyong/p/11946956.html', },
@@ -145,7 +145,7 @@ const FrontEndList = [
     id: 6,
     categoryName: 'react',
     children: [
-      {id: 5, name: 'react/taro', href: 'https://www.cnblogs.com/lgyong/p/13220525.html'}, 
+      {id: 5, name: 'react/taro', href: './view/other/taro.md', done: true,}, 
     ]
   },
 ];

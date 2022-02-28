@@ -4,8 +4,9 @@
 4. <a href="#h4"> 开发工具中不执行的函数 </a>
 5. <a href="#h5"> 下来刷新api </a>
 6. <a href="#h6"> WEPY框架 </a>
-7. <a href="#h7"> 。。。 </a>
-
+7. <a href="#h7"> 获取手机号 </a>
+8. <a href="#h8"> 分包 </a>
+100. <a href="#h100"> 。。。 </a>
 
 
 
@@ -105,7 +106,65 @@ uni.stopPullDownRefresh();  （onPullDownRefresh() {}）
 
 
 <br/><br/>
-###  <h1 id="h7"> 。。。 </h1>
+###  <h1 id="h7"> 7.获取手机号 </h1>
+> button的open-type为``getPhoneNumber``, bindgetphonenumber方法获取数据
+
+ - getPhoneNumber:ok
+ -  getPhoneNumber:fail deny(ios和安卓空格不一样)<br/>
+
+ ``
+ e.detail.errMsg.includes('getPhoneNumber:fail') && e.detail.errMsg.includes('deny')
+ ``
+
+ - getPhoneNumber:fail cancel
+
+
+  ```
+   <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" bindtap="showError">登录</button>
+   
+  
+   getPhoneNumber(e) {
+     switch(e.detail.errMsg) {
+       case 'getPhoneNumber:ok':
+         // 获取手机号成功(用户点击“确定”)
+         break;
+       case 'getPhoneNumber:fail deny':
+         // 获取手机号失败(用户点击“拒绝”)
+         break;
+       case 'getPhoneNumber:fail cancel':
+         // 获取手机号失败(用户双击了登录按钮,目前只有安卓机有这种情况)
+         break;
+     }
+   }
+  ```
+
+
+
+<br/><br/>
+###  <h1 id="h8"> 8.[分包](https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages.html) </h1>
+
+> 文件app.json加属性subpackages
+ - 独立分包：不需要加载主包（独立模块，不与主包公共方法等）
+ - 分包预加载：主包加载完，后加载分包（不用访问分包才加载，造成空白页）
+    ```
+      "preloadRule": {
+        "pages/index/index": { // 进入这个页面开始加载如下分包
+          "network": "all", // 不限网络（另一个值wifi）
+          "packages": { "包名" }
+        }
+      }
+    ```
+  - 分包异步化: 子组件访问子组件
+  ```
+  require('../subPackageB/utils.js', utils => {
+    console.log(utils.whoami) // Wechat MiniProgram
+  })
+  ```
+
+
+
+<br/><br/>
+###  <h1 id="h100"> 。。。 </h1>
  ```
   1.买域名
   2.域名备案，加白名单（线下）

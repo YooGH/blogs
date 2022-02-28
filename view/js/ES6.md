@@ -7,9 +7,11 @@
 7. <a href="#h7"> 函数</a>
 8. <a href="#h8"> 对象 </a>
 9. <a href="#h9"> 数据结构 </a>
-10. <a href="#h10"> 历史</a>
+9. <a href="#h10"> Class </a>
+100. <a href="#h100"> 历史</a>
 <br/><a href="#ck"> 参考 </a>
 
+- 过完class1-3 (2-28)
 
 
 ###  <h1 id="h1"> 1.新类型 </h1>
@@ -378,7 +380,7 @@ Arr.inculdes(3,5) // false(从键第5位开始查)
 
 
 
-
+<br/><br/><br/>
 
 ### <h1 id="h9"> 数据结构 </h1>
 
@@ -394,10 +396,50 @@ m.set('Adam', 67)
 
 
 
+<br/><br/><br/>
+
+### <h1 id="h10"> Class </h1>
+class => new
+1. 属性: 
+  - constructor
+  - 必须有一个constructor方法，没有则隐性添加
+2. 方法: 
+  + 方法与方法之间不需要逗号分隔,会报错
+  + 类内部定义的方法不可枚举, 可用hasOwnProperty()
+  ```
+    //定义类
+    class Point {
+
+      constructor(x, y) {
+        this.x = x;
+        this.y = y;
+      }
+
+      toString() {
+        return '(' + this.x + ', ' + this.y + ')';
+      }
+
+    }
+
+    var point = new Point(2, 3);
+
+    point.toString() // (2, 3)
+
+    point.hasOwnProperty('x') // true
+    point.hasOwnProperty('y') // true
+    point.hasOwnProperty('toString') // false
+    point.__proto__.hasOwnProperty('toString') // true
+  ```
+3. 变量不提升，与继承有影响
+4. name ``class Point{}  Point.name // 'Point'``
+5. Generator方法，在方法前加``*``
+6. 静态方法，不能被实例继承(只能在类内部调用)，可被子类继承，在方法前加``static``, this指向类
 
 
 
-### <h1 id="h10"> 历史 </h1>
+<br/><br/><br/>
+
+### <h1 id="h100"> 历史 </h1>
 
 - ES8(ES2017)  [new **`Uint8Array()`**](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 

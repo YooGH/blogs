@@ -169,7 +169,29 @@ splice(键、删除个数)          // 返删除的数组,如果有
 
 <br/>
 
-> ④. 其他
+> ④. 数组累加器[reduce](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+
+> 可用于get请求，代码对象写法，在通过如下转化<br/>``array.reduce((total, currentValue, currentIndex, arr), initialValue)``
+
+```
+参1: callback函数
+参2：初始值,不传则数组的第一个
+
+let longStr = Object.entries({
+    id: 666,
+    name: 'reduce'
+}).reduce((result, [key, value], yy, arr) => {
+    console.log(result) // ''/ &id=666
+    console.log(yy) // 0 / 1
+    console.log(arr) // [['id',666], ['name', 'reduce']]
+    return (result += `&${key}=${value || ''}`);
+}, '')
+console.log(longStr) // &id=666&name=reduce
+```
+
+<br/>
+
+> ... 其他
 ```
 slice(键1、键2)  // 切，返原数组键1到键2 - 1的数组，不改变原数组
 concat()        // 合，返原合并数组，不改变原数组
@@ -177,12 +199,9 @@ reverse()       // 倒，返原反转后的数组，改原数组
 sort(function(a,b){return a-b})
 join()          // Arr => Str
 split(',')      // Str => Arr
+Array.isArray([]) // 返回布尔值 
+```
 
-```
-```
-数组累加器：array.reduce(function(total, currentValue, currentIndex, arr), initialValue)   -- (参1函数；参2初始值，不传则数组的第一个;    函数主要减少手动遍历)
-
-```
 
 
 
@@ -197,6 +216,19 @@ one:for(...){
 　　}
 }
 ```
+
+Object.entries()
+```
+const object1 = {
+  a: 'somestring',
+  b: 42
+};
+Object.entries(object1).reduce(result, [key, value]=>{
+    console.log(key, value) // a   somestring
+})
+```
+
+
 
 
 <br/><br/><br/>
