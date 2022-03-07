@@ -59,6 +59,6 @@ tinymce.min.js慢问题
 
 
 ### 其他富文本编辑器
-
+[vue-quill-editor](https://www.cnblogs.com/zly430/p/10895307.html)
 [Vue-Quill-Editor](https://www.cnblogs.com/wjlbk/p/12884661.html)
 [mavon-editor](https://www.cnblogs.com/hermit-gyqy/p/12101324.html)

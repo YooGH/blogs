@@ -1,6 +1,42 @@
-﻿路由：
+﻿项目：e:/ai_trao
+（用taro,hooks）
 
-状态管理：redux
+1. 路由：[在React中使用react-router-dom路由](https://www.jianshu.com/p/8954e9fb0c7e)
+
+2. 状态管理：redux
+
+3. JSX
+ <br/>[React 组件条件渲染的几种方式（类似vue的v-if指令）](https://blog.csdn.net/qq_37034928/article/details/107119716)<br/>
+  + 三元运算符
+  + &&
+  + 函数
+
+ <br/>[v-for]()
+  + {arrList.map(item => <View>ddd</View>)}
+
+ <br/>设置data``import { useState } from 'react'; const [val, setVal] = useState('')``
+
+4. 生命周期
+
+5. 父子传值，
+    父
+    ```
+    import Report from './components/report.jsx'
+    <Report reportArray={reportArray} />
+    ```
+
+    子
+    ```
+    function Report(props) {
+        console.log(props)
+    }
+    export default Report;
+    Report.defaultProps = {
+      reportArray: [],
+    }
+    ```
+    <!-- 1. hooks => **Context** 上下文的作用就是对它所包含的组件树提供全局共享数据的一种技术。
+    React Hooks之useRef、createRef、forwardRef（还没测） -->
 
 [框架搭建](https://taro-docs.jd.com/taro/docs/GETTING-STARTED)
 
@@ -101,4 +137,5 @@ export default function Login() {
 
 
 ### 参考
+[Taro 小程序开发大型实战（一）：熟悉的 React，熟悉的 Hooks](https://blog.csdn.net/huan1043269994/article/details/107539593)
 [微信小程序转 Taro](https://taro-docs.jd.com/taro/docs/taroize)

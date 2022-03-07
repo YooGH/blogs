@@ -93,6 +93,7 @@ const FrontEndList = [
       
       { name: '深拷贝', href: './view/js/js1.md', done: true},
       { name: '数字转汉数字', href: 'https://www.cnblogs.com/lgyong/p/13921834.html', },
+      { name: '计算机', href: './view/js/computed.md', },
     ]
   },
 

@@ -11,8 +11,12 @@
 100. <a href="#h100"> 历史</a>
 <br/><a href="#ck"> 参考 </a>
 
-- 过完class1-3 (2-28)
 
+- 过完ES6的22.class、23.class.1-3(2.28 - 3.1)
+（差4-6）
+- 过完ES6的5.字符串: 5-8、11(3-2)
+- 过完ES6的5.字符串: 1、3、9、10(3-3)
+（差2、4）
 
 ###  <h1 id="h1"> 1.新类型 </h1>
     symbol
@@ -96,26 +100,94 @@
   let a ='你好'; 
   let b = `hello ${a} world 世界。`;    // hello 你好 world 世界
   ```
-- 增(后两es2017)
 
+
+- 增(后两ES2017)
+    
+  + **repeat()**: 将字符串复制几遍
   ```
-  repeat()
-  padStart()
-  padEnd()   
+  字符串换成数字,负数或者Infinity会报错
+  'r'.repeat(3) // 'rrr'
+  'na'.repeat(0) // ''（值为0，NaN，'',0到-1之间的小数）
   ```
+  + **padStart()**
+  + **padEnd()**
+  ```
+  1. 用途
+  '1'.padStart(10, '0') // "0000000001"
+  '12'.padStart(10, 'YYYY-MM-DD') // "YYYY-MM-12"
+
+  2. 第二个参数未传
+  '1'.padStart(4) // '   1'
+
+  3. 长度等于小于原来，返回原来
+  'rinaa'.(9, '666') // 'rinna'
+  ```
+
+
 - 查
+> 下面三个都返回布尔值; 第二个参数是从哪个键查起，endsWith为子字符串的长度
+  + **includes()**     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// search()
+  + **startsWith()**   &nbsp;&nbsp;// indexOf()
+  + **endsWith()**     &nbsp;&nbsp;&nbsp;&nbsp;// lastIndexOf()
+
+
+- 清空
+> ES2019 清空空格， tab 键、换行符等不可见的空白符号也有效，不改变原字符串
+  + **trimStart()** &nbsp;// 别名 **trimLeft()** 
+  + **trimEnd()**   &nbsp;&nbsp;// 别名 **trimRight()** 
+
+
+- 查
+> 键查值，超出undefined,支持负数
+<br/>at(), 超出undefined,负索引
+<br/>charAt(), 超出'',不支持负索引返''
+  + **at()**
 
   ```
-  includes()
-  startsWith()
-  endsWith()
-  ```
-- 
+  const str = 'hello';
+
+  str.at(1) // 'e'
+  str.chartAt(1) // 'e'
+
+  str.at(-3) // 'l'
+  str.chartAt(-3) // ''
 
   ```
-  {}
-  codePointAt()
-  fromCodePoint()
+
+<br/><br/><br/>
+
+- 转码
+  + **String.fromCodePoint()**
+
+  > Unicode编码转字符串
+  ```
+  String.fromCodePoint('0x20BB7') // 𠮷
+
+  String.fromCharCode(0x20BB7) // 这个满足不了大于0xFFF
+  ```
+
+  + **codePointAt()**
+  > 字符串转Unicode编码，满足4个字节存储的，如'𠮷'
+  ```
+  '𠮷'.codePointAt() // 134071
+  ```
+
+- 改
+  + **replaceAll()** ES2021替换满足的所有,传统的replace()只能替换一个，否则用正则
+   ```
+   let str = 'hello'
+   str.replaceAll('l', '6') // he66o
+
+   str.replace('b', '_') // he6lo
+   str.replace(/b/g, '_') // he66o
+   ```
+
+
+- 未看
+  ```
+  2. String.raw()
+  4. normalize()
   ```
   
 
@@ -136,6 +208,8 @@
 - flangs属性
 
   返回修饰符
+
+- matchAll()
 
 ###  <h1 id="h6"> 6.数组</h1>
 
@@ -399,6 +473,8 @@ m.set('Adam', 67)
 <br/><br/><br/>
 
 ### <h1 id="h10"> Class </h1>
+[22.class](./html/class1.html)<br/>
+[23.继承](./html/class2.html)<br/>
 class => new
 1. 属性: 
   - constructor
