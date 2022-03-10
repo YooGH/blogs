@@ -17,6 +17,8 @@
 - 过完ES6的5.字符串: 5-8、11(3-2)
 - 过完ES6的5.字符串: 1、3、9、10(3-3)
 （差2、4）
+- 过完ES6的9.数组: 1-8(3-3)
+（差10-12）
 
 ###  <h1 id="h1"> 1.新类型 </h1>
     symbol
@@ -211,12 +213,14 @@
 
 - matchAll()
 
+
+
+<br/><br/><br/>
 ###  <h1 id="h6"> 6.数组</h1>
 
-- ...     : <small>扩展运算符</small>
+- **...**     : <small>扩展运算符</small>
 
-- Array.from()：<small>转为数组，不改变原来遍历; [详细](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from)</small>
-
+- **Array.from()**：<small>转为数组，不改变原来遍历; [详细](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from)</small>
   ```
   字符串转数组:
   const Str = 'yes';
@@ -236,7 +240,7 @@
   Array.from(arrayLike) // ["a", "b", "c"]
   ```
   
-- Array.of()：<small>数值转为数组，不改变原来遍历; [详细](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/of);   可以用于替换new Array()的问题</small>
+- **Array.of()**：<small>数值转为数组，不改变原来遍历; [详细](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/of);   可以用于替换new Array()的问题</small>
 
   ```
   Array.of(1,2,3,4)  // [1,2,3,4]  数值转为数组
@@ -246,7 +250,7 @@
   Array(3)    // [,,,]
   ```
   
-- copyWithin()替换 ，**改变原数组**
+- **copyWithin()** <small>替换 ，**改变原数组**</small>
 
   ```
   copyWithin 替换，数组长度不变，改变原数组
@@ -255,7 +259,7 @@
   splice 添加，数组长度改变，改变原数组
   [1,2,3,4,5].splice(0, 0, '外来数据1') // ['外来数据1', 1, 2, 3, 4, 5]
   ```
-- find() / findIndex()  <small>返回值/键，undefind/-1</small>
+- **find() / findIndex()**  <small>返回值/键，undefind/-1</small>
 
   > findIndex()参数是函数
   >
@@ -273,7 +277,9 @@
   console.log(value1) // 5(返回键，没有返回-1)  
   ```
 
-- fill() 填充，改变原数组
+<br/><br/><br/>
+
+- **fill()** <small>填充，改变原数组</small>
 
   ```
   let arr=[0,1,2,3,4,5,6,7,8,9];
@@ -281,7 +287,7 @@
   console.log(arr);                // [0,1,"Hi","Hi","Hi",5,6,7,8,9]
   ```
 
-- keys()/values()/entries()
+- **keys()/values()/entries()** <small>填充，改变原数组</small>
 
 ````
 let arr = ['a', 'b', 'c'];
@@ -310,15 +316,12 @@ let keyList = arr.keys();
 console.log(keyList.next().value);  // 0
 ```
 
-- inculdes()  
+- **inculdes()**
 
-> 参1：查询的值 （NaN为true）
->
-> 参2：从哪里开始查（默认，0开始/大于数组是也是0）
->
-> ES7， 返回布尔值
->
-> 而indexOf()，返回是键
+> 参1：查询的值 （NaN为true）<br/>
+参2：从哪里开始查（默认，0开始/大于数组是也是0）<br/>
+ES7， 返回布尔值<br/>
+而indexOf()，返回是键<br/>
 
 ```
 const Arr = [1,2,3, NaN];
@@ -327,13 +330,25 @@ Arr.includes(NaN) // true（用indexOf(NaN)则是-1）
 Arr.inculdes(3,5) // false(从键第5位开始查)
 ```
 
+- **flat()，flatMap()**
+> 多维数组减成低纬度或一位数组
+ + **flat()** <small>参数数组</small>
 
+ ```
+ [1, 2, [3, 4]].flat() // [1, 2, 3, 4] (默认减一层，需要多少层次就写几)
 
+ [1, [2, [3]]].flat(Infinity)  // [1, 2, 3](一律降成一维，用Infinity)
 
+ [1, 2, , 4, 5].flat()  // [1, 2, 4, 5]（原数组有空位会跳过不返回）
+ ```
 
+ + **flatMap()** <small>参数回调</small>
 
+ ```
+ [1, 2, [3, 4]].map(item => item * 2) // [2, 4, NaN]（只处理一维，）
+ ```
 
-- in（对象和数组是否存在）
+- **in**（对象和数组是否存在）
 
   ```
   obj = { a: 'blogs'}
@@ -342,7 +357,20 @@ Arr.inculdes(3,5) // false(从键第5位开始查)
   console.log(0 in arr);  // true         
   ```
 
+<br/><br/><br/>
+
+
+
 - forEach、filter、some、map(替换)、
+> 返回item,index,arr
+ ```
+ forEach 不改变元数组
+ filter 函数支持return，过滤满足条件的新数组 fArr = [1,2,3].filter(item=>{return item>2}) ->  [3]
+ some
+ map    函数支持return，处理的新数组 fArr = [1,2,3].filter(item=>{return item*2}) -> [2, 4, 6]
+ ```
+
+
 
 - toString();
 
@@ -351,6 +379,7 @@ Arr.inculdes(3,5) // false(从键第5位开始查)
 
 
 
+<br/><br/><br/>
 
 ###  <h1 id="h7"> 7.函数 </h1>
 

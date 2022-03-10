@@ -125,22 +125,25 @@ console.log(`${six} = ${sum}(总和)`)  // 10+20+40+80+160+320+640+1280+2560+512
   
 <br/><br/><br/>
 ###  <h1 id="h4"> 4.数组 </h1>
-> ①. 声明
+> 声明
 ```
-var arr=new Array()
+var arr = new Array()
 var arr = []
 ```
 
 <br/>
 
-> ②. 长度: length(同字符串)
+> 长度: length(同字符串)
 ```
 [1,2].length // 2
 ```
 
 <br/>
 
-> ③. 增
+> ①. 增
+ - **unshift()**
+ - **push()**
+ - **splice()**
 ```
 unshift(num1,numb2,...)     // 返新数组长度
 push(num1,numb2,...)        // 返新数组长度
@@ -149,7 +152,10 @@ splice(键、删除个数(0)、替换)  // 返删除的数组,如果有
 
 <br/>
 
-> ④. 删
+> ②. 删
+ - **shift()**
+ - **pop()**
+ - **splice()**
 ```
 shift()                     // 返删除的数字
 pop()                       // 返删除的数字
@@ -158,9 +164,9 @@ splice(键、删除个数)          // 返删除的数组,如果有
 
 <br/>
 
-> ④. 数组累加器[reduce](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
-
-> 可用于get请求，代码对象写法，在通过如下转化<br/>``array.reduce((total, currentValue, currentIndex, arr), initialValue)``
+> ③. 数组累加器[reduce](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+ - **reduce()**
+ > 可用于get请求，代码对象写法，在通过如下转化<br/>``array.reduce((total, currentValue, currentIndex, arr), initialValue)``
 
 ```
 参1: callback函数
@@ -180,7 +186,7 @@ console.log(longStr) // &id=666&name=reduce
 
 <br/>
 
-> ... 其他
+> ④. ... 其他
 ```
 slice(键1、键2)  // 切，返原数组键1到键2 - 1的数组，不改变原数组
 concat()        // 合，返原合并数组，不改变原数组

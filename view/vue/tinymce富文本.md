@@ -1,4 +1,4 @@
-﻿﻿1. 把[Tinymce组件](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/components/Tinymce)放进全局组件里，
+1. 把[Tinymce组件](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/components/Tinymce)放进全局组件里，
 
 2. 引入页面代码
 
@@ -60,5 +60,9 @@ tinymce.min.js慢问题
 
 ### 其他富文本编辑器
 [vue-quill-editor](https://www.cnblogs.com/zly430/p/10895307.html)
+[github官网](https://github.com/surmon-china/vue-quill-editor)
+[options全解析](https://blog.csdn.net/div_ma/article/details/79536634)
+
+
 [Vue-Quill-Editor](https://www.cnblogs.com/wjlbk/p/12884661.html)
 [mavon-editor](https://www.cnblogs.com/hermit-gyqy/p/12101324.html)
