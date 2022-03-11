@@ -19,6 +19,8 @@
 （差2、4）
 - 过完ES6的9.数组: 1-8(3-3)
 （差10-12）
+- 过完ES6的8.函数: 1、2、4、9(3-11)
+（差3、5-8）
 
 ###  <h1 id="h1"> 1.新类型 </h1>
     symbol
@@ -383,9 +385,62 @@ Arr.inculdes(3,5) // false(从键第5位开始查)
 
 ###  <h1 id="h7"> 7.函数 </h1>
 
-- 参数默认值： y = y|r --> (y=4)
+- 参数默认值<small>(ES6之前参数不能指定默认值)</small>
+
+  ```
+  function Man( sex = '男', ) {
+    this.sex = sex;
+  }
+  const m = new Man();
+  m // { sex: '男' }
+  ```
+
+  参数限制：不能在声明、不能同名<br/>
+  好处： 不用做判空处理，方便阅读<br/>
+
+- ...
+  
+  + 代表后面所有参数，并且后面values不能在有参数，可替换arguments使用
+
+  ```
+  function add(a, ...values) {
+    console.log(values)
+  }
+
+  add('参数1', '参数2', '参数3', '参数4') // '参数2', '参数3', '参数4'
+  ```
+
+  + 函数的length属性，不包括 rest 参数
+
+  ```
+  (function(a) {}).length  // 1
+  (function(...a) {}).length  // 0
+  ```
+ 
+- 严格模式
 
 - name
+
+  + ES6name
+
+  ```
+  function foo() {}
+  foo.name // "foo"
+  ```
+
+  + 匿名函数
+
+  ```
+  const foo = function () {}
+
+  ES5
+  foo.name // ""
+
+  ES6
+  foo.name // "foo"
+  ```
+
+  + [其他情况](https://es6.ruanyifeng.com/#docs/function#name-%E5%B1%9E%E6%80%A7)
 
 - 箭头函数
 
@@ -413,7 +468,26 @@ Arr.inculdes(3,5) // false(从键第5位开始查)
   obj2.fn2()
   ```
 
-![图片1](E:\blogss\view\js\img\set.png)
+![图片1](./img/set.png)
+
+- catch
+> ES2019可省略catch参数
+  ```
+  ES5
+  try {
+    // ...
+  } catch (err) {
+    // 处理错误
+  }
+
+  ES2019
+  try {
+    // ...
+  } catch {
+    // ...
+  }
+  ```
+
 
 
 
