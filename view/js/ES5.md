@@ -65,58 +65,51 @@ console.log(`${six} = ${sum}(总和)`)  // 10+20+40+80+160+320+640+1280+2560+512
 
 <br/><br/><br/>
 ###  <h1 id="h3"> 3.字符串 </h1>
-> ①. 声明
+ - 声明
 ```
-```
-
-<br/>
-
-> ②. 长度: length
-```
-'string'.length // 6
-```
-
-<br/>
-
-> ③. 增
-```
-+
-```
-
-<br/>
-
-> ④. 
-查(值 => 键)
-> <br/>search和indexOf: search支持正则，indexOf不支持，但性能高（字符串优选用indexOf,要用到正则用search）
-```
-indexOf(值,开始检索键可选) // 返检索的键，没有则返-1(可用于数组)
-lastIndexOf(值)           // 返检索的键，没有则返-1(可用于数组)
-search(值/正则)           // 返检索的键，没有则返-1
-```
-
-> 查(键 => 值)
-```
-charAt(键)
-```
-
-<br/>
-
-> ⑤. 改(值 => 键)
-```
-substr(键,个数)          // 返新字符串，没有则返空字符串
-substring(键1,键2)       // 返键1到键2-1新字符串，没有则返空字符串
-```
-
-<br/>
-
-> ⑥. 大小写转换
-```
-toLowerCase()、toUpperCase()不改变原字符串
+  var s1 = '我是字符串';
+  var s2 = new String('我是字符串');
 ```
 
 
 
-> 正则
+ - 长度: **length** ``'hi Jim'.length // 6`` 
+
+
+ - 增 ``+``
+
+
+ - 查(值 => 键)
+
+   + **indexOf**
+   (值,开始检索键可选) // 返检索的键，没有则返-1(可用于数组)
+   + **lastIndexOf**  (值)           // 返检索的键，没有则返-1(可用于数组)
+   + **search**       (值/正则)           // 返检索的键，没有则返-1
+> search: 支持正则和字符串，
+<br/>indexOf: 只支持字符串，但性能高
+<br/>（字符串优选用indexOf,要用到正则用search）
+ - 查(键 => 值)
+   
+   + **charAt**(键)
+
+
+ - 改(值 => 键)
+   
+   + **substr**      (键,个数)          // 返新字符串，没有则返空字符串
+   + **substring**   (键1,键2)       // 返键1到键2-1新字符串，没有则返空字符串
+
+<br/><br/><br/>
+
+
+ - 替换
+   + **replace()**
+
+ - 大小写转换（不改变原字符串）
+   + **toLowerCase()**
+   + **toUpperCase()** 
+
+
+ - 正则
 ```
 按位与(NOT ~)：取最小的值
 按位或(AND &)：取最大的值
@@ -136,22 +129,25 @@ toLowerCase()、toUpperCase()不改变原字符串
   
 <br/><br/><br/>
 ###  <h1 id="h4"> 4.数组 </h1>
-> ①. 声明
+> 声明
 ```
-var arr=new Array()
+var arr = new Array()
 var arr = []
 ```
 
 <br/>
 
-> ②. 长度: length(同字符串)
+> 长度: length(同字符串)
 ```
 [1,2].length // 2
 ```
 
 <br/>
 
-> ③. 增
+> ①. 增
+ - **unshift()**
+ - **push()**
+ - **splice()**
 ```
 unshift(num1,numb2,...)     // 返新数组长度
 push(num1,numb2,...)        // 返新数组长度
@@ -160,7 +156,10 @@ splice(键、删除个数(0)、替换)  // 返删除的数组,如果有
 
 <br/>
 
-> ④. 删
+> ②. 删
+ - **shift()**
+ - **pop()**
+ - **splice()**
 ```
 shift()                     // 返删除的数字
 pop()                       // 返删除的数字
@@ -169,7 +168,29 @@ splice(键、删除个数)          // 返删除的数组,如果有
 
 <br/>
 
-> ④. 其他
+> ③. 数组累加器[reduce](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+ - **reduce()**
+ > 可用于get请求，代码对象写法，在通过如下转化<br/>``array.reduce((total, currentValue, currentIndex, arr), initialValue)``
+
+```
+参1: callback函数
+参2：初始值,不传则数组的第一个
+
+let longStr = Object.entries({
+    id: 666,
+    name: 'reduce'
+}).reduce((result, [key, value], yy, arr) => {
+    console.log(result) // ''/ &id=666
+    console.log(yy) // 0 / 1
+    console.log(arr) // [['id',666], ['name', 'reduce']]
+    return (result += `&${key}=${value || ''}`);
+}, '')
+console.log(longStr) // &id=666&name=reduce
+```
+
+<br/>
+
+> ④. ... 其他
 ```
 slice(键1、键2)  // 切，返原数组键1到键2 - 1的数组，不改变原数组
 concat()        // 合，返原合并数组，不改变原数组
@@ -177,12 +198,9 @@ reverse()       // 倒，返原反转后的数组，改原数组
 sort(function(a,b){return a-b})
 join()          // Arr => Str
 split(',')      // Str => Arr
+Array.isArray([]) // 返回布尔值 
+```
 
-```
-```
-数组累加器：array.reduce(function(total, currentValue, currentIndex, arr), initialValue)   -- (参1函数；参2初始值，不传则数组的第一个;    函数主要减少手动遍历)
-
-```
 
 
 
@@ -197,6 +215,19 @@ one:for(...){
 　　}
 }
 ```
+
+Object.entries()
+```
+const object1 = {
+  a: 'somestring',
+  b: 42
+};
+Object.entries(object1).reduce(result, [key, value]=>{
+    console.log(key, value) // a   somestring
+})
+```
+
+
 
 
 <br/><br/><br/>
@@ -255,7 +286,7 @@ JSON: JSON.parse() / JSON.stringify()
 数字: Number()　　  // 强制转化数字
 
 
-取整:　~~
+取整:　~~（浮点转化为整数）
 ```
 
 

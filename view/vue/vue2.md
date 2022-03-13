@@ -1,4 +1,4 @@
-﻿﻿- > 1. <a href="#h1"> 生命周期 </a>
+﻿  > 1. <a href="#h1"> 生命周期 </a>
   > 2. <a href="#h2"> 路由 </a>
   > 3. <a href="#h3">  </a>
   >    <a href="#ck"> 参考 </a>
@@ -7,14 +7,14 @@
 
   ###  <h1 id="h1"> 1.生命周期 </h1>
 
-  > created：逻辑和视图没没绑定thie.el为空(**可以掉接口和this赋值**，beforeCreated调报错this.data和this.el为初始化this没有指向)<br/>
+  > **created**：逻辑和视图没没绑定thie.el为空(**可以掉接口和this赋值**，beforeCreated调报错this.data和this.el为初始化this没有指向)<br/>
   >
-  > beforeMount：逻辑和视图绑定了，但是虚拟dom,视图占位，``<div>msg</div>``**msg**没解析<br/>
+  > **beforeMount**：逻辑和视图绑定了，但是虚拟dom,视图占位，``<div>msg</div>``**msg**没解析<br/>
   > 挂载，数据，视图（created:可以访问数据但还不能更新，因为没挂载，beforeMount: 视图占位）<br/>
   >
   > [文件](./life.html)
 
-  ![图片1](E:/blogss/view/vue/img/vue2-1.png)
+  ![图片1](./img/vue2-1.png)
 
   
 
@@ -43,10 +43,11 @@
   http://shanhuxueyuan.com/news/detail/137.html
   ```
 
-  ![动态重定向](E:/blogss/view/vue/img/动态重定向.png)
+  ![动态重定向](./img/动态重定向.png)
 
-  
-
+  + 开发遇到问题<br/>
+  [同路由不同参数无法通过this.$query获取](https://segmentfault.com/q/1010000009329520) => ``wacth: {'$route'(to, from){console.log(to, from)}}``<br/>
+  [vue 监听$route的方式](https://blog.csdn.net/m0_38073829/article/details/79072195)<br/>
 
   <br/><br/><br/><br/>
 

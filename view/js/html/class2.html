@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>class-ES6.md</title>
+</head>
+<body>
+
+<!-- 
+	继承:除了私有属性，父类的所有属性和方法，都会被子类继承，其中包括静态方法
+	关键词：
+	  extends、super
+    Object.getPrototypeOf()
+ -->
+
+<!-- 
+	链接：https://es6.ruanyifeng.com/#docs/class-extends(ES6-23)
+	一. 简介 - extends、super
+	二. Object.getPrototypeOf() - 获取父类
+ -->
+
+
+
+<!-- 一. 简介 -->
+	<!-- 1. extends -->
+	<script>
+	// extends: ColorPoint继承Point的方法和属性
+	class Point {
+	  
+	}
+
+	class ColorPoint extends Point {
+		
+	}
+	</script>
+
+
+	<!-- 1.1. super -->
+	<script>
+	// super: 
+	// “继承在前，实例在后”(ES6),ColorPoint2先super完才能实例子类
+	// “实例在前，继承在后”(ES5)
+	// 子类必须在constructor()方法中调用super(), 子类的this依赖于父类的构造函数完成塑造, 得到父类的构造函数的属性和方法后在加工
+	// ColorPoint2的构造函数constructor必须调用super()，否则color的this指向不了，需super复制完父的实例属性和方法
+	class Point2 {
+	  constructor(x, y) {
+	    this.x = x;
+	    this.y = y;
+	  }
+
+	  toString() {
+	    return this.x + ', ' + this.y
+	  }
+	}
+
+	class ColorPoint2 extends Point2 {
+		constructor(x,y,color) {
+			super(x,y)
+			this.color = color;
+		}
+
+		toSt() {
+			return new Date().getTime();
+		}
+	}
+
+	let sonObj = new ColorPoint2();
+	console.log(sonObj.toSt())
+	</script>
+
+	<!-- 1.2.super -->
+	<script>
+	// ES6 的继承必须先调用super()方法，因为这一步会生成一个继承父类的this对象，没有这一步就无法继承父类。
+	// new Bar()先输出1后输出2: 原因就是子类构造函数调用super()时，会执行一次父类构造函数
+		class Foo {
+			constructor() {
+				console.log(1)
+			}
+		}
+		class Bar extends Foo {
+			constructor() {
+				super();
+				console.log(2)
+			}
+		}
+		const bar = new Bar();
+		// 1
+		// 2
+	</script>
+
+
+<!-- 二.Object.getPrototypeOf() -->
+<script>
+class Human {} // 父类
+class Man extends Human {} // 子类
+Object.getPrototypeOf(ColorPoint) === Point // true,判断Man是否继承了Human
+console.log('Man的父类', Object.getPrototypeOf(ColorPoint))
+</script>
+
+</body>
+</html>

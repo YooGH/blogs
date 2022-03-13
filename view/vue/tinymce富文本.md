@@ -1,4 +1,4 @@
-﻿﻿1. 把[Tinymce组件](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/components/Tinymce)放进全局组件里，
+1. 把[Tinymce组件](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/components/Tinymce)放进全局组件里，
 
 2. 引入页面代码
 
@@ -59,6 +59,22 @@ tinymce.min.js慢问题
 
 
 ### 其他富文本编辑器
+[vue-quill-editor](https://www.cnblogs.com/zly430/p/10895307.html)
+[github官网](https://github.com/surmon-china/vue-quill-editor)
+[options全解析](https://blog.csdn.net/div_ma/article/details/79536634)
+[光标位置插入图片](http://www.yuepc.com/a/1722.html)
+```
+// 1.获取容器（ref="myQuillEditor"）
+let selection = this.$refs.myQuillEditor.quill.getSelection();
+// 2. 上传回来的图片地址
+let imgUrl = 'https://...'; 
+// 3.获取quill的光标，插入图片
+selection.insertEmbed(selection != null ? selection.index : 0, 'image', imgUrl)   
+// 4.插入完成后，光标往后移动一位 
+selection.setSelection(selection.index + 1);
+```
+
+
 
 [Vue-Quill-Editor](https://www.cnblogs.com/wjlbk/p/12884661.html)
 [mavon-editor](https://www.cnblogs.com/hermit-gyqy/p/12101324.html)

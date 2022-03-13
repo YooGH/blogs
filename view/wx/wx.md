@@ -2,8 +2,9 @@
 1. <a href="#h1"> WXML </a>
 2. <a href="#h2"> CSS </a>
 3. <a href="#h3"> JS </a>
+4. <a href="#h4"> 弹框（界面） </a>
 
-
+[小程序自定义组件全局样式不生效的解决方法](https://www.jb51.net/article/218984.htm)
 
 [mpvue](http://mpvue.com/)、
 [wepy](https://tencent.github.io/wepy/document.html#/)
@@ -163,7 +164,32 @@
 
 
 
+<br/><br/>
+###  <h1 id="h4"> 4、弹框 </h1>
+> [界面-交互](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showToast.html)
+1. 消息提示框(状态图加文字说明): showToast<br/>
+  关闭： 属性duration自动关闭或者hideToast关闭<br/>
+  长度： icon==none可以大于7字符，其他类型最多7字符
+2. loading 提示框(转圈需手动关闭): showLoading<br/>
+  关闭： 需要hideLoading才能关闭
+**showLoading和showToast区别**<br/>
+![wepy](./img/interactive.jpg)
+ ```
+ showLoading需要手动关闭hideLoading关闭，showToast能自动关闭(duration)或手动关闭hideToast
+ showLoading(加载图，title限制7个), showToast(状态图，title限制7个； none, title限制两行)
+ ```
+
+3. 模态对话框(确定和取消或x关闭): showModal<br/>
+  关闭： 确定和取消或x关闭
+
+4. 操作菜单: showActionSheet<br/>
+  下弹框，选择
+
+5. 开启小程序页面返回询问对话框: 
+
 
 <br/><br/>
 [blogs](https://www.cnblogs.com/lgyong/p/9959023.html)
+
+[小程序工作原理浅析](https://www.cnblogs.com/SophiaLees/p/11409339.html)
 
