@@ -5,7 +5,7 @@ const BackEndList = [
     children: [
       { id: 0, name: 'webpack1.0~2.0笔记', href: 'https://www.cnblogs.com/lgyong/p/9192650.html'}, 
       { id: 1, name: 'webpack', href: 'https://www.cnblogs.com/lgyong/p/9823545.html'}, 
-      { id: 2, name: 'git', href: 'https://www.cnblogs.com/lgyong/p/11577904.html'}, 
+      { id: 2, name: 'git', href: './view/project/git.md', done: true}, 
       { id: 7, name: 'vite', href: './view/project/vite.md' },
 			{ id: 992, name: '————————',},
       { id: 5, name: '算法1 -- 排序', href: 'https://www.cnblogs.com/lgyong/p/10419400.html'}, 
