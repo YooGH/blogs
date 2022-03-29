@@ -18,7 +18,8 @@
 
 4. 生命周期
 
-5. 父子传值，
+5. 父子传值
+> 组件：引入后直接使用，不用像vue要components注册后使用
     父
     ```
     import Report from './components/report.jsx'

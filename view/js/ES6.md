@@ -12,28 +12,15 @@
 <br/><a href="#ck"> 参考 </a>
 
 
-- 过完ES6的22.class、23.class.1-3(2.28 - 3.1)
-（差4-6）
-- 过完ES6的5.字符串: 5-8、11(3-2)
-- 过完ES6的5.字符串: 1、3、9、10(3-3)
-- 过完ES6的9.数组: 1-8(3-3)
-（差10-12）
-- 过完ES6的8.函数: 1、2、4、9(3-11)
-（差3、5-8）
-- 过完ES6的5.字符串: 2(3-14)
-（差4）
 
-
-- 4、6、7、10
-- 11-20
-- 21、24-28
-
+<br/><br/><br/>
 
 ###  <h1 id="h1"> 1.新类型 </h1>
-    symbol
+    Symbol()
 
 
 
+<br/><br/><br/>
 
 ###  <h1 id="h2"> 2.声明变量 </h1>
 
@@ -61,6 +48,7 @@
 
 
 
+<br/><br/><br/>
 
 ###  <h1 id="h3"> 3.解构赋值 </h1>
 
@@ -102,6 +90,7 @@
   ```
 
   
+<br/><br/><br/>
 
 ###  <h1 id="h4"> 4.字符串 </h1>
 
@@ -214,6 +203,7 @@
 
 
 
+<br/><br/><br/>
 
 ###  <h1 id="h5"> 5.正则 </h1>
 
@@ -234,6 +224,7 @@
 
 
 <br/><br/><br/>
+
 ###  <h1 id="h6"> 6.数组</h1>
 
 - **...**     : <small>扩展运算符</small>
@@ -379,6 +370,24 @@ Arr.inculdes(3,5) // false(从键第5位开始查)
 
 
 
+
+- **at()**（支持负索引）
+> 超出返回undefined<br/>支持字符串和类数组
+  ```
+  const arr = [1, 2, 4, 8, 16];
+
+  arr[-2] // undefined
+  arr.at(-2) // 8
+
+  const str = 'hello Tony!'
+  str.at(-2) // y
+  ```
+
+- **空位** 返回undefined
+
+
+<br/><br/><br/>
+
 - forEach、filter、some、map(替换)、
 > 返回item,index,arr
  ```
@@ -434,6 +443,7 @@ Arr.inculdes(3,5) // false(从键第5位开始查)
   ```
  
 - 严格模式
+> ES5之前函数内可设置模式，但ES2016函数参数使用了默认值、解构赋值、或者扩展运算符会报错（先执行函数后执行函数体）<br/>解决方法全局严格模式或用一个立即执行函数套[详见](https://es6.ruanyifeng.com/#docs/function#%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F)
 
 - name
 
@@ -509,13 +519,16 @@ Arr.inculdes(3,5) // false(从键第5位开始查)
 
 ### <h1 id="h8"> 对象 </h1>
 
-- 
+- 属性的简洁表示法
+> 属性名就是变量名, 属性值就是变量值<br/>不能用于构造函数
 
   ```
-  var name = 'name', function = 'function';　　　　var obj = {name,function}
+  var name = 'name', function = 'function';
+  var obj = {name,function}
   ```
 
-- 结构
+ + 结构
+
   ```
   var foo = ‘bar’　
   var baz = {foo}　
@@ -524,8 +537,8 @@ Arr.inculdes(3,5) // false(从键第5位开始查)
   
   var baz = {foo:'baz'}
   ```
-  
-- function结构  
+
+ + function结构  
 
   ```
   var o = {　　　 
@@ -539,7 +552,7 @@ Arr.inculdes(3,5) // false(从键第5位开始查)
   } 
   ```
 
-- 对象的属性
+ + 对象的属性
 
   ```
   obj['a' + 'bc'] = 123;
@@ -552,12 +565,33 @@ Arr.inculdes(3,5) // false(从键第5位开始查)
   };
   ```
 
-
-- name
+ + 报错
 
   ```
-  返回对象名称  Object.is(NaN,NaN);     Object.is(+0,-0);
+  const obj = {
+    f() {
+      this.foo = 'bar';
+    }
+  };
+
+  new obj.f() // 报错
   ```
+
+<br/><br/>
+
+- 属性名表达式
+
+  ```
+  // 方法一: 直接用标识符作为属性名
+  obj.foo = true;
+
+  // 方法二: 用表达式作为属性名
+  obj['f' + '00'] = false;
+  ```
+
+- name: 返回对象名称
+
+
 
 - assign
 
@@ -570,6 +604,37 @@ Arr.inculdes(3,5) // false(从键第5位开始查)
   { cid as c, aid as a, family as f}
   export default   vs  export  import
   ```
+
+
+<br/><br/><br/>
+
+- **Object.is()**：
+  ```
+    Object.is(NaN,NaN); // true 
+    Object.is(+0,-0); // false
+  ```
+
+- **Object.assign()**：
+  ```
+    const target = { a: 1 };
+    Object.assign(target, {b: 2})
+    target  // {a: 1, b: 2}        // 改变目标target, 不想改变{...target, b: 2}
+   
+  其他情况
+  - 参数只有一个直接返回
+  const obj = {a: 1};
+  Object.assign(obj) === obj // true 
+
+  - undefined和null
+  Object.assign(undefined) // 报错
+  Object.assign(null) // 报错 
+
+  - undefined和null被跳过
+  let obj = {a: 1};
+  Object.assign(obj, undefined) === obj // true
+  Object.assign(obj, null) === obj // true
+  ```
+
 
 
 
@@ -684,6 +749,28 @@ class => new
 
 [ES6文档](https://es6.ruanyifeng.com/#docs/promise)
 
+
+- 过完ES6的22.class、23.class.1-3(2.28 - 3.1)
+<br/>（差4-6）
+- 过完ES6的5.字符串: 5-8、11(3-2)
+- 过完ES6的5.字符串: 1、3、9、10(3-3)
+- 过完ES6的9.数组: 1-8(3-3)
+- 过完ES6的8.函数: 1、2、4、9(3-11)
+- 过完ES6的5.字符串: 2(3-14)（差4）
+- 过完ES6的9.数组: 10、11(3.16)
+<br/>（差12）
+- 过完ES6的10.对象1-3  / 过完ES6的11.对象: 1、2(3.1)
+<br/>10(4-7) / 11（差3-6）
+- 过完ES6的8.函数: 3(3-21)
+<br/>（差5-8）
+
+
+
+- 4、6、7、10
+- 11-20
+- 21、24-28
+
+<br/><br/>
 https://www.cnblogs.com/lgyong/p/8711550.html
 
 [E6 ~ E10](https://www.cnblogs.com/miaSlady/p/10955729.html)

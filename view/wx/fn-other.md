@@ -6,6 +6,7 @@
 6. <a href="#h6"> WEPY框架 </a>
 7. <a href="#h7"> 获取手机号 </a>
 8. <a href="#h8"> 分包 </a>
+9. <a href="#h9"> 更新 </a>
 100. <a href="#h100"> 。。。 </a>
 
 
@@ -162,6 +163,8 @@ uni.stopPullDownRefresh();  （onPullDownRefresh() {}）
   ```
 
 
+<br/><br/>
+###  <h1 id="h9"> 9.[微信小程序自动更新](https://blog.csdn.net/le_17_4_6/article/details/83036518) </h1>
 
 <br/><br/>
 ###  <h1 id="h100"> 。。。 </h1>
