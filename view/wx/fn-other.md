@@ -156,7 +156,18 @@ uni.stopPullDownRefresh();  （onPullDownRefresh() {}）
       }
     ```
   - 分包异步化: 子组件访问子组件
+  子分包之间的调用(componentPlaceholder -> simple-refund-steps没加载前的占位置)
   ```
+  "usingComponents": {
+    "refund-steps": "/pages/medical/medical-detail/components/medical-steps/medical-steps"
+  },
+  "componentPlaceholder": {
+    "refund-steps": "simple-refund-steps"
+  }
+  ```
+  js
+  ```
+
   require('../subPackageB/utils.js', utils => {
     console.log(utils.whoami) // Wechat MiniProgram
   })
