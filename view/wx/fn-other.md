@@ -2,7 +2,7 @@
 2. <a href="#h2"> 小程序跳转公众号 </a>
 3. <a href="#h3"> 小程序跳转小程序 </a>
 4. <a href="#h4"> 开发工具中不执行的函数 </a>
-5. <a href="#h5"> 下来刷新api </a>
+5. <a href="#h5"> 下拉刷新api </a>
 6. <a href="#h6"> WEPY框架 </a>
 7. <a href="#h7"> 获取手机号 </a>
 8. <a href="#h8"> 分包 </a>
@@ -85,6 +85,12 @@ wx.getSystemInfo({
 uni.showNavigationBarLoading()
 uni.stopPullDownRefresh();  （onPullDownRefresh() {}）
 ```
+json
+```
+"enablePullDownRefresh": true,
+"backgroundTextStyle": "dark"
+```
+
 
 
 <br/><br/>

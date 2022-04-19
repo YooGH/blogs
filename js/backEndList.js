@@ -9,6 +9,7 @@ const BackEndList = [
       { id: 3, name: 'vite', href: './view/project/vite.md' },
       { id: 4, name: 'ESLint', href: './view/project/ESLint.md' },
       { id: 5, name: 'vue-cli', href: './view/project/vue-cli.md' },
+      { id: 5, name: 'docker', href: './view/project/docker.md' },
       
 			{ id: 992, name: '————————',},
       { id: 11, name: '算法1 -- 排序', href: 'https://www.cnblogs.com/lgyong/p/10419400.html'}, 
@@ -37,6 +38,7 @@ const BackEndList = [
       { id: 7, name: '功能7 -- 全球快递物流查询', href: './view/func/功能7--全球快递物流查询.md', done: true },
       { id: 8, name: '功能8 -- JS实现下拉刷新、上拉加载', href: './view/func/JS实现下拉刷新、上拉加载.md' },
       { id: 9, name: '功能9 -- 腾讯地图map', href: './view/func/map.md', done: true },
+      { id: 10, name: '功能10 -- 手机和身份证脱敏', href: './view/func/desensitization.md', done: true },
       { id: 8, name: '_____', href: '' },
       { id: 8, name: 'Ele0 -- form', href: './view/func/ele-form.md'},
       { id: 8, name: 'Ele1 -- table', href: './view/func/ele-table.md', done: true,},

@@ -3,11 +3,12 @@
 3. <a href="#h3"> 解构赋值</a>
 4. <a href="#h4"> 字符串</a>
 5. <a href="#h5"> 正则 </a>
-6. <a href="#h6"> 数组 </a>
-7. <a href="#h7"> 函数</a>
-8. <a href="#h8"> 对象 </a>
-9. <a href="#h9"> 数据结构 </a>
-9. <a href="#h10"> Class </a>
+6. <a href="#h6"> 数字 </a>
+7. <a href="#h7"> 数组 </a>
+8. <a href="#h8"> 函数</a>
+9. <a href="#h9"> 对象 </a>
+10. <a href="#h10"> 数据结构 </a>
+11. <a href="#h11"> Class </a>
 100. <a href="#h100"> 历史</a>
 <br/><a href="#ck"> 参考 </a>
 
@@ -223,9 +224,68 @@
 
 
 
+
 <br/><br/><br/>
 
-###  <h1 id="h6"> 6.数组</h1>
+###  <h1 id="h6"> 6.数字</h1>
+- 进制表示法
+> B表示二进制，O表示八进制，D表示十进制，H表示十六进制<br/>
+二前缀：0b / 0B<br/>
+八前缀：0o / 0O<br/>
+可用Number方法转十进制； 非严格模式   0o11 === 011<br/>
+
+- 数值分隔符(**_**2021)<br/>
+  数值中间看加**_**增加可读性<br/>
+  限制规则
+
+  ```
+  不能放在数值的最前面（leading）或最后面（trailing）。
+  不能两个或两个以上的分隔符连在一起。
+  小数点的前后不能有分隔符。
+  科学计数法里面，表示指数的e或E前后不能有分隔符。
+  字符串转成数值的函数，不支持数值分隔符Number()、parseInt()、parseFloat()
+  ```
+
+- **Number.isFinite()**、**Number.isNaN()**
+
+  ```
+  Number.isFinite(15) // true 有限
+  Number.isNaN(NaN)、Number('true' / 0) // true 
+  ```
+  
+  ```
+  isFinite(25) // true
+  isFinite("25") // true
+  Number.isFinite(25) // true
+  Number.isFinite("25") // false
+
+  isNaN(NaN) // true
+  isNaN("NaN") // true
+  Number.isNaN(NaN) // true
+  Number.isNaN("NaN") // false
+  Number.isNaN(1) // false
+  ```
+
+- **Number.parseInt()**, **Number.parseFloat()**
+  与全局方法一致
+
+- **Number.isInteger()**用来判断一个数值是否为整数。  
+> 整数和浮点数采用的是同样的储存方法，所以 25 和 25.0 被视为同一个值(Number.isInteger(25)==Number.isInteger(25.0))
+
+
+<br/><br/>
+
+- Number.EPSILON
+> 极小的常量,可以用来设置“能够接受的误差范围”
+
+- **Number.isSafeInteger()**
+> 判断整数是否在安全值(Number.MIN_SAFE_INTEGER~Number.MAX_SAFE_INTEGER之间)
+
+
+
+<br/><br/><br/>
+
+###  <h1 id="h7"> 7.数组</h1>
 
 - **...**     : <small>扩展运算符</small>
 
@@ -408,7 +468,7 @@ Arr.inculdes(3,5) // false(从键第5位开始查)
 
 <br/><br/><br/>
 
-###  <h1 id="h7"> 7.函数 </h1>
+###  <h1 id="h8"> 8.函数 </h1>
 
 - 参数默认值<small>(ES6之前参数不能指定默认值)</small>
 
@@ -517,7 +577,7 @@ Arr.inculdes(3,5) // false(从键第5位开始查)
 
 
 
-### <h1 id="h8"> 对象 </h1>
+### <h1 id="h9"> 9.对象 </h1>
 
 - 属性的简洁表示法
 > 属性名就是变量名, 属性值就是变量值<br/>不能用于构造函数
@@ -656,7 +716,7 @@ m.set('Adam', 67)
 
 <br/><br/><br/>
 
-### <h1 id="h10"> Class </h1>
+### <h1 id="h11"> 11.Class </h1>
 [22.class](./html/class1.html)<br/>
 [23.继承](./html/class2.html)<br/>
 class => new
@@ -763,6 +823,8 @@ class => new
 <br/>10(4-7) / 11（差3-6）
 - 过完ES6的8.函数: 3(3-21)
 <br/>（差5-8）
+- 过完ES6的7.数值: 1-5(4-6)
+<br/>（差6-9）
 
 
 
