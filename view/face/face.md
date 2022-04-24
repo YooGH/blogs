@@ -120,6 +120,10 @@ localstorage/(2)vuex-persistedstate/(3)cookie
     1 call的语法：函数名.call(obj,参数1,参数2,参数3……); 
     2 apply的语法：函数名.apply(obj,[参数1,参数2,参数3……]); 
     ```
+14. switch比if快
+ - 采用branch table索引优化
+ - 使用全等操作符，不会类型转换损耗
+[JavaScript的ifelse和switch对比](https://wenku.baidu.com/view/7dfd5b7374232f60ddccda38376baf1ffc4fe3e6.html)
 
 
 

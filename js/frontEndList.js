@@ -108,6 +108,7 @@ const FrontEndList = [
       {id: 3, name: 'vue2', href: './view/vue/vue2.md'}, 
       {id: 2, name: '2-vuex', href: './view/vue/vuex.md'}, 
       {id: 4, name: '2-组件间的传值 + 路由守卫', href: 'https://www.cnblogs.com/lgyong/p/11570040.html'}, 
+      {id: 5, name: '插件', href: './view/vue/vuePlug.md'}, 
       {id: 9910, name: '———',}, 
       {id: 1, name: 'vue开发中遇到的问题', href: 'https://www.cnblogs.com/lgyong/p/8538846.html'}, 
       {id: 0, name: 'vue项目的过程(开始时间大概是2018/2/22)', href: 'https://www.cnblogs.com/lgyong/p/11514598.html'}, 

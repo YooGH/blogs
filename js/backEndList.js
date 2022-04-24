@@ -92,6 +92,7 @@ const BackEndList = [
       {id: 1, name: '后台资料', href: './view/tools/backstageSystem.md'},
       {id: 2, name: 'px转rpx', href: './view/tools/pxChangeRpx.html'},
       {id: 3, name: 'English', href: './view/window/english.md'},
+      {id: 4, name: 'Linux', href: './view/tools/linux.md'},
     ]
   }
 ];
