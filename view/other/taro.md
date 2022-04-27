@@ -13,17 +13,18 @@
 
 
   
-### <h1 id="h1"> 1.  路由：[在React中使用react-router-dom路由](https://www.jianshu.com/p/8954e9fb0c7e) </h1>
+### <h1 id="h1"> 1. 路由：[在React中使用react-router-dom路由](https://www.jianshu.com/p/8954e9fb0c7e) </h1>
 <br/><br/><br/>
 
 
 
-###  <h1 id="h2"> 2.状态管理：redux </h1>
+###  <h1 id="h2"> 2. 状态管理：redux </h1>
+https://zhuanlan.zhihu.com/p/256297415?utm_source=wechat_session
 <br/><br/><br/>
 
 
 
-###  <h1 id="h3"> 3.JSX </h1>
+###  <h1 id="h3"> 3. JSX </h1>
  <br/>[React 组件条件渲染的几种方式（类似vue的v-if指令）](https://blog.csdn.net/qq_37034928/article/details/107119716)<br/>
   + 三元运算符
   + &&

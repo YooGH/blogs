@@ -2,7 +2,8 @@
 2. <a href="#h2"> attached 和detached模式 </a>
 3. <a href="#h3"> Docker的交互式模式 </a><br/><br/>
 4. <a href="#h4"> 镜像 </a>
-4. <a href="#h5"> 镜像操作(10、11) </a>
+4. <a href="#h5"> 镜像操作(10-14) </a>
+5. <a href="#h6"> 镜像命令(15) </a>
 <br/><a href="#ck"> 参考 </a>
 
 
@@ -85,7 +86,7 @@
 
   - 自有文件导入，压缩包
 
-  <br/><br/><br/>
+<br/><br/><br/>
 
   ### <h1 id="h5"> 5. 镜像操作 </h1>
   - ``docker image`` 查看  镜像操作命令（build(Dockerfile构建)、history、import、inspect、load(加载本地包)、ls、prune(可定时清理不常用数据)、pull、push、rm、save）
@@ -101,14 +102,48 @@
     > 第二行``tag``的意思就是版本; ``latest``代表的是最新版（默认拉取），指定版本``docker image pull wordpress:beta-php8.1-fpm``
 
   - ``docker image rm <Image ID>`` // 删除  镜像，容器使用镜像时，是不能删除的
-
-  #### 导入导出
+<br/><br/>
+  #### 导入导出(三种获取途径之一)
   - ``docker image save wordpress:latest -o abc.image`` 导出 镜像（``save``导出/保存的意思; ``wordpress:latest``镜像名称+版本号; ``-o`` 导出文件; ``abc.image`` 导出后镜像名称+.image后缀）
 
   - ``docker image load -i ./abc.image`` 导入 镜像（``load``加载/导入; ``-i`` install或init吧）
-  
+<br/><br/>
+  #### Dockerfile(三种获取途径之一)
+  > -- 集成脚本生成自定义的镜像包<br/> -- Dockerfile是一个包含用于组合映像的命令的文本文档。可以使用在命令行中调用任何命令。 Docker通过读取Dockerfile中的指令自动生成映像。<br/>--简单总结: ①、Dockerfile是用于构建docker镜像的文件; ②、Dockerfile里包含了构建镜像所需的”指令“; ③、Dockerfile有其特定的语法规则（重要学习）
+
+
+  Dockerfile(准备文件)
+  ```
+  FROM ubuntu:latest    // 引入docker环境
+  RUN apt-get update && \ 
+        DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y python3.9 python3-pip python3.9-dev   // 安装python
+  ADD gg.py  // 添加脚本
+  CMD ["python3","gg.py"]  // 执行
+  ```
+
+  gg.py
+  ```
+  print('hi gg')
+  ```
+
+  **开始构建**<br/>
+  ``docker image build -t <Name:tay> <file path>`` (-t：指定镜像名称, 如跑上边文件: docker image build -t gg .)
+
+  [dockerfile拉取python3.7镜像](https://blog.csdn.net/stay_foolish12/article/details/123710558)
+
+  **选择原则**<br/>
+  - 官方镜像优于非官方的镜像；（选择基予官方的镜像安全）
+  - 固定版本的Tag，而不是每次都使用latest;（选择固定稳定的版本）
+  - 功能满足，选择体积小的镜像（包小打包也小）
 <br/><br/><br/>
 
+<br/><br/><br/>
+
+  ### <h1 id="h5"> 5. 镜像操作 </h1>
+
+
+
+  
 
   ### <h1 id="ck"> 参考 </h1>
 
@@ -118,6 +153,8 @@
   4.21--6-7章
   4.22--8章
   4.24--9-11章
+  4.26--12-13章
+  4.27--14章
 
   
 
