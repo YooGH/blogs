@@ -13,6 +13,7 @@ const FrontEndList = [
       { name: '布局的一些小思路', href: './view/html/html2--布局的一些小思路.md'}, 
       { name: '恩，布局', href: './view/html/html3--恩，布局.md' },
       { name: '列表flex布局', href: './view/html/list-flex.md'}, 
+      { name: '商品布局', href: './view/layout/index.html', done: true, }, 
     ]
   },
 
@@ -130,7 +131,7 @@ const FrontEndList = [
       {id: 1, name: '————————',}, 
       {id: 1, name: '功能1-map', href: './view/wx/fn-map.md', done: true, }, 
       {id: 2, name: '功能2-h5跳转', href: './view/wx/fn-h5.md', done: true, }, 
-      {id: 3, name: '功能3-登录授权', href: './view/wx/fn-login.md', done: true, }, 
+      {id: 3, name: '功能3-登录授权和手机', href: './view/wx/fn-login.md', done: true, }, 
       {id: 4, name: '功能4-模板消息接口', href: './view/wx/fn-message.md', done: true, }, 
       {id: 5, name: '功能5-摄像头', href: './view/wx/fn-camera.md', done: true, }, 
 

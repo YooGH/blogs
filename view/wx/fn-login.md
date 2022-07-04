@@ -38,6 +38,47 @@ wx.request({
 ```
 
 
+
+
+
+<br/><br/><br/>
+
+### [获取手机号](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/getPhoneNumber.html)
+> 通过<button>开发接口getPhoneNumber,点击触发拿到code
+> 后端拿code调[getuserphonenumber](https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/phonenumber/phonenumber.getPhoneNumber.html),参数code和access_token
+> [access_token](https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/access-token/auth.getAccessToken.html)需要后端用参数grant_type=client_credential&appid=APPID&secret=APPSECRET获取
+
+
+  ```
+  <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机</button>
+  getPhoneNumber() {
+    // console.log('getPhoneNumber', e)
+    wx.request({
+      url: 'https://api.weixin.qq.com/cgi-bin/token',
+      data: {
+        grant_type: 'client_credential',  // 固定写死
+        appid: '', // 微信公众平台获取
+        secret: '', // 微信公众平台获取
+      },
+      success(res) {
+        console.log(res.data.access_token)
+        console.log(res.data.expires_in)
+        wx.request({
+          url: 'https://api.weixin.qq.com/wxa/business/getuserphonenumberaccess_token='+res.data.access_token+'&code='+e.detail.code,
+          method: "POST",
+          success(res) {
+            console.log(res.data.access_token)
+            console.log(res.data.expires_in)
+          }
+        })
+      }
+    })
+  }
+  },
+  ```
+
+
+
 <br/><br/><br/>
 #### 用户信息
 > 用户信息（头像，微信名，性别，地区，openid,unionid,appid）<br/>

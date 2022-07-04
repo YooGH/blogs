@@ -1,0 +1,41 @@
+.item-goods {
+  display: flex;
+  width: 100%;
+  padding: 8px;
+  background: #fff;
+  border-radius: 10px;
+  margin: 10px auto;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+
+
+/*大左边（头像）*/
+.goods-img {
+  height: 40px;
+  flex: 0 0 40px;
+}
+
+
+
+/*大右边*/
+.goods-main {
+  flex: 1;
+  padding: 0;
+}
+/*上*/
+.goods-name {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.85);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/*下*/
+.goods-info {
+	display: flex;
+	justify-content: space-between;
+}

@@ -2,8 +2,11 @@
 2. <a href="#h2"> attached 和detached模式 </a>
 3. <a href="#h3"> Docker的交互式模式 </a><br/><br/>
 4. <a href="#h4"> 镜像 </a>
-4. <a href="#h5"> 镜像操作(10-14) </a>
-5. <a href="#h6"> 镜像命令(15) </a>
+5. <a href="#h5"> 镜像操作(10-14) </a>
+6. <a href="#h6"> 镜像命令(15) </a>
+7. <a href="#h7"> 数据持久化 - VOLUME </a>
+8. <a href="#h8"> 端口转发 </a>
+9. <a href="#h9"> docker-compose </a>
 <br/><a href="#ck"> 参考 </a>
 
 
@@ -33,8 +36,7 @@
   容器
 
   ```
-  创建： docker container run < image name >
-    docker container run nginx/ubuntu(线上镜像名称)
+  创建： docker container run < image name > (如：docker container run nginx/ubuntu(线上镜像名称)
   查看： docker container ls -a(docker container ps -a旧版)
   停止： docker container stop <name or ID(只输入ID前两位也行)>(<name or ID>通过上面查看得到)
   开始： docker container start/restart <name or ID>
@@ -90,7 +92,7 @@
 
   ### <h1 id="h5"> 5. 镜像操作 </h1>
   - ``docker image`` 查看  镜像操作命令（build(Dockerfile构建)、history、import、inspect、load(加载本地包)、ls、prune(可定时清理不常用数据)、pull、push、rm、save）
-  <br/>build、import、prune、push
+  <br/>import、prune、push
   ```
   docker image history wordpress(镜像名称) // 查看一个镜像的历史版本
 
@@ -139,22 +141,69 @@
 
 <br/><br/><br/>
 
-  ### <h1 id="h5"> 5. 镜像操作 </h1>
+  ### <h1 id="h6"> 6. 镜像命令 </h1>
+ - **FROM** 相对于require或import引入环境(如node,nginx)
+
+ - **RUN** 可以执行Shell指令 (如: RUN ping www.baidu.com； 多个RUN用"&& \"连接;  用“docker image history ID”查看分层)
+
+ - **COPY** 和 **ADD** 本地文件复制到镜像里（ADD命令可以直接解压gzip压缩文件）
+
+ - **WOKDIR** 镜像目前切换，类Linux的cd
+ ```
+ FROM node:alpine3.14
+ WORKDIR /app                    (切到镜像环境的二级目录app)
+ ADD index.tar index.js          (复制linux环境index.tar到镜像环境的/app/index.js)
+ ```
+
+ - **ENV** (environment)
+
+
+<br/><br/><br/>
+
+  ### <h1 id="h7"> 7. 数据持久化 - VOLUME </h1>
+  - Data Volume
+  > 正常容器删除，数据也会删除，数据持久化就是容器之外的硬盘等<br/>
+  在WIndows环境中很难使用，因为路径是虚拟机的路径，不容易找到
+
+  指定持久化的硬盘空间如，/appp文件,没有文件自动创建
+
+  ```
+  FROM nginx
+  VOLUME ["/appp"]
+  ```
+
+
+  - Bind Mount
+  > 设置更简单，可以和开发环境更好的融合<br/>
+  执行代码: app为持久化本地的目录
+  ``docker container run -it -v ${pwd}:/app node``
 
 
 
-  
+
+
+<br/><br/><br/>
+
+  ### <h1 id="h9"> 9. docker-compose </h1>
+  - 1. 安装
+  > https://docs.docker.com/desktop/   =>   Product Manuals —>Docker compose—>Liunx   =>   执行三条命令 
+
+<br/><br/><br/>
 
   ### <h1 id="ck"> 参考 </h1>
 
   [看技术胖视频22/04/18](https://jspang.com/article/75)
-  
-  4.20--5章
-  4.21--6-7章
-  4.22--8章
-  4.24--9-11章
-  4.26--12-13章
-  4.27--14章
+  [面试题目](https://www.jianshu.com/p/76ee1565b4e2)
+  [参考](https://blog.csdn.net/u014265398/article/details/105636193)
+  2022
+  4.20--5章<br/>
+  4.21--6-7章<br/>
+  4.22--8章<br/>
+  4.24--9-11章<br/>
+  4.26--12-13章<br/>
+  4.27--14章<br/>
+  15章<br/>
+  5.09--17章<br/>
 
   
 

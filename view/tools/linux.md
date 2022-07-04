@@ -8,7 +8,7 @@
 #### 目录
  ``mkdir`` 创建目录（mkdir gg）
 
- ``rmdir`` 删除目录
+ ``rmdir`` 删除目录（目录不为空 ``rm -rf`` r是向下递归，f是直接删除）
 
  ``ls`` 查看当前目录文件
 
@@ -28,10 +28,17 @@
 
  ``:q!``    退出
 
-
+### 操作文件 
+``echo``  写入, echo gg > text.txt
+``more``  查看, more /appp/text.txt
 
 
 
 #### 启动服务
 ``systemctl start NetworkManager`` 开启网络
+
+
+### 操作
+halt 关机
+reboot 重启
 

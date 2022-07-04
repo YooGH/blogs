@@ -48,7 +48,7 @@ tinymce.min.js慢问题
 
 ### 参考
 
-﻿[vue-element-admin: Tinymce](https://panjiachen.github.io/vue-element-admin-site/feature/component/rich-editor.html#tinymce)
+[vue-element-admin: Tinymce](https://panjiachen.github.io/vue-element-admin-site/feature/component/rich-editor.html#tinymce)
 
 [Tinymce 组件](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/views/components-demo/tinymce.vue)
 
@@ -60,10 +60,14 @@ tinymce.min.js慢问题
 
 ### 其他富文本编辑器
 [vue-quill-editor--star7k](https://www.cnblogs.com/zly430/p/10895307.html)
-[github官网](https://github.com/surmon-china/vue-quill-editor)
-[options全解析](https://blog.csdn.net/div_ma/article/details/79536634)
-[options全解析2](https://www.cnblogs.com/wjlbk/p/12884661.html)
-[光标位置插入图片](http://www.yuepc.com/a/1722.html)
+
+ - [github官网](https://github.com/surmon-china/vue-quill-editor)
+
+ - [options全解析](https://blog.csdn.net/div_ma/article/details/79536634)
+
+ - [options全解析2](https://www.cnblogs.com/wjlbk/p/12884661.html)
+
+ - [光标位置插入图片](http://www.yuepc.com/a/1722.html)
 ```
 // 1.获取容器（ref="myQuillEditor"）
 let selection = this.$refs.myQuillEditor.quill.getSelection();
@@ -80,3 +84,9 @@ selection.setSelection(selection.index + 1);
 
 
 [mavon-editor--5.4k](https://www.cnblogs.com/hermit-gyqy/p/12101324.html)
+
+
+[ueditor -- 6.1k](https://github.com/fex-team/ueditor)
+ - [vue2安装](https://www.wangeditor.com/v5/for-frame.html#vue2)<br/>[工具栏配置](https://www.wangeditor.com/v5/toolbar-config.html#getconfig)<br/>[编辑器配置](https://www.wangeditor.com/v5/editor-config.html)
+ - 问题
+   [禁止编辑](https://www.wangeditor.com/v5/editor-config.html#readonly) => editor.enable() 和 editor.disable() <br/>

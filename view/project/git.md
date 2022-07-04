@@ -3,9 +3,10 @@
 3. <a href="#h3"> 分支 </a>
 4. <a href="#h4"> 合并/删除 </a>
 5. <a href="#h5"> 回滚与补救 </a>
-6. <a href="#h6"> 其他 </a>
-7. <a href="#h7"> git 提交规范 </a>
-8. <a href="#h8"> 可视化 </a>
+5. <a href="#h6"> 重命名 </a>
+6. <a href="#h7"> 其他 </a>
+7. <a href="#h8"> git 提交规范 </a>
+8. <a href="#h9"> 可视化 </a>
 <br/><a href="#ck"> 参考 </a>
 
 <br/><br/><br/>
@@ -98,9 +99,9 @@
   ```
 - remote删除分支
   ```
-  git log
-  git pull = git fetch + git merge
-  git remote -v 查看Git地址
+  git branch -d 分支名称 (删除本地分支)
+  git branch -D 分支名称（如果删除不了可以强制删除）
+  git push origin --delete 分支名称（有必要的情况下，删除远程分支(慎用)）
   ```
 
 
@@ -122,7 +123,19 @@
 
 <br/><br/><br/>
 
-### <h1 id="h6"> 6. 其他 </h1>
+### <h1 id="h6"> 6. 重命名 </h1>
+
+  ```
+  git branch -m 旧分支名 新分支名
+  git push origin 新分支名
+  删除旧分支
+  ```
+
+
+<br/><br/><br/>
+
+
+### <h1 id="h7"> 7. 其他 </h1>
 - **npm prefix -g**    全局安装路径
 - **npm list -g**    全局安装路径和安装过的包
 - **git status**    查看【提示消息中告诉我们哪些文件被修改】
@@ -143,7 +156,7 @@ clone某个分支： git clone -b 分支名 远程git仓库地址
 
 <br/><br/><br/>
 
-### <h1 id="h7"> 7. git 提交规范 </h1>
+### <h1 id="h8"> 8. git 提交规范 </h1>
 
 - feat：新功能/需求（feature）
 
@@ -170,7 +183,7 @@ clone某个分支： git clone -b 分支名 远程git仓库地址
 
 <br/><br/><br/>
 
-### <h1 id="h8"> 8. 可视化 </h1>
+### <h1 id="h9"> 9. 可视化 </h1>
 - Sourcetree
 ![git.png](./img/sourcetree.png)
 
