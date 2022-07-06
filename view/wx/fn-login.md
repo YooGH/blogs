@@ -7,6 +7,7 @@
 > code发给后端，后端通过[微信接口](https://api.weixin.qq.com/sns/jscode2session)解析出数据   -- (api.weixin.qq.com小程序加不了白名单，安全问题放后端调)<br/>
 > 数据用户唯一id,openid<br/>
 
+[小程序登录](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html)
 <br/>
 > 前端
 

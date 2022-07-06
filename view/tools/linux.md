@@ -39,6 +39,11 @@
 
 
 ### 操作
-halt 关机
+poweroff 关闭系统后掉电
+
+halt 关闭系统不掉电(主板是通电的)
+
+shutdown -h now
+
 reboot 重启
 

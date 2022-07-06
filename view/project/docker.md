@@ -7,6 +7,7 @@
 7. <a href="#h7"> 数据持久化 - VOLUME </a>
 8. <a href="#h8"> 端口转发 </a>
 9. <a href="#h9"> docker-compose </a>
+10. <a href="#h10"> 网络 </a>
 <br/><a href="#ck"> 参考 </a>
 
 
@@ -15,6 +16,9 @@
   sudo systemctl start docker  // 开启docker
   ```
 
+
+-d // 后台运行
+-p // 接口映射
 
  ## 按照
  
@@ -188,6 +192,37 @@
   - 1. 安装
   > https://docs.docker.com/desktop/   =>   Product Manuals —>Docker compose—>Liunx   =>   执行三条命令 
 
+①、image: 指定镜像
+②、variables: 变量声明
+③、stages: 执行阶段
+
+
+命令
+docker compose up // 执行yml文件
+docker compose up -d // 执行yml文件，并可以执行后台命令
+
+docker compose ps // 查看yml文件状态
+
+docker compose stop // 停止yml文件执行
+docker compose rm // 删除yml文件执行
+
+docker compose 
+
+
+<br/><br/><br/>
+
+  ### <h1 id="h10"> 10. 网络 </h1>
+- 桥接（Bridging）
+  ``docker container run -d -p 80:80 nginx``<br/>
+  ``--name``重命名
+- host网络模式
+> 使用宿主的IP和端口，关键词``--network host/-- net host``
+``docker run -it --name nginxNo1 --network host nginx``
+- none
+> 无网络，做扩展用
+``docker run -it --name nginxNo1 --network none nginx``
+  
+
 <br/><br/><br/>
 
   ### <h1 id="ck"> 参考 </h1>
@@ -204,6 +239,10 @@
   4.27--14章<br/>
   15章<br/>
   5.09--17章<br/>
+
+
+  7.4--27章<br/>
+  7.6--29-30章<br/>
 
   
 
