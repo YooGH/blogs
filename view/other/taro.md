@@ -1,4 +1,12 @@
 ﻿项目：e:/ai_trao（用taro,hooks）
+- [ ] JSX(v-for, v-if, 方法, 响应)
+- [ ] hooks
+- [ ] 生命周期
+- [ ] 组件
+- [ ] 路由
+- [ ] 状态
+
+
 1. <a href="#h1"> 路由------ </a>
 2. <a href="#h2"> redux------ </a>
 3. <a href="#h3"> JSX </a>
@@ -7,6 +15,10 @@
 6. <a href="#h6"> 框架搭建 </a>
 7. <a href="#h7"> hooks </a>
 <br/><a href="#ck"> 参考 </a>
+
+
+
+
 
 <br/><br/><br/><br/><br/><br/>
 

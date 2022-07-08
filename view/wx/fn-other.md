@@ -18,10 +18,14 @@
 <br/><br/>
 ###  <h1 id="h1"> 1、小程序关闭自己 </h1>
 > navigator组件，属性target为miniProgram，open-type为exit(exit退出，需targer="miniProgram"为前提)
+方法1
+
 ```
 <navigator target="miniProgram" open-type="exit"></navigator> 
 ```
 
+方法2[2.17.2、20210602](https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.exitMiniProgram.html)
+``wx.exitMiniProgram``需点击生效
 
 
 <br/><br/>

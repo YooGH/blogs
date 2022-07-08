@@ -94,6 +94,8 @@ const BackEndList = [
       {id: 2, name: 'px转rpx', href: './view/tools/pxChangeRpx.html'},
       {id: 3, name: 'English', href: './view/window/english.md'},
       {id: 4, name: 'Linux', href: './view/tools/linux.md'},
+      {id: 5, name: '开机启动任务', href: './view/window/开机启动任务.md'},
+      
     ]
   }
 ];

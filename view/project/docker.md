@@ -41,7 +41,7 @@
 
   ```
   创建： docker container run < image name > (如：docker container run nginx/ubuntu(线上镜像名称)
-  查看： docker container ls -a(docker container ps -a旧版)
+  查看： docker container ls -a(docker container ps -a旧版;  -a是包括exit和up，不加就是up)
   停止： docker container stop <name or ID(只输入ID前两位也行)>(<name or ID>通过上面查看得到)
   开始： docker container start/restart <name or ID>
   删除： docker container rm <name or ID>
@@ -59,9 +59,9 @@
   ### <h1 id="h2"> 2. attached 和detached模式 </h1>
   > 容器映射服务器接口访问：``docker container run -p 80:80 nginx``    (第一服务器接口，第二个容器接口)
 
-  - attached(前台, 适合开放环境,ctrl+C就能停止)
+  - attached(前台, 适合开放环境,ctrl+C就能停止)<br/>``docker container run -p 80:80 nginx`` 
 
-  - detached(后台，适合生成环境，需要stop停止):detached模式加参数``-d``或``--detach`` => ``docker container run -d -p 80:80 nginx``<br/>detached转为attached: ``docker  attach <ID or Image Name>``
+  - detached(后台，适合生成环境，需要stop停止):detached模式加参数``-d``或``--detach`` =><br/> ``docker container run -d -p 80:80 nginx``<br/><br/>detached转为attached: ``docker  attach <ID or Image Name>``
 
   - 查看日志 ``docker container logs <ID or Image name>``<br/> 动态一直跟踪加``-f``
 
@@ -95,7 +95,23 @@
 <br/><br/><br/>
 
   ### <h1 id="h5"> 5. 镜像操作 </h1>
-  - ``docker image`` 查看  镜像操作命令（build(Dockerfile构建)、history、import、inspect、load(加载本地包)、ls、prune(可定时清理不常用数据)、pull、push、rm、save）
+  - ``docker image`` 查看<br/>
+  镜像操作命令
+
+  ```
+    build(Dockerfile构建)、
+    history、
+    import、
+    inspect、
+    load(加载本地包)、
+    ls、
+    prune(可定时清理不常用数据)、
+    pull、
+    push、
+    rm、
+    save
+  ```
+
   <br/>import、prune、push
   ```
   docker image history wordpress(镜像名称) // 查看一个镜像的历史版本
@@ -229,6 +245,9 @@ docker compose
 
   [看技术胖视频22/04/18](https://jspang.com/article/75)
   [面试题目](https://www.jianshu.com/p/76ee1565b4e2)
+  1. 什么是docker: 
+  2. 什么是docker镜像：安装包，用于创建容器
+  3. 什么是docker容器
   [参考](https://blog.csdn.net/u014265398/article/details/105636193)
   2022
   4.20--5章<br/>
@@ -243,6 +262,7 @@ docker compose
 
   7.4--27章<br/>
   7.6--29-30章<br/>
+  7.8--回归<br/>
 
   
 
