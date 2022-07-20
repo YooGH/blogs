@@ -666,6 +666,30 @@ Arr.inculdes(3,5) // false(从键第5位开始查)
   ```
 
 
+
+<br/><br/><hr/>
+
+ - **Objcet.assign()**
+
+ - **Object.entries()**
+
+  ```
+  const object1 = {
+    a: 'somestring',
+    b: 42
+  };
+  Object.entries(object1).reduce(result, [key, value]=>{
+      console.log(key, value) // a   somestring
+  })
+  ```
+
+ - **Object.fromEntries()**
+
+ - **Object.getOwnPropertySymbols()**
+
+
+
+
 <br/><br/><br/>
 
 - **Object.is()**：
@@ -694,7 +718,10 @@ Arr.inculdes(3,5) // false(从键第5位开始查)
   Object.assign(obj, undefined) === obj // true
   Object.assign(obj, null) === obj // true
   ```
+- **Object.hasOwn**
+> Object.hasOwn({a:1}, 'a')<br/>用于替换Object.prototype.hasOwnProperty(),可被重新定义
 
+- **Object.values()** 对象自身的所有可枚举属性值的数组(对象转数组)
 
 
 

@@ -92,6 +92,7 @@ const BackEndList = [
       {id: 0, name: '脑图', href: 'https://naotu.baidu.com/file/b2c14b8301fe08e11db283b2b3788935'}, 
       {id: 1, name: '后台资料', href: './view/tools/backstageSystem.md'},
       {id: 2, name: 'px转rpx', href: './view/tools/pxChangeRpx.html'},
+      {id: 2, name: 'uni转wx', href: './view/tools/uniChangewx.html'},
       {id: 3, name: 'English', href: './view/window/english.md'},
       {id: 4, name: 'Linux', href: './view/tools/linux.md'},
       {id: 5, name: '开机启动任务', href: './view/window/开机启动任务.md'},

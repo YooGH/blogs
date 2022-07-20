@@ -34,7 +34,9 @@
 			watch: {
 				oldValue() {
 					let oldValue = this.oldValue;
-					let newValue = oldValue.replace(/px/g, "rpx")
+					let newValue = oldValue.replace(/0px /g, "0");
+					newValue = oldValue.replace(/px/g, "rpx");
+					newValue = newValue.replace(/500;/g, "bold;");
 					this.newValue = newValue;
 				}
 			},

@@ -206,7 +206,64 @@ Array.isArray([]) // 返回布尔值
 
 <br/><br/><br/>
 ###  <h1 id="h5"> 5.对象 </h1>
-in: 操作符检查属性在对象是否存在
+
+ - **Object.create()**
+
+ - **Object.defineProperties()**
+
+ - **Object.defineProperty()**
+
+ - **Objcet.freeze()**
+> 不能修复对象的属性并且是浅操作(需要深层还需递归)，但可以重新赋值
+[参考](https://www.jianshu.com/p/2b4ab7105dbd)
+
+ - **Object.isFrozen()**
+
+
+<br/><br/><hr/>
+
+ - **Objcet.getOwnPropertyDescriptor()**
+
+ - **Objcet.getOwnPropertyDescriptors()**
+
+ - **Objcet.getOwnPropertyNames()**
+
+ - **Object.getOwnPropertySymbols()**
+
+ - **Object.prototype.hasOwnProperty()**  新api: Object.hasOwn()
+
+
+<br/><br/><hr/>
+ - **Object.isExtensible()**,是否可以扩展，Object.preventExtensions，Object.seal 或 Object.freeze标记
+
+ - **Object.prototype.isPrototypeOf()**,一个对象是否存在于另一个对象的原型链
+
+ - **Object.isSealed()**,判断一个对象是否被密封（Object.preventExtensions也包括属性不可配置）
+
+ - **Object.keys()**,枚举对象的key
+
+ - **Object.preventExtensions()**,不可扩展，可通过Object.isExtensible()检测
+
+
+<br/><br/><hr/>
+
+ - **Object.prototype.propertyIsEnumerable()**,查询属性是否可以枚举
+
+ - **Object.seal()**, 阻止添加新属性，但已经有属性还是可以读写不能删除
+
+ - **Object.setPrototypeOf()**
+
+ - **Object.prototype.toLocaleString()** 对象转为字符串
+
+ - **Object.prototype.toString()** 对象转为字符串(tostring()方法是直接转换成字符串，tolocalstring()方法是转化成带有本地格式的字符串。最好的例子就是new 一个Date对象，然后分别tostring 和tolocalstring一下)
+
+ - **Object.prototype.valueOf()** 指定对象的原始值
+
+ 
+
+ 
+
+**in**: 操作符检查属性在对象是否存在
 
 ```
 one:for(...){
@@ -216,16 +273,7 @@ one:for(...){
 }
 ```
 
-Object.entries()
-```
-const object1 = {
-  a: 'somestring',
-  b: 42
-};
-Object.entries(object1).reduce(result, [key, value]=>{
-    console.log(key, value) // a   somestring
-})
-```
+
 
 
 
