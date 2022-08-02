@@ -1,4 +1,4 @@
-﻿1. <a href="#h1"> 类型 </a>
+1. <a href="#h1"> 类型 </a>
 2. <a href="#h2"> 数字 </a>
 3. <a href="#h3"> 字符串 </a>
 4. <a href="#h4"> 数组 </a>
@@ -206,12 +206,52 @@ Array.isArray([]) // 返回布尔值
 
 <br/><br/><br/>
 ###  <h1 id="h5"> 5.对象 </h1>
+ 
+ <h3>一</h3>
 
- - **Object.create()**
+ - **Object.create()**<br/>
 
- - **Object.defineProperties()**
 
- - **Object.defineProperty()**
+ - **Object.defineProperty()** [例子来源](https://blog.csdn.net/qq_45954420/article/details/123315867)
+
+ ```
+ 参数: obj、prop、descriptor(对象)
+
+ let person = {age: 16}
+ Object.defineProperty(person, 'age', {
+   // value: 18,          // 属性的值
+   // enumerable: true,   // 控制属性是否可以枚举 默认值false（for...in）
+   // writable: true,     // 控制属性是否可以修改 默认值false（修改属性将不成功）
+   // configurable: true, // 控制属性是否可以被删除 默认值false(delete 'age' in person)
+   get: function() { // vue订阅/收集调用
+     return number
+   },
+   set: function(value) { // 发布/值改变后把收集调用全部更新
+     number = value
+   }
+
+ })
+ ```
+
+ - **Object.defineProperties()** --（上面的只能操作一个属性，下面则是1变多）
+
+ ```
+ let person = {age: 16};
+ Object.defineProperties(person, {
+   'age': {
+     value: 18,
+     writable: true,
+   },
+   'name': {
+     value: 'aaa',
+     enumerable: true, // 新属性默认是false,打印不出
+     writable: true,
+   }
+ })
+ console.log(person)
+ ```
+
+ <br/>
 
  - **Objcet.freeze()**
 > 不能修复对象的属性并且是浅操作(需要深层还需递归)，但可以重新赋值
@@ -222,11 +262,27 @@ Array.isArray([]) // 返回布尔值
 
 <br/><br/><hr/>
 
- - **Objcet.getOwnPropertyDescriptor()**
+ <h3>二</h3>
 
- - **Objcet.getOwnPropertyDescriptors()**
+ - **Object.getOwnPropertyDescriptor()**
+ ```
+ 查询自身的某个属性描述(configurable、enumerable、value、writable)
+ let obj = {b:2, c:3};
+ Object.getOwnPropertyDescriptors(obj, 'b') // {configurable,enumerable,value,writable}
+ ```
 
- - **Objcet.getOwnPropertyNames()**
+ - **Object.getOwnPropertyDescriptors()**
+
+ ```
+ 查询自身的属性描述(configurable、enumerable、value、writable)
+ Object.prototype.a = 1;
+ let obj = {b:2, c:3};
+ Object.getOwnPropertyDescriptors(obj) // {a:{value...}, c:{value...}}
+ ```
+
+ - **Object.getOwnPropertyNames()**
+
+ 查询属性名包括不可
 
  - **Object.getOwnPropertySymbols()**
 
@@ -234,6 +290,9 @@ Array.isArray([]) // 返回布尔值
 
 
 <br/><br/><hr/>
+
+ <h3>三</h3>
+
  - **Object.isExtensible()**,是否可以扩展，Object.preventExtensions，Object.seal 或 Object.freeze标记
 
  - **Object.prototype.isPrototypeOf()**,一个对象是否存在于另一个对象的原型链
@@ -246,6 +305,8 @@ Array.isArray([]) // 返回布尔值
 
 
 <br/><br/><hr/>
+
+ <h3>四</h3>
 
  - **Object.prototype.propertyIsEnumerable()**,查询属性是否可以枚举
 

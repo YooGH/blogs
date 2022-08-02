@@ -40,6 +40,10 @@ const BackEndList = [
       { id: 8, name: '功能8 -- JS实现下拉刷新、上拉加载', href: './view/func/JS实现下拉刷新、上拉加载.md' },
       { id: 9, name: '功能9 -- 腾讯地图map', href: './view/func/map.md', done: true },
       { id: 10, name: '功能10 -- 手机和身份证脱敏', href: './view/func/desensitization.md', done: true },
+      
+      { id: 1111111, name: '_____', href: '' },
+      { id: 11, name: '功能11 -- h5支付', href: './view/func/offlinePayment.md', done: true },
+
       { id: 8, name: '_____', href: '' },
       { id: 8, name: 'Ele0 -- form', href: './view/func/ele-form.md'},
       { id: 8, name: 'Ele1 -- table', href: './view/func/ele-table.md', done: true,},

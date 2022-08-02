@@ -8,6 +8,7 @@
 8. <a href="#h8"> 分包 </a>
 9. <a href="#h9"> 更新 </a>
 10. <a href="#h10"> 获取appId </a>
+11. <a href="#h11"> 生成小程序二维码 </a>
 100. <a href="#h100"> 。。。 </a>
 
 
@@ -191,6 +192,11 @@ json
 <br/><br/>
 ###  <h1 id="h10"> 10.获取appId </h1>
   ``wx.getAccountInfoSync().miniProgram.appId``
+  
+<br/><br/>
+###  <h1 id="h11"> 11.生成小程序二维码 </h1>
+  [wxacode.getUnlimited](https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/qr-code/wxacode.getUnlimited.html)
+
   
 
 <br/><br/>
