@@ -96,8 +96,9 @@ const FrontEndList = [
       { name: '数字转汉数字', href: 'https://www.cnblogs.com/lgyong/p/13921834.html', done: false, },
       { name: '计算机', href: './view/js/computed.md', done: true, },
       { name: '————————',},
+      { name: '————————',},
       { name: '1. 设计模型--单例', href: './view/js/design/singleton.md', done: true, },
-      { name: '1. 设计模型--工厂', href: './view/js/design/factory.md', done: true, },
+      { name: '2. 设计模型--工厂', href: './view/js/design/factory.md', done: true, },
     ]
   },
 

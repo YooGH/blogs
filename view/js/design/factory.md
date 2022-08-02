@@ -1,56 +1,42 @@
-﻿##### 单例(Singleton)模式
+﻿##### 工厂模式（Factory Pattern）
+>创建对象的接口，通过标识指向要实例化哪个工厂类
 
-> 保证一个类只有一个实例,并提供一个访问它的全局访问点; <br/>可以利用闭包和判断对象是否创建实现<br/>保证系统中只有一个对象，如web-view<br/>
-(全局或某环境中只能实例一次)
 
-- 方法1: 利用闭包
-
-  ```
-  var Singleton = function(name) {
-  	this.name = name;
-  }
-  
-  Singleton.getInstance = (function () {
-    var instance = null;
-    return function (name) {
-      if (!instance) {
-        instance = new Singleton(name);
-      }
-      return instance;
+```
+//篮球基类
+var Basketball = function() {
+    this.intro = '篮球盛行于美国';
+}
+Basketball.prototype = {
+    getMember: function() {
+        console.log('每个队伍需要五个队员');
+    },
+    getBallSize: function() {
+        console.log('篮球很大');
     }
-  })()
-  
-  var single1 = Singleton.getInstance('张三');
-  var single2 = Singleton.getInstance('李四');
-  
-  console.log(single1 === single2); // 输出true
-  ```
-
-
-
-- 方法2: 利用闭包和new
-
-  ```
-  var Singleton = function(name) {
-    this.name = name;
-  }
-  
-  var ProxySingleton = (function () {
-    var instance = null;
-    return function(name) {
-      if (!instance) {
-        instance = new Singleton(name);
-      }
-      return instance;
+}
+//足球基类
+var Football = function() {
+    this.intro = '足球在世界范围内都很流行';
+}
+Football.prototype = {
+    getMember: function() {
+        console.log('每个队伍需要11名队员');
+    },
+    getBallSize: function() {
+        console.log('足球很大');
     }
-  })()
-  
-  var single1 = new ProxySingleton('张三');
-  var single2 = new ProxySingleton('李四');
-  
-  console.log(single1 === single2); // 输出true
-  ```
-
+}
+//运动工厂
+var SportsFactory = function(name) {
+    switch (name) {
+        case 'NBA':
+            return new Basketball();
+        case 'worldCup':
+            return new Football();
+    }
+}
+```
   
 
 [参考](https://www.cnblogs.com/niehang/p/10565765.html)

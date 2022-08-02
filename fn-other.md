@@ -1,24 +1,19 @@
-﻿1. <a href="#h1"> 小程序关闭自己 </a>
-2. <a href="#h2"> 小程序跳转公众号 </a>
-3. <a href="#h3"> 小程序跳转小程序 </a>
-4. <a href="#h4"> 开发工具中不执行的函数 </a>
-5. <a href="#h5"> 下拉刷新api </a>
-6. <a href="#h6"> WEPY框架 </a>
-7. <a href="#h7"> 获取手机号 </a>
-8. <a href="#h8"> 分包 </a>
-9. <a href="#h9"> 更新 </a>
-10. <a href="#h10"> 获取appId </a>
-11. <a href="#h11"> 生成小程序二维码 </a>
-12. <a href="#h12"> 获取小程序登录失效前的页面信息 </a>
-100. <a href="#h100"> 。。。 </a>
+1.<a href="h1">  2、小程序跳转公众号  </a>
+2.<a href="h2">  3、小程序跳转小程序  </a>
+3.<a href="h3">  4、开发工具中不执行的函数  </a>
+4.<a href="h4">  5、下来刷新api  </a>
+5.<a href="h5">  6、WEPY框架  </a>
+6.<a href="h6">  7.获取手机号  </a>
+7.<a href="h7">  8.[分包](https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages.html)  </a>
+8.<a href="h8">  9.[微信小程序自动更新](https://blog.csdn.net/le_17_4_6/article/details/83036518)  </a>
+9.<a href="h9">  10.获取appId  </a>
+10.<a href="h10">  11.生成小程序二维码  </a>
+11.<a href="h11">  12.获取小程序登录失效前的页面信息  </a>
+12.<a href="h12">  。。。  </a>
+********************
 
 
-
-
-
-
-<br/><br/>
-###  <h1 id="h1"> 1、小程序关闭自己 </h1>
+"h1"> 1、小程序关闭自己 </h1>
 > navigator组件，属性target为miniProgram，open-type为exit(exit退出，需targer="miniProgram"为前提)
 方法1
 
