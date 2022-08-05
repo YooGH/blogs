@@ -210,7 +210,7 @@ Array.isArray([]) // 返回布尔值
  <h3>一</h3>
 
  - **Object.create()**<br/>
-
+ [{},Object.create(),new Object()区别](https://blog.csdn.net/weixin_45446654/article/details/115296998)
 
  - **Object.defineProperty()** [例子来源](https://blog.csdn.net/qq_45954420/article/details/123315867)
 
@@ -253,38 +253,44 @@ Array.isArray([]) // 返回布尔值
 
  <br/>
 
- - **Objcet.freeze()**
-> 不能修复对象的属性并且是浅操作(需要深层还需递归)，但可以重新赋值
+ - **Object.freeze()**
+> 不能修复对象的属性并且是浅操作(需要深层，还需递归冻结)，但可以重新赋值
 [参考](https://www.jianshu.com/p/2b4ab7105dbd)
 
  - **Object.isFrozen()**
+ ```
+ let g = {x:1,y:{a:5}}
+ Object.freeze(g)
+ Object.isFrozen(g.x) // true
+ Object.isFrozen(g.y) // false
+ ```
 
 
 <br/><br/><hr/>
 
  <h3>二</h3>
 
- - **Object.getOwnPropertyDescriptor()**
+ - **Object.getOwnPropertyDescriptor(obj, key)**
  ```
- 查询自身的某个属性描述(configurable、enumerable、value、writable)
+ 获取自身的某个属性描述(configurable、enumerable、value、writable)
  let obj = {b:2, c:3};
  Object.getOwnPropertyDescriptors(obj, 'b') // {configurable,enumerable,value,writable}
  ```
 
- - **Object.getOwnPropertyDescriptors()**
+ - **Object.getOwnPropertyDescriptors(obj)**
 
  ```
- 查询自身的属性描述(configurable、enumerable、value、writable)
+ 获取自身的所属性描述(configurable、enumerable、value、writable)
  Object.prototype.a = 1;
  let obj = {b:2, c:3};
  Object.getOwnPropertyDescriptors(obj) // {a:{value...}, c:{value...}}
  ```
 
- - **Object.getOwnPropertyNames()**
+ - **Object.getOwnPropertyNames(obj)**
 
- 查询属性名包括不可
+ 查询属性名(关键包括不可遍历的，与keys()区分)
 
- - **Object.getOwnPropertySymbols()**
+ - **Object.getOwnPropertySymbols() -- ES6**
 
  - **Object.prototype.hasOwnProperty()**  新api: Object.hasOwn()
 
@@ -439,3 +445,5 @@ ES3：1999 年 12月
 ES4：未通过(政治因素)
 ES5：2009 年12 月
 ES6：2015 年 6 月每年一版
+[](https://blog.csdn.net/weixin_39583029/article/details/111097271)
+chrome38版本  -- 2018

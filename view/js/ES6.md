@@ -866,6 +866,8 @@ https://www.cnblogs.com/lgyong/p/8711550.html
 
 [ES2021](https://h3manth.com/ES2021/)
 
+[ES6浏览器版本支持](http://kangax.github.io/compat-table/es6/)
+
 #### (ES2022)[https://h3manth.com/ES2020/]
 1. top-level await（不在需要与async配合，可以单独）
 2. 类

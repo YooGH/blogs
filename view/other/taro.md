@@ -1,10 +1,14 @@
 ﻿项目：e:/ai_trao（用taro,hooks）
-- [ ] JSX(v-for, v-if, 方法, 响应)
-- [ ] hooks
-- [ ] 生命周期
-- [ ] 组件
+- [x] JSX(v-for, v-if, 方法, 响应)
+- [x] hooks
+- [x] 生命周期
+- [x] 组件
 - [ ] 路由
-- [ ] 状态
+- [x] 状态
+
+
+
+
 
 
 1. <a href="#h1"> 路由------ </a>
@@ -14,6 +18,7 @@
 5. <a href="#h5"> 组件 </a>
 6. <a href="#h6"> 框架搭建 </a>
 7. <a href="#h7"> hooks </a>
+8. <a href="#h8"> 路由 </a>
 <br/><a href="#ck"> 参考 </a>
 
 
@@ -30,9 +35,13 @@
 
 
 
+
+<br/><br/><br/>
+
 ###  <h1 id="h2"> 2. 状态管理：redux </h1>
 https://zhuanlan.zhihu.com/p/256297415?utm_source=wechat_session
 <br/><br/><br/>
+
 
 
 
@@ -149,7 +158,7 @@ ReactDOM.render(
 
 
 
-###  <h1 id="h7"> hooks </h1>
+###  <h1 id="h7"> 7. hooks </h1>
 
 > [参考项目](https://github.com/xiaohuwei/Tarodemo) <br/> [taro官网](https://taro-docs.jd.com/taro/docs/hooks)
 
@@ -224,9 +233,28 @@ export default function Login() {
 
 
 
+<br/><br/><br/>
+
+<h1 id="h8">8. 路由</h1>
+
+****
+
+Redux 的三大核心概念为：Store，Action，Reducers：<br/>
+Store：保存着全局的状态，有着 ”数据的唯一真相来源之称“。(state)getters<br/>
+Action：发起修改 Store 中保存状态的动作，是修改状态的唯一手段。(mutations/actions)<br/>
+Reducers：一个个的纯函数，用于响应 Action，对 Store 中的状态进行修改。<br/>
+[Taro3搭建redux](https://www.cnblogs.com/Nyan-Workflow-FC/p/13529088.html)
+1. taro按照redux``yarn add redux @tarojs/redux @tarojs/redux-h5  redux-logger``
+
+
+<br/><br/>
+[taro2使用Hooks版的Redux](https://segmentfault.com/a/1190000022164777)<br/>
+[taro2项目](https://github.com/tuture-dev/ultra-club)<br/>
+****
 
 
 
+<br/><br/><br/>
 
 ### 参考
 [Taro 小程序开发大型实战（一）：熟悉的 React，熟悉的 Hooks](https://blog.csdn.net/huan1043269994/article/details/107539593)

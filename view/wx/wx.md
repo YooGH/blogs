@@ -4,6 +4,8 @@
 3. <a href="#h3"> JS </a>
 4. <a href="#h4"> 弹框（界面） </a>
 
+
+[后端接口](https://developers.weixin.qq.com/miniprogram/dev/api-backend/)
 [小程序自定义组件全局样式不生效的解决方法](https://www.jb51.net/article/218984.htm)
 
 [mpvue](http://mpvue.com/)、
@@ -18,9 +20,9 @@
   发布时间 2017年1月9日
   小游戏  2017年12月28日，微信更新的 6.6.1 版本开放了
   ```
-#### 应用生命周期
-- onLaunch   初始化（全局启动一次）
-- onShow 
+#### 应用生命周期[>](https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/app.html)
+- onLaunch(options)   初始化（全局启动一次）
+- onShow(options)
 - onHide
 - onError  脚本报错
 - onPageNotFound 找不到页面
@@ -34,7 +36,7 @@
 
 <br/><br/>
 
-#### 页面生命周期
+#### 页面生命周期[>](https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/page.html)
 - onLoad (options)
 - onShow
 - onReady
