@@ -55,6 +55,7 @@ const FrontEndList = [
   {
     id: 3,
     categoryName: 'JS/jQ',
+    href: './view/face/js-face.md',
     children: [
       // {id: 110, name: 'JS (javascript)', href: 'https://www.cnblogs.com/lgyong/p/8711510.html'}, 
       { name: 'ES6(ES2015)', href: './view/js/ES6.md', done: true},
