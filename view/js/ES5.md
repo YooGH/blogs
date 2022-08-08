@@ -254,7 +254,7 @@ Array.isArray([]) // 返回布尔值
  <br/>
 
  - **Object.freeze()**
-> 不能修复对象的属性并且是浅操作(需要深层，还需递归冻结)，但可以重新赋值
+> 不能修复对象的属性并且是浅操作(需要深层，还需递归冻结)，但可以重新赋值<br>, 与preventExtensions区别是不可以编辑原来的属性
 [参考](https://www.jianshu.com/p/2b4ab7105dbd)
 
  - **Object.isFrozen()**
@@ -301,22 +301,23 @@ Array.isArray([]) // 返回布尔值
 
  - **Object.isExtensible()**,是否可以扩展，Object.preventExtensions，Object.seal 或 Object.freeze标记
 
- - **Object.prototype.isPrototypeOf()**,一个对象是否存在于另一个对象的原型链
+ - **Object.preventExtensions()**,不可扩展，可通过Object.isExtensible()检测, 与freeze区别是可以编辑原来的属性
 
- - **Object.isSealed()**,判断一个对象是否被密封（Object.preventExtensions也包括属性不可配置）
+ - **Object.isSealed()**,判断一个对象是否被密封（Object.preventExtensions也包括属性不可配置） (Object.seal())
+
+ - **Object.seal()**, 阻止添加新属性，但已经有属性还是可以读写不能删除(Object.isSealed())
 
  - **Object.keys()**,枚举对象的key
-
- - **Object.preventExtensions()**,不可扩展，可通过Object.isExtensible()检测
 
 
 <br/><br/><hr/>
 
  <h3>四</h3>
 
+ - **Object.prototype.isPrototypeOf()**,一个对象是否存在于另一个对象的原型链
+
  - **Object.prototype.propertyIsEnumerable()**,查询属性是否可以枚举
 
- - **Object.seal()**, 阻止添加新属性，但已经有属性还是可以读写不能删除
 
  - **Object.setPrototypeOf()**
 
