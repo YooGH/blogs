@@ -22,7 +22,7 @@
   ```
 #### 应用生命周期[>](https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/app.html)
 - onLaunch(options)   初始化（全局启动一次）
-- onShow(options)
+- onShow(options) - [场景值](https://developers.weixin.qq.com/miniprogram/dev/reference/scene-list.html)
 - onHide
 - onError  脚本报错
 - onPageNotFound 找不到页面

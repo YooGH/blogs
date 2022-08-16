@@ -669,36 +669,7 @@ Arr.inculdes(3,5) // false(从键第5位开始查)
 
 <br/><br/><hr/>
 
- - **Objcet.assign()**
-
- - **Object.entries()**
-
-  ```
-  const object1 = {
-    a: 'somestring',
-    b: 42
-  };
-  Object.entries(object1).reduce(result, [key, value]=>{
-      console.log(key, value) // a   somestring
-  })
-  ```
-
- - **Object.fromEntries()**
-
- - **Object.getOwnPropertySymbols()**
-
-
-
-
-<br/><br/><br/>
-
-- **Object.is()**：
-  ```
-    Object.is(NaN,NaN); // true 
-    Object.is(+0,-0); // false
-  ```
-
-- **Object.assign()**：
+ - **Objcet.assign(target, ...otherObj)**：
   ```
     const target = { a: 1 };
     Object.assign(target, {b: 2})
@@ -718,6 +689,42 @@ Arr.inculdes(3,5) // false(从键第5位开始查)
   Object.assign(obj, undefined) === obj // true
   Object.assign(obj, null) === obj // true
   ```
+
+ ```
+  let target = {a: 1, c: 3}
+  let obj1 = {b: 2, a: 666}
+  Object.assign(target, obj1)
+  target // {a: 666, b: 2, c:3}    // 合并obj1进来并且a值被覆盖了
+  obj1 // {b: 2, a: 666}
+ ```
+
+ - **Object.entries()**
+
+  ```
+  const object1 = {
+    a: 'somestring',
+    b: 42
+  };
+  Object.entries(object1).reduce(result, [key, value]=>{
+      console.log(key, value) // a   somestring
+  })
+  ```
+
+ - **Object.fromEntries()**
+
+ - **Object.getOwnPropertySymbols()**
+
+
+- **Object.is()**：
+  ```
+    Object.is(1,'1');   // false (1 == '1' // true)
+    Object.is(NaN,NaN); // true  (NaN === NaN // false)
+    Object.is(+0,-0);   // false (+0 === -0 // true)
+  ```
+
+
+<br/><br/><br/>
+
 - **Object.hasOwn**
 > Object.hasOwn({a:1}, 'a')<br/>用于替换Object.prototype.hasOwnProperty(),可被重新定义
 
