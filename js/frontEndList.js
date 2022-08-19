@@ -102,6 +102,7 @@ const FrontEndList = [
       { name: '数据结构和算法', href: './view/js/design/数据结构和算法.txt', done: true, },
       { name: '1. 设计模型--单例', href: './view/js/design/singleton.md', done: true, },
       { name: '2. 设计模型--工厂', href: './view/js/design/factory.md', done: true, },
+      { name: '2. 设计模型--builder', href: './view/js/design/builder.md', done: true, },
     ]
   },
 

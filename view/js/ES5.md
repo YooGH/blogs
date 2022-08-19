@@ -272,9 +272,9 @@ Array.isArray([]) // 返回布尔值
 
  - **Object.getOwnPropertyDescriptor(obj, key)**
  ```
- 获取自身的某个属性描述(configurable、enumerable、value、writable)
+ 获取自身的某个属性描述(value、writable:true-是否可以赋值、enumerable:true-是否可以遍历、configurable:true-是否被删除/改变特性值、)
  let obj = {b:2, c:3};
- Object.getOwnPropertyDescriptors(obj, 'b') // {configurable,enumerable,value,writable}
+ Object.getOwnPropertyDescriptors(obj, 'b') // {value,configurable,enumerable,writable}
  ```
 
  - **Object.getOwnPropertyDescriptors(obj)**
