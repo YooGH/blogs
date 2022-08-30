@@ -195,12 +195,18 @@ console.log(longStr) // &id=666&name=reduce
 slice(键1、键2)  // 切，返原数组键1到键2 - 1的数组，不改变原数组
 concat()        // 合，返原合并数组，不改变原数组
 reverse()       // 倒，返原反转后的数组，改原数组
-sort(function(a,b){return a-b})
+
 join()          // Arr => Str
 split(',')      // Str => Arr
 Array.isArray([]) // 返回布尔值 
 ```
+sort(function(a,b){return a-b}) 
 
+```
+let arr = [1,22,3,12]
+arr.sort() // 1,12,3,22
+arr.sort((a,b)={return a-b}) // 1,3,12,22
+```
 
 
 

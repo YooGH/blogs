@@ -1,0 +1,51 @@
+<html>
+<style>
+	.parent {
+		display: flex;
+		width: 50vw;
+		background: #eee;
+	}
+	.left {
+		width: 20vw;
+		background: #999;
+	}
+	.right {
+		width: 30vw;
+		/*height: 500px;*/
+		background: #ff0;
+		word-break: break-all;
+	}
+</style>
+
+<style>
+	.parent-2 {
+		display: flex;
+		width: 50vw;
+		background: #eee;
+	}
+	.left-2 {
+		width: 20vw;
+		background: #999;
+	}
+	.right-2 {
+		width: 30vw;
+		height: 500px;
+		background: #ff0;
+	}
+</style>
+
+
+<body>
+	左边高度跟随右边
+	<div class="parent">
+		<div class="left"></div>
+		<div class="right">ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</div>
+	</div>
+
+	右边高度跟随左边
+	<div class="parent-2">
+		<div class="left-2"></div>
+		<div class="right-2"></div>
+	</div>
+</body>
+</html>

@@ -33,3 +33,15 @@
 散列存储结构
 
 https://github.com/yezihack/algo
+
+
+
+&a代表引用类型
+
+
+
+
+# C
+
+['gcc' is not recognized as an internal or external command, operable program](https://blog.51cto.com/u_15292864/2973678)
+[11111](https://www.it610.com/article/1424574512837545984.htm)

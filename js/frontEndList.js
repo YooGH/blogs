@@ -2,7 +2,7 @@ const FrontEndList = [
   { 
     id: 1,
     categoryName: 'HTML',
-    href: './view/face/html-face.md', 
+    href: './view/skill/html-skill.md', 
     children: [
       { name: 'HTML', href: './view/html/HTML.md'},  
       { name: 'img', href: './view/html/img.md'},
@@ -21,7 +21,7 @@ const FrontEndList = [
   {
     id: 2,
     categoryName: 'CSS',
-    href: './view/face/css-face.md',
+    href: './view/skill/css-skill.md',
     children: [
       { name: 'CSS', href: 'https://www.cnblogs.com/lgyong/p/8617044.html',}, 
       { name: 'SCSS', href: './view/css/scss.md', grade: 1, done: true}, 
@@ -55,7 +55,7 @@ const FrontEndList = [
   {
     id: 3,
     categoryName: 'JS/jQ',
-    href: './view/face/js-face.md',
+    href: './view/skill/js-skill.md',
     children: [
       // {id: 110, name: 'JS (javascript)', href: 'https://www.cnblogs.com/lgyong/p/8711510.html'}, 
       { name: 'ES6(ES2015)', href: './view/js/ES6.md', done: true},
@@ -111,7 +111,7 @@ const FrontEndList = [
   {
     id: 4,
     categoryName: 'Vue',
-    href: './view/face/vue-face.md',
+    href: './view/skill/vue-skill.md',
     children: [
       {id: 3, name: 'vue2', href: './view/vue/vue2.md'}, 
       {id: 2, name: '2-vuex', href: './view/vue/vuex.md'}, 

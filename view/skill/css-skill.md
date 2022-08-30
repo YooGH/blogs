@@ -18,15 +18,17 @@
 + 单行
 
 ```
+width: 宽度;                 // flex布局可以用flex: 0 0 宽度;
 overflow: hidden;
-text-overflow: ellipsis;       // ...省略号
-white-space: nowrap;        // 超出不换行
+text-overflow: ellipsis;    // ...省略号
+white-space: nowrap;        // 超出不换行(no+wrap)
 
 ```
 
 +多行
 
 ```
+width: 宽度;
 display: -webkit-box;
 -webkit-box-orient: vertical;
 -webkit-line-clamp: 2;            // 多行溢出，需要-webkit-box，因为不是规范内的，有兼容问题
@@ -49,18 +51,19 @@ display: -webkit-box;
 <br/><br/><br/>
 
 ###  <h1 id="h3"> 3.居中 </h1>
- - flex
- - transform:translate(-50%,-50%)
- - position: absolute; left: 0; margin: auto;
+ - flex => display: flex; justify-content: center; align-items: center;
+ - position: absolute; top: 50%; left: 50%; margin: auto; transform:translate(-50%,-50%)
+ - position: absolute; width: 100%; height: 100%; left: 0; top: 0; bottom: 0; right: 0; margin: auto;
 
 
 
 <br/><br/><br/>
 
 ###  <h1 id="h4"> 4.清浮动 </h1>
+ - :after/:before(伪元素)
  - clear:both;
  - overflow:hidden;
- - :after/:before
+
 
 
 
@@ -69,7 +72,9 @@ display: -webkit-box;
 
 ###  <h1 id="h5"> 5.自适应高度 </h1>
   [自适应高度](https://jingyan.baidu.com/article/37bce2bec2171c5003f3a221.html)
-
+  
+  [flex](./sameHeight1.html) => 父: display: flex; | 左边: width: 宽度; | 右边： width: 宽度; height: 高度;
+  [position](./sameHeight2.html) => 父: position:relative; | 左边: position:absulote; height: 100%; width: 宽度; | 右边： width: 宽度; margin-left: 左边宽度; height: 100px;(父级高度随右侧兼容，左侧高度设置100%继承父级)
 
 
 

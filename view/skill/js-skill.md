@@ -23,7 +23,7 @@
 
 10. 页面到服务器输入流程： 1.DNS域名解析；2.建立TCP连接； 3.http请求；4.服务器处理相关的请求；5.返回响应的结果；6关闭TCP连接；7.浏览器解析HTML；8浏览器渲染
 
-11. es6（filter,find,map     ...，includes, 箭头函数，）
+11. es6（includes, 箭头函数，解构，扩展运算符，new Set, for...of, filter, find, map     ...，）
 
 12. AMD和CMD的区别：https://blog.csdn.net/qq_38912819/article/details/80597101?ivk_sa=1024320u
 

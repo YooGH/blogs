@@ -1,0 +1,64 @@
+<html>
+<style>
+.parent {
+	position: relative;
+	width: 400px;
+	background: #eee;
+}
+.left {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 200px;
+	background: #ddd;
+}
+.right {
+	margin-left: 200px;
+	width: 200px;
+	height: 100px;
+	background: #ff0;
+}
+</style>
+
+<style>
+.parent-2 {
+	position: relative;
+	width: 400px;
+	background: #eee;
+}
+.left-2 {
+	margin-right: 200px;
+	width: 200px;
+	height: 100px;
+	background: #ff0;
+}
+.right-2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 200px;
+	background: #ddd;
+}
+</style>
+
+
+<body>
+
+	左边高度跟随右边
+	<div class="parent">
+		<div class="left">
+			顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶
+		</div>
+		<div class="right">d</div>
+	</div>
+
+	
+	<br/>右边高度跟随左边
+	<div class="parent-2">
+		<div class="left-2"></div>
+		<div class="right-2"></div>
+	</div>
+</body>
+</html>

@@ -289,40 +289,53 @@
 
 - **...**     : <small>扩展运算符</small>
 
-- **Array.from()**：<small>转为数组，不改变原来遍历; [详细](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from)</small>
+- **Array.from()**：<small>转为数组，不改变原来遍历;[详细](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from)</small>
   ```
-  字符串转数组:
+  1.字符串转数组:
   const Str = 'yes';
   Array.of(Str)  // ["y", "e", "s"]
   
-  Set转数组:
+  
+  2.Set转数组:
   const set = new Set(['one', 'two', 'three', 'two']);
   Array.of(set) // ["one", "two", "three"]
   
-  对象转数组(要有length,不然不能转)：
+
+  3.对象转数组(要有length,不然不能转)：
   let arrayLike = {
       '0': 'a',
       '1': 'b',
       '2': 'c',
       length: 3
   };
+
+
+  4.其他
   Array.from(arrayLike) // ["a", "b", "c"]
+  Array.from(null)/Array.from(undefined) // 报错
+  Array.from(NaN)/Array.from(0)/Array.from('') // []
   ```
   
-- **Array.of()**：<small>数值转为数组，不改变原来遍历; [详细](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/of);   可以用于替换new Array()的问题</small>
+- **Array.of()**：<small>数值转为数组，不改变原来遍历; [详细](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/of);   可以用于替换new Array()的问题（如例1）</small>
 
   ```
-  Array.of(1,2,3,4)  // [1,2,3,4]  数值转为数组
-  '1,2,3,4'.split(',')  // [1,2,3,4]  字符串转为数组
-  
+  例1：
   Array.of(3) // [3]
   Array(3)    // [,,,]
+
+  Array.of(1,2,3) // [1,2,3]
+  Array(1,2,3)    // [1,2,3]
+
+
+  例2：
+  Array.of(1,2,3,4)  // [1,2,3,4]  数值转为数组
+  '1,2,3,4'.split(',')  // [1,2,3,4]  字符串转为数组
   ```
   
-- **copyWithin()** <small>替换 ，**改变原数组**</small>
+- **copyWithin()** <small>拷贝自己 ，**改变原数组**</small>
 
   ```
-  copyWithin 替换，数组长度不变，改变原数组
+  copyWithin （需要被替换的index,替换它的开始index，替换它的结束index），数组长度不变，改变原数组
   [1,2,3,4,5].copyWithin(0, 3) // [4, 5, 3, 4, 5]
   
   splice 添加，数组长度改变，改变原数组

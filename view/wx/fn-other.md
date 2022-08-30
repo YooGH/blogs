@@ -7,9 +7,10 @@
 7. <a href="#h7"> 获取手机号 </a>
 8. <a href="#h8"> 分包 </a>
 9. <a href="#h9"> 更新 </a>
-10. <a href="#h10"> 获取appId </a>
+10. <a href="#h10"> 常见API(appId, 环境，复制) </a>
 11. <a href="#h11"> 生成小程序二维码 </a>
 12. <a href="#h12"> 获取小程序登录失效前的页面信息 </a>
+13. <a href="#h13"> 跳转小程序链接 </a>
 100. <a href="#h100"> 。。。 </a>
 
 
@@ -191,8 +192,31 @@ json
 ###  <h1 id="h9"> 9.[微信小程序自动更新](https://blog.csdn.net/le_17_4_6/article/details/83036518) </h1>
 
 <br/><br/>
-###  <h1 id="h10"> 10.获取appId </h1>
+###  <h1 id="h10"> 常见API(appId, 环境，复制) </h1>
+  - [appId](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/account-info/wx.getAccountInfoSync.html)<br />
   ``wx.getAccountInfoSync().miniProgram.appId``
+
+  - [环境](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/account-info/wx.getAccountInfoSync.html)<br />
+  ``wx.getAccountInfoSync().miniProgram.envVersion => develop/trial/release``
+
+  - [复制](https://developers.weixin.qq.com/miniprogram/dev/api/device/clipboard/wx.setClipboardData.html)
+
+  ```
+  wx.setClipboardData({
+    data: res.code,
+    success (res) {
+      wx.getClipboardData({
+        success (res) {
+          wx.showToast({
+            title: '复制code成功！',
+          })
+          console.log(res.data) // data
+        }
+      })
+    }
+  })
+  ```
+
   
 <br/><br/>
 ###  <h1 id="h11"> 11.生成小程序二维码 </h1>
@@ -208,6 +232,12 @@ routeObj.route
 routeObj.options
 ```
 
+  
+
+<br/><br/>
+###  <h1 id="h13"> 13.跳转小程序链接 </h1>
+[获取 URL Scheme](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/url-scheme.html)
+[限制公告](https://developers.weixin.qq.com/community/develop/doc/000aeab88a4ea0c5c89d81fde5b801?source=templateb&page=9)
   
 
 <br/><br/>

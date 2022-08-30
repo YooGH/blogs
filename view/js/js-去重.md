@@ -18,22 +18,37 @@
 <br/><br/>
 
 2. **set**数组对象，array.from数组对象转数组
+  > new Set()能保证值的唯一性，Array.from是将类数组的new Set()转为数组类型
 
   ```
     function dr (arr) {
-  　　return Array.from(new Set(arr))    //    方法2: return [new Set(arr)]
+  　　return Array.from(new Set(arr))    //  方法2: return [new Set(arr)]
+      return [...new Set(arr)]          //   简化版
     }
   ```
 
 <br/><br/>
 
-3. **indexof**
+3. **indexof**/**includes**
 
   ```
     function dr(arr) {
       let newArr = [];
       for(let item of arr) {
         if(newArr.indexOf(item) == -1) {
+          newArr.push(item)  
+        }
+      }
+      return newArr;    
+    }
+  ```
+
+
+  ```
+    function dr(arr) {
+      let newArr = [];
+      for(let item of arr) {
+        if(newArr.includes(item)) {
           newArr.push(item)  
         }
       }
