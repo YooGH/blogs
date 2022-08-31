@@ -1,0 +1,61 @@
+let arr = [1,2,3,4,5,6,7,9,10]
+
+
+
+一、改变原数组
+unshift()、push()、		// 返回长度
+shift()、pop()、splice()	// 返回删除的元素，没有空数据
+splice(), reverse()
+
+
+
+二、不改变原数组
+reduce(fn)、slice()、concat()、
+sort(fn)、join()、Array.isArray()
+
+
+
+三、
+Array.from()、
+Array.of()、
+copyWithin()、
+fill()、
+
+
+
+四、
+find()/findIndex()、
+keys()/values()/entries()                         find/findIndex传入函数不用return，indexOf()传入值; 返回遍历器用for...of遍历(或直接用Object.keys())
+
+
+五、
+includes()、
+flat()、			// flat()减维度，不改变原数组；Infinity； flatMap()接受回调函数
+flatMap()、
+in、
+at()、             		// 下标找值，支持-3
+
+
+
+六、
+(element, index, arr)
+forEach()、    // 不return；遍历数组，不改变(遍历前先存数组，中途加入不变)
+filter()、        // return；过滤数组，不改变；返回过滤的数组
+some()、       // return；查找是否至少一个符合条件的，不改变；返回true/false；
+map()、        // return；item*2；创建新数组
+
+toString()、  // 数组转字符串
+
+
+
+every()
+find()
+
+
+
+
+
+
+问题1：数组遍历
+for...of(只有item)；for...in(只有index,)；forEach(都有)；for(最快)
+map()；some()；every()；filter()；find()-可以带回调的includes

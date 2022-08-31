@@ -68,6 +68,11 @@
    - emit/props
    - location
   ```
+
+  [兄弟组件](https://segmentfault.com/a/1190000020232224)
+  1. vuex
+  2. A组件emit, 父组件中间变量，B组件prop接受中间变量
+  3. 建立Vue 实例模块 bus.js $on和$emit
   
 
 
