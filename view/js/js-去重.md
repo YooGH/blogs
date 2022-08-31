@@ -22,8 +22,8 @@
 
   ```
     function dr (arr) {
-  　　return Array.from(new Set(arr))    //  方法2: return [new Set(arr)]
-      return [...new Set(arr)]          //   简化版
+      return Array.from(new Set(arr))    //  
+      return [...new Set(arr)]           //  简化版
     }
   ```
 

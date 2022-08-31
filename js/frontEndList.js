@@ -69,8 +69,8 @@ const FrontEndList = [
       { name: '————————',},
     ],
     itemsChildren: [
-      { name: '去重', href: './view/js/js-去重.md', done: true},
-      { name: '闭包', href: 'https://www.cnblogs.com/lgyong/p/8559775.html', done: false, },
+      { name: '去重', href: './view/js/js-去重.md', done: true, before: 'https://www.cnblogs.com/lgyong/p/8490610.html'},
+      { name: '闭包', href: './view/js/js-closure.md', done: true, before: 'https://www.cnblogs.com/lgyong/p/8559775.html'},
       { name: '继承：（封装、多态、抽象）', href: 'https://www.cnblogs.com/lgyong/p/8566279.html', done: false, },
       { name: '模块(cmd amd)', href: 'https://www.cnblogs.com/lgyong/p/8586283.html', done: false, },
       { name: '事件流（冒泡和捕获）', href: 'https://www.cnblogs.com/lgyong/p/9521226.html', done: false, },
