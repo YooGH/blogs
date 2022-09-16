@@ -1,0 +1,237 @@
+﻿2.JavaScript数据结构与算法第3版
+[ES浏览器兼容](http://kangax.github.io/compat-table/es5/)
+[babel](https://babeljs.io/repl)
+
+
+4章：
+①、栈是一种遵从后进先出（LIFO）原则的有序集合。（应用：浏览器历史记录,子弹壳装弹）- 96（4.5）
+仅仅用于线性表
+
+②、类的私有属性用1. 下划线标识(实际还是能访问) -> 2. yong Symbol(实际getOwnProperty-Symbols可以访问) -> 3.WeakMap真正实现私有属性，但可读性差并且私有属性不能被继承 -> 4. 提案在属性前加#(如ts,c属性前加private)
+
+③、new Stack()
+
+
+
+
+
+
+5章：
+队列是遵循先进先出（FIFO，也称为先来先服务）原则的一组有序的项(应用：排队做核酸)
+双端口队列（应用：回文），循环队列（应用：击鼓传花游戏）
+
+class Queue {
+  constructor() {
+    this.count = 0;
+    this.lowestCount = 0;
+    this.items = {};
+  }
+  enqueue(element) {
+    this.items[this.count] = element;
+    this.count++
+  }
+  dequeue() {
+    if(this.isEmpty()) { return undefined; };
+    const result = this.items{this.lowestCount};
+    delete this.items{this.lowestCount}
+    this.lowestCount++;
+    return result
+  }
+  peek() {
+    if(this.isEmpty()) { return undefined; };
+    return this.items{this.lowestCount}
+  }
+  isEmpty() {
+    return this.count - this.lowestCount === 0;
+  }
+  size() {
+    return this.count - this.lowestCount
+  }
+  clear() {
+    this.count = 0;
+    this.lowestCount = 0;
+    this.items = {};
+  }
+  toString() {
+    if(this.isEmpty()) { return ''; };
+    let objString = `${this.items{this.lowestCount}}`;
+    for (let i = this.lowestCount + 1; i < this.count; i++) {
+      objString = `${objString},${this.items[i]}`;
+    }
+    return objString;
+  }
+}
+1. 添加：enqueue（push）
+2. 移除：dequeue（shift）
+3. 查看队列头元素: peek() (当前第一个元素)
+4. 队列是否为空: isEmpty() (是否是空)
+5. 长度: size() （length）
+6. 清空: clear() （一直调dequeue直到undefined或初始化）
+
+
+
+
+5.2.1双端队列数组结构（与双端队列，就是多少后进和后出操作）
+class Deque{
+  constructor() {
+    this.count = 0;
+    this.lowestCount = 0;
+    this.items = {};
+  }
+  addFront(element) {
+    if (this.isEmpty()) { // 队列空
+      this.addBack(element);
+    } else if (this.lowestCount > 0) { // 队列被删除
+      this.lowestCount--;
+      this.items[this.lowestCount] = element;
+    } else {  // 先把之前的移动后一位，在塞进第一位置
+      for (let i = this.count; i > 0; i--) { // {3}
+        this.items[i] = this.items[i - 1];
+      }
+      this.count++;
+      this.lowestCount = 0;
+      this.items[0] = element; // {4}
+    }
+  } 
+}
+
+5.3.1循环队列
+5.3.2回文检测器: 正反读有一样 -> madam  (比较就是前出和后出比较是否一致)
+
+
+6章
+export function defaultEquals(a, b) {
+  return a === b;
+}
+class Node {
+  constructor(element) {
+    this.element = element;
+    this.next = undefined;
+  }
+} 
+export default class LinkedList {
+  constructor(equalsFn = defaultEquals) {
+    this.count = 0; // 数组长度
+    this.head = undefined; // 数组头结点(element和next)
+    this.equalsFn = equalsFn; // 两元素是否相同
+  }
+  push(element) {
+    const node = new Node(element); // 
+    let current; // {2}
+    if (this.head == null) { // 空数组
+      this.head = node;
+    } else {
+      current = this.head; //
+      while (current.next != null) { //  获得最后一项
+        current = current.next;
+      }
+      // 将其 next 赋为新元素，建立链接
+      current.next = node; // {6}
+    }
+    this.count++; // {7}
+  }
+  removeAt(index) {
+   // 检查越界值
+    if (index >= 0 && index < this.count) { // 
+      let current = this.head; // 头结点
+      // 移除第一项
+      if (index === 0) { // 移除头指针只要把第二个结点放头部
+        this.head = current.next;
+      } else {
+        let previous; // {4}
+        for (let i = 0; i < index; i++) { // {5}
+        previous = current; // {6}
+        current = current.next; // {7}
+      }
+      // 将 previous 与 current 的下一项链接起来：跳过 current，从而移除它
+      previous.next = current.next; // {8}
+    }
+    this.count--; // {9}
+    return current.element;
+    }
+    return undefined; // {10}
+  }
+  getElementAt(index) {
+    if (index >= 0 && index <= this.count) { // {1}
+      let node = this.head; // {2}
+      for (let i = 0; i < index && node != null; i++) { // {3}
+        node = node.next;
+      }
+      return node; // {4}
+    }
+    return undefined; // {5}
+  }
+  removeAt(index) {  // 重构
+   // 检查越界值
+    if (index >= 0 && index < this.count) { // 
+      let current = this.head; // 头结点
+      // 移除第一项
+      if (index === 0) { // 移除头指针只要把第二个结点放头部
+        this.head = current.next;
+      } else {
+        let previous;
+        const previous = this.getElementAt(index - 1);
+        current = previous.next;
+        previous.next = current.next; 
+      }
+    }
+    this.count--; // {9}
+    return current.element;
+    }
+    return undefined; // {10}
+  }
+}
+1. 添加元素 push
+2. index移除元素 removeAt
+3. 循环迭代链表直到目标位置 getElementAt(下标找元素)
+4. 任意位置插入元素
+
+
+
+
+
+
+
+
+
+宿主发起的任务为宏观任务(setTimeout)，js引擎发起的任务为微观任务(ES5之后的Promise),引擎等待宿主环境分配任务发起，node也叫事件循环
+
+
+
+
+路由: config/permission.js => 做了路由守卫router.beforeEach
+
+
+
+
+
+
+
+
+CICD(1week)
+ESLint   怎么更改、vscode插件(1week)
+用vim打包项目（看看原来的打包项目时间）(1week)
+trao--E: ai_trao(手动转)/ai_mdt_xcx-taro(自转)（file:///D:/a/blogs/view/other/taro.md）
+diff: https://mp.weixin.qq.com/s/esHgaLjr6plHxaidFw9iVw（到：此方法就是diff算法的核心部分）
+
+1. vue源码
+2. 设计模型
+3. ES6
+4. done空间算法时间算法
+5. docker18开始,共30
+
+9月(看看skill、过过一)
+一、对象、数组、字符串、敲敲排序代码2
+skill(docker/算法)、js
+设计模式(结构1-2)
+搭建小vue
+
+
+
+Object(object; 14: vue)
+
+
+队列：先进先出（排队）
+
+
+118

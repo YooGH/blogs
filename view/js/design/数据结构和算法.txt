@@ -41,6 +41,22 @@ https://github.com/yezihack/algo
 
 
 
+
+
+
+单链表：
+1. 取值：链表不是随机存储的，而是顺序存储
+2. 插入（新节点先指向后面，在用前节点指向新节点）
+3. 删除（前指针替换成下下指针，当前值删除）
+4. 取值O（n）；知道位置的插入和删除是常量O（1），未知O（n）
+5. 
+头插法：元素插入到链表头部，也叫前插法；先把新节点指向上个存储结点，当前新节点被首结点指向）
+尾插法：元素插入到链表尾部，也叫后插法；新结点）
+
+双链表：
+双向：以单区别是多了头指针prior；空表就是头尾都是^（结构对称性）
+1. 插入，先头prior和next，在尾prior和next
+
 # C
 
 ['gcc' is not recognized as an internal or external command, operable program](https://blog.51cto.com/u_15292864/2973678)

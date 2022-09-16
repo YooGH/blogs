@@ -1,6 +1,6 @@
 ﻿# JS
 
-1. 防抖节流（https://www.jianshu.com/p/c8b86b09daf0）
+1. 防抖节流（https://blog.csdn.net/m0_48166663/article/details/121144995）
 
 - 防抖： 触发函数后n秒内执行一次，不断触发重新开始（登陆，模糊查询，页面跳转）
 - 节流：不断触发只执行一次(吸顶(配合transform和transition)，顶部导航栏)
@@ -97,6 +97,8 @@ Class
 
 <br/><br/><br/>
 17. ES6
+  let/const<br />
+  模板字面量：后台删除某项<br />
   箭头函数<br />
   解构：用于接口返回、表单接受、<br />
   includes/for...of/filter<br />

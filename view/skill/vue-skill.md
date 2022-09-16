@@ -66,7 +66,7 @@
    - vuex
    - $ref
    - emit/props
-   - location
+   - location (watch"router")
   ```
 
   [兄弟组件](https://segmentfault.com/a/1190000020232224)
