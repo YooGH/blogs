@@ -97,6 +97,7 @@ Class
 
 <br/><br/><br/>
 17. ES6
+  new Promist<br/>
   let/const<br />
   模板字面量：后台删除某项<br />
   箭头函数<br />

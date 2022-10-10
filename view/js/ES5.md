@@ -172,6 +172,11 @@ splice(键、删除个数)          // 返删除的数组,如果有
  - **reduce()**
  > 可用于get请求，代码对象写法，在通过如下转化<br/>``array.reduce((total, currentValue, currentIndex, arr), initialValue)``
 
+  let array1 = [1,2,3]
+  array1.reduce(
+    (pre, cur) => pre + cur,   // (pre, cur) => { return pre + cur }
+    0
+  );
 ```
 参1: callback函数
 参2：初始值,不传则数组的第一个
@@ -194,7 +199,7 @@ console.log(longStr) // &id=666&name=reduce
 ```
 slice(键1、键2)  // 切，返原数组键1到键2 - 1的数组，不改变原数组
 concat()        // 合，返原合并数组，不改变原数组
-reverse()       // 倒，返原反转后的数组，改原数组
+reverse()       // 倒，返原反转后的数组，改原数组（应用：第三方的物流信息）
 
 join()          // Arr => Str
 split(',')      // Str => Arr

@@ -180,15 +180,54 @@ export default class LinkedList {
     }
     return undefined; // {10}
   }
+  indexOf(element) {
+    let current = this.head;
+    for (let i=0; i < this.count && current != null; i++) {
+      if(this.equalsFn(element, current.element)){ // 判断传入元素与当前元素是否一致
+        return i
+      }
+      current = current.next // 循环指向下一个
+    }
+    return -1
+  }
+  remove(element) {
+    const index = this.indexOf(element);
+    return this.removeAt(index);
+  }
+  isEmpty() {
+    return this.size() === 0;
+  }
+  size() {
+    return this.count;
+  }
+  getHead() {
+    return this.head;
+  }
+  toString() {
+    if(this.head == null) {
+      return '';
+    }
+    let objString = `${this.head.element}`;
+    let current = this.head.next;
+    for(let i=1; i<this.size() && current !=null; i++) {
+      objString += current.element;
+      current = current.next; // 指针 
+    }
+    return objString;
+  }
 }
 1. 添加元素 push
 2. index移除元素 removeAt
 3. 循环迭代链表直到目标位置 getElementAt(下标找元素)
 4. 任意位置插入元素
+5. 返回一个元素的位置(indexOf) 9.27
+6. 从链表中移除元素(remove) 9.27
+7. isEmpty、size 和 getHead 方法 9.27
+8. toString()
 
 
-
-
+6.2双向链表
+123
 
 
 
@@ -234,4 +273,3 @@ Object(object; 14: vue)
 队列：先进先出（排队）
 
 
-118

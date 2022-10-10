@@ -1,4 +1,4 @@
-﻿1. <a href="#h1"> 新类型 </a>
+1. <a href="#h1"> 新类型 </a>
 2. <a href="#h2"> 声明变量 </a>
 3. <a href="#h3"> 解构赋值</a>
 4. <a href="#h4"> 字符串</a>
@@ -290,6 +290,7 @@
 - **...**     : <small>扩展运算符</small>
 
 - **Array.from()**：<small>转为数组，不改变原来遍历;[详细](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from)</small>
+  
   ```
   1.字符串转数组:
   const Str = 'yes';

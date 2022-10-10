@@ -1,5 +1,6 @@
 ﻿1. <a href="#h1"> 计算机码 </a>
 2. <a href="#h2"> 进制转化 </a>
+3. <a href="#h3"> 单位 </a>
 
 
 
@@ -19,7 +20,7 @@
 
 
 <br/><br/><br/>
-###  <h1 id="h1"> 计算机码 </h1>
+###  <h1 id="h2"> 计算机码 </h1>
  - **toString()** 十进制转16进制，参数2-36``25105.toString(16) // 6211``
 
  - **parseInt(其他进制数字,其他进制)** 其他进制转十进制,第二个参2-36``parseInt('F', 16) // ``
@@ -28,4 +29,20 @@
 <br/><br/><br/>
 [字符编码笔记：ASCII，Unicode 和 UTF-8](http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html)
 [彻底弄懂 Unicode 编码](https://www.jianshu.com/p/9c9073e601d7)
+
+
+
+<br/><br/><br/>
+###  <h1 id="h3"> 单位 </h1>
+bit（比特，位）
+
+byte（字节,B）
+
+1B（byte，字节）= 8 bit（见下文）
+
+1KB（Kibibyte，千字节）=1024B= 2^10 B
+
+1MB（Mebibyte，兆字节，百万字节，简称“兆”）=1024KB= 2^20 B
+
+1GB（Gigabyte，吉字节，十亿字节，又称“千兆”）=1024MB= 2^30 B
 

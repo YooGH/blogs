@@ -28,5 +28,6 @@ bar 是“ beyond all recognition " ，意思是“超越认知”，通俗说�
 
 <br/><br/>
 ### 样子差不多
-sleep(睡)
-sheep(绵羊)
+sleep(睡) - sheep(绵羊)
+
+slice - silent
