@@ -135,3 +135,53 @@ this.$alert(
  
 ```
 
+
+
+# bug
+el-elect数据多加载慢
+分页，触底加载
+
+
+html
+
+```
+<el-select
+  @focus="focus"
+  v-model="form.groupId"
+  filterable
+  placeholder="请选择所属团体"
+>
+  <div class="ggg">
+    <el-option
+      v-for="item of groupOptions"
+      :key="item.groupId"
+      :label="item.groupName"
+      :value="item.groupId"
+    />
+  </div>
+</el-select>
+```
+
+
+js
+
+```
+focus() {
+  this.$nextTick(() => {
+    let barWrap = document.querySelector('.ggg').parentElement.parentElement;
+
+    barWrap.onscroll = function({ target }) {
+      if (target.scrollHeight - target.scrollTop <= target.clientHeight) {
+        that.pageNum++;
+        /* console.log(
+          that.groupOptionsAll.slice(
+            20 * that.pageNum,
+            20 * that.pageNum + 20
+          )
+        ); */
+        console.log('触底');
+      }
+    };
+  }
+}
+```

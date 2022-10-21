@@ -3,9 +3,15 @@ let arr = [1,2,3,4,5,6,7,9,10]
 
 
 一、改变原数组
-unshift()、push()、		// 返回长度
-shift()、pop()、splice()	// 返回删除的元素，没有空数据
-splice(), reverse()
+unshift()、
+push()、		// 返回长度
+
+shift()、
+pop()、
+splice()	// 返回删除的元素，没有空数据
+
+splice(), 
+reverse()
 
 
 
@@ -39,8 +45,8 @@ at()、             		// 下标找值，支持-3
 
 六、
 (element, index, arr)
-forEach()、    // 不return；遍历数组，不改变(遍历前先存数组，中途加入不变)
-filter()、        // return；过滤数组，不改变；返回过滤的数组
+forEach()、    // return无效,不支持break,抛出错误throw new Error断掉；遍历数组，不改变(遍历前先存数组，中途加入不变)
+filter()、     // return；过滤数组，不改变；返回过滤的数组
 some()、       // return；查找是否至少一个符合条件的，不改变；返回true/false；
 map()、        // return；item*2；创建新数组
 
@@ -48,9 +54,11 @@ toString()、  // 数组转字符串
 
 
 
-every()
-find()
 
+find() 只要有一项返回val
+some() 只要有一项返回true就返回true
+filter() []
+every() 每一项都返回true才返回true
 
 
 

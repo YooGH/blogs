@@ -14,7 +14,7 @@
 
 <br/><br/><br/>
 ###  <h1 id="h1"> 1.类型 </h1>
-> 基本类型: boolean、number、string、null、undefined、<br/>
+> 基本类型: boolean、number、string、null、undefined、Symbol()-6、BigInt-6<br/>
 > 引用类型: Array、Object(深浅拷贝)
 
 
