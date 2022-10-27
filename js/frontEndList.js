@@ -143,7 +143,8 @@ const FrontEndList = [
       {id: 5, name: '功能5-摄像头', href: './view/wx/fn-camera.md', done: true, }, 
 
       {id: 6, name: '功能6-组件', href: './view/wx/fn-components.md', done: true, }, 
-      {id: 7, name: '功能7-其他', href: './view/wx/fn-other.md', done: true, }, 
+      {id: 7, name: '功能7-滚动到指定位置', href: './view/wx/fn-scroll.md', done: true, }, 
+      {id: 8, name: '功能8-其他', href: './view/wx/fn-other.md', done: true, }, 
 
       {id: 1, name: '————————',}, 
       {id: 3, name: 'uniapp', href: 'https://www.cnblogs.com/lgyong/p/11579340.html'}, 

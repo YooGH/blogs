@@ -19,9 +19,16 @@
   
 
 
+
+
+
+
+
   <br/><br/><br/><br/>
 
   ###  <h1 id="h2"> 2.路由 </h1>
+
+  https://www.imooc.com/article/78706
 
   + hast
 
@@ -48,6 +55,13 @@
   + 开发遇到问题<br/>
   [同路由不同参数无法通过this.$query获取](https://segmentfault.com/q/1010000009329520) => ``wacth: {'$route'(to, from){console.log(to, from)}}``<br/>
   [vue 监听$route的方式](https://blog.csdn.net/m0_38073829/article/details/79072195)<br/>
+
+
+
+
+
+
+
 
   <br/><br/><br/><br/>
 

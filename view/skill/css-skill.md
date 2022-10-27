@@ -1,4 +1,23 @@
-﻿1. <a href="#h1"> 文字超出 </a>
+1. <a href="h1">  文字超出  </a>
+2. <a href="h2">  选择器级别  </a>
+3. <a href="h3">  居中  </a>
+4. <a href="h4">  清浮动  </a>
+5. <a href="h5">  自适应高度  </a>
+6. <a href="h6">  两边固定，中间自适应；左边固定，右边自适应  </a>
+7. <a href="h7">  iphoneX及以上苹果底部横条  </a>
+8. <a href="h8">  flex  </a>
+9. <a href="h9">  重绘和回流的概念  </a>
+10. <a href="h10">  css中padding和margin区别  </a>
+11. <a href="h11">  CSS 雪碧图的好处  </a>
+12. <a href="h12">  position属性用于元素定位有几种方式，相对定位和绝对定位的区别？  </a>
+13. <a href="h13">  有几种像素单位？em和rem有什么区别  </a>
+********************
+
+
+
+
+
+文字超出 </a>
 2. <a href="#h2"> 选择器级别； </a>
 3. <a href="#h3"> 居中 </a>
 4. <a href="#h4"> 清浮动 </a>
@@ -14,7 +33,7 @@
 
 <br/><br/><br/>
 
-###  <h1 id="h1"> 1.文字超出 </h1>
+###  <h1 id="h1"> 1. 文字超出 </h1>
 + 单行
 
 ```
@@ -36,9 +55,10 @@ display: -webkit-box;
 
 
 
+
 <br/><br/><br/>
 
-###  <h1 id="h2"> 2.选择器级别 </h1>
+###  <h1 id="h2"> 2. 选择器级别 </h1>
 
 选择器排序： id选择器 > 类选择器 > 标签选择器  
 
@@ -50,16 +70,18 @@ display: -webkit-box;
 
 <br/><br/><br/>
 
-###  <h1 id="h3"> 3.居中 </h1>
+###  <h1 id="h3"> 3. 居中 </h1>
  - flex => display: flex; justify-content: center; align-items: center;
  - position: absolute; top: 50%; left: 50%; margin: auto; transform:translate(-50%,-50%)
  - position: absolute; width: 100%; height: 100%; left: 0; top: 0; bottom: 0; right: 0; margin: auto;
 
 
 
+
+
 <br/><br/><br/>
 
-###  <h1 id="h4"> 4.清浮动 </h1>
+###  <h1 id="h4"> 4. 清浮动 </h1>
  - :after/:before(伪元素)
  - clear:both;
  - overflow:hidden;
@@ -70,7 +92,7 @@ display: -webkit-box;
 
 <br/><br/><br/>
 
-###  <h1 id="h5"> 5.自适应高度 </h1>
+###  <h1 id="h5"> 5. 自适应高度 </h1>
   [自适应高度](https://jingyan.baidu.com/article/37bce2bec2171c5003f3a221.html)
   
   [flex](./sameHeight1.html) => 父: display: flex; | 左边: width: 宽度; | 右边： width: 宽度; height: 高度;
@@ -78,9 +100,11 @@ display: -webkit-box;
 
 
 
+
+
 <br/><br/><br/>
 
-###  <h1 id="h6"> 6.两边固定，中间自适应；左边固定，右边自适应 </h1>
+###  <h1 id="h6"> 6. 两边固定，中间自适应；左边固定，右边自适应 </h1>
 (两边固定，中间自适应)[https://blog.csdn.net/lemaktub/article/details/107138319]
 
 - ***flex***: 父--display: flex;   左右两边--flex 0 0 100px;   中--flex: 1;padding: 0 100px;box-sizing: border-box;
@@ -91,9 +115,11 @@ display: -webkit-box;
 
 
 
+
+
 <br/><br/><br/>
 
-###  <h1 id="h7"> 7.iphoneX及以上苹果底部横条 </h1>
+###  <h1 id="h7"> 7. iphoneX及以上苹果底部横条 </h1>
  iphoneX及以上苹果底部横条 小程序（wx.getSystemInfo -> safeArea.bottom与可视区相减）
 
 
@@ -101,18 +127,73 @@ display: -webkit-box;
 
 <br/><br/><br/>
 
-###  <h1 id="h8"> 8.flex </h1>
-	
+###  <h1 id="h8"> 8. flex </h1>
+
+
 
 
 
 <br/><br/><br/>
 
-###  <h1 id="h9"> 9.重绘和回流的概念 </h1>
+###  <h1 id="h9"> 9. 重绘和回流的概念 </h1>
   回流(重排): 当浏览器必须重新处理和绘制部分或全部页面时，回流就会发生。  
   重绘: 不影响布局, 只是标签页面发生变化, 重新绘制。  
   注意: 回流(重排)必引发重绘, 重绘不一定引发回流(重排)。  
 
+重绘(repaint)：当元素样式改变而不影响元素在页面中的位置时，浏览器对元素进行更新这就是重绘；
+回流(reflow)：当元素样式改变而影响到其在页面中的位置和大小时，浏览器将对页面重新计算渲染树，这就是回流
+二者之间的关系：发生回流一定会触发重绘，但是触发重绘不一定会发生回流；
+举个简单的例子：
+因为元素的颜色的改变会导致元素的样式改变此时就触发了重绘，但是其并没有影响其在页面的位置和大小所以就没有触发回流；
+但是元素通过定位或者改变大小导致样式的改变此时即符合重绘的定义也符合回流的定义；因而即触发了重绘又触发了回流；
+DOM 样式发生了变化，但没有影响到页面布局时，会触发重绘，而不会触发回流。
+重绘由于 DOM 位置信息不需要更新，省去了布局过程，因而性能上优于回流
+（https://zhuanlan.zhihu.com/p/391932368）
+
+
+
+
+
+<br/><br/><br/>
+
+###  <h1 id="h10"> 10. css中padding和margin区别 </h1>
+margin是用来隔开元素与元素的间距;
+padding是用来隔开元素与内容的间隔
+
+
+
+
+
+<br/><br/><br/>
+
+###  <h1 id="h11"> 11. CSS 雪碧图的好处 </h1>
+1.合并多少图片，减少页面请求次数
+2.提高加载速度
+3.方便风格更改
+
+
+
+
+
+<br/><br/><br/>
+
+###  <h1 id="h12"> 12. position属性用于元素定位有几种方式，相对定位和绝对定位的区别？ </h1>
+fixed
+absolute
+relative
+
+
+
+
+
+<br/><br/><br/>
+
+###  <h1 id="h13"> 13. 有几种像素单位？em和rem有什么区别 </h1>
+ + px
+ + rem（相对于根元素html）
+ + em (相对于上级元素，没有设置也是根元素)
+ + vh和vw 可视区宽高总,共100(vmin,vmax)
+ + em相对于父元素(设置font-size)，rem相对于根元素（htm
 
 
 

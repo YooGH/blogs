@@ -1,19 +1,18 @@
-﻿1. <a href="#h1"> 生命周期 </a>
-  <br/>有哪些；常用的那些并且怎么应用；父子生命周期顺序
+﻿1. <a href="#h1"> 生命周期--有哪些；常用的那些并且怎么应用；父子生命周期顺序;请详细说下你对vue生命周期的理解？ </a>
 2. <a href="#h2"> 指令 </a>
   <br/>有那些指令；if和show的区别；on和bind的缩写；自定义
 3. <a href="#h3"> 组件传值 </a>
   <br/>有那些；兄弟；
-4. <a href="#h4"> vuex </a>
-  <br/>是什么；5个属性或核心；刷新丢失怎么做
-5. <a href="#h5"> router </a>
-  <br/>模式；传值区别；守卫顺序
+4. <a href="#h4"> vuex--是什么；5个属性或核心；刷新丢失怎么做 </a>
+5. <a href="#h5"> router--模式；传值区别；守卫顺序;vue-router有哪几种导航钩子 </a>
 6. <a href="#h6"> computed和watch的区别 </a>
-7. <a href="#h7"> 双向绑定 </a>
-  <br/>原理(用什么模式)；ES5和ES6区别
+7. <a href="#h7"> 双向绑定--原理(用什么模式)；ES5和ES6区别 </a>
 8. <a href="#h8"> data为什么函数 </a>
-9. <a href="#h9">  </a>
-10. <a href="#h10">  </a>
+9. <a href="#h9"> vue-loader是什么？使用它的用途有哪些？ </a>
+10. <a href="#h10"> axios是什么？怎么使用？描述使用它实现登录功能的流程？ </a>
+
+11. <a href="#h11"> vue中父组件如何触发子组件的函数，子组件如何触发父组件的函数 </a>
+12. <a href="#h12"> 什么是虚拟DOM，与真实DOM有什么区别 </a>
 
 
 
@@ -40,6 +39,8 @@
 
 子组件和父组件的生命周期顺序？ 先子后父
 
+vue的实列从创建到销毁的整个过程
+
 
 
 
@@ -55,7 +56,8 @@
     > v-for>v-if: v-for先渲染v-if后，v-if为false就摧毁元素，v-for又再次一边；(10数据，2个是false的话就要v-for执行3遍)
     > 可以用computed过滤原数据，用computed的变量做数据绑定；v-show和v-if（show是初始渲染消耗，之后通过样式display来展示，而if是判断是否需要渲染，操纵dom元素）
 
-
+v-if 是“真正的”条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建。
+v-show 就简单得多——不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 进行切换。
 
 
 
@@ -146,6 +148,15 @@ axios比较成熟，官方对vue-resource停止更新
 axios兼容后端http请求库
 
 
+1.全局钩子
+2.单个路由独享的
+3.组件级的
+
+$router和$route: 前者是全局的路由对象，后者是当前路由
+https://www.jianshu.com/p/93fd5ff47d17
+
+
+
 
 
 <br/><br/><br/>
@@ -188,3 +199,37 @@ Object.defineProperty  vs  Proxy
   > data()为什么是对象: 组件要复用的，data需要隔离开来，闭包  
   [Vue(ES6)中的data属性为什么不能是一个对象？](https://blog.csdn.net/sinat_17775997/article/details/83757985)  
 
+
+
+
+
+<br/><br/><br/>
+
+###  <h1 id="h9"> 9.vue-loader是什么？使用它的用途有哪些？ </h1>
+  解析.vue文件的一个加载器，跟template/js/style转换成js模块。
+  用途：js可以写es6、style样式可以scss或less、template可以加jade等
+
+
+
+
+
+<br/><br/><br/>
+
+###  <h1 id="h10"> 10.axios是什么？怎么使用？描述使用它实现登录功能的流程？ </h1>
+
+
+
+
+<br/><br/><br/>
+
+###  <h1 id="h11"> 11.vue中父组件如何触发子组件的函数，子组件如何触发父组件的函数 </h1>
+父组件中获取子组件函数：$children、$refs
+子组件中获取父组件函数：$on
+
+
+
+
+<br/><br/><br/>
+###  <h1 id="h12"> 12.什么是虚拟DOM，与真实DOM有什么区别 </h1>
+虚拟dom比真实dom体积小，操作是相对来说消耗性能少，虚拟Dom不会进行回流和重绘操作
+真实Dom频繁的回流和重绘效率非常低

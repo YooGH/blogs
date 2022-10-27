@@ -1,5 +1,5 @@
 一、
-Object.create()
+Object.create(): [{},Object.create(),new Object()区别](https://blog.csdn.net/weixin_45446654/article/details/115296998)
 Object.defineProperty()
 Object.defineProperties()
 Object.getOwnPropertyDescriptor()
@@ -10,25 +10,24 @@ Object.getOwnPropertyDescriptors()
 
 二、
 Object.getOwnPropertyNames()
-Object.getOwnPropertySymbols() -- ES6
+Object.getOwnPropertySymbols()
 Object.prototype.hasOwnProperty()
-Object.hasOwn -- ES6（Object.prototype.hasOwnProperty()）
-Object.setPrototypeOf()
+Object.freeze()    动一层
+Object.isFrozen()
 
 
 
 三、
-Object.freeze()    动一层
-Object.isFrozen()
 Object.isExtensible()
 Object.preventExtensions()
 Object.isSealed()
 Object.seal()
-
+Object.keys()
 
 
 
 四、
+Object.setPrototypeOf()
 Object.prototype.isPrototypeOf()
 Object.prototype.propertyIsEnumerable()
 Object.prototype.toLocaleString()
@@ -39,13 +38,19 @@ Object.prototype.toString()
 五、
 Object.prototype.valueOf()
 for...in
-Object.keys()
-Object.values() -- ES6
+
+
+
+
+ES6ES6ES6ES6
+Object.hasOwn  （Object.prototype.hasOwnProperty()）
+Object.values()
 
 
 
 六
-Objcet.assign() -- ES6
-Object.entries() -- ES6
-Object.fromEntries() -- ES6
-Object.is() -- ES6
+Objcet.assign()
+Object.entries()
+Object.fromEntries()
+Object.getOwnPropertySymbols()
+Object.is()
