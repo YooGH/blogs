@@ -12,14 +12,6 @@
 ********************
 
 
-donctype的作用和模式区别 </a>
-2. <a href="#h2"> 块级元素、非块级元素和空元素 </a>
-3. <a href="#h3"> 语义化和h5标签 </a>
-4. <a href="#h4"> 倒三角 </a>
-5. <a href="#h5"> 像素 </a>
-  <br/>那些是相对和绝对； rem和em有什么区别； vh和vw
-6. <a href="#h6"> HTML 全局属性有哪些？ </a>
-
 
 
 
@@ -28,6 +20,11 @@ donctype的作用和模式区别 </a>
 ###  <h1 id="h1"> 1. donctype的作用和模式区别 </h1>
   [详情](../html/HTML.md#h1)
 
+浏览器的解析器使用哪种HTML规范；
+
+严格模式：又称标准模式，是指浏览器按照W3C标准来解析代码，呈现页面
+混杂模式：又称为怪异模式或者兼容模式，是指浏览器按照自己的方式来解析代码，使用一种比较宽松的向后兼容的方式来显示页面
+
 
 
 
@@ -35,7 +32,7 @@ donctype的作用和模式区别 </a>
 <br/><br/><br/>
 
 ###  <h1 id="h2"> 2. 块级元素、非块级元素和空元素 </h1>
-  header、nav、footer、section、div
+  header、nav、footer、section、div、section、article
   span、a
   hr
 
@@ -68,7 +65,6 @@ donctype的作用和模式区别 </a>
  + rem（相对于根元素html）
  + em (相对于上级元素，没有设置也是根元素)
  + vh和vw 可视区宽高总,共100(vmin,vmax)
- + em相对于父元素(设置font-size)，rem相对于根元素（html）
 
 
 

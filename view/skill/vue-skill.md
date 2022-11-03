@@ -128,7 +128,7 @@ localstorage/(2)vuex-persistedstate/(3)cookie
 ```
 - : hash, history(默认hash)
 - hash： 1.后面带#；2.hTTP请求中对后端不影响，不会重新加载页面；3.兼容性好（）
-- history: 1.兼容性不好（pushState()和replaceState()); 2.路径要和后端一致
+- history: 1.兼容性不好（pushState()和replaceState()-HTML5支持的); 2.路径要和后端一致
 ```
 [原理](https://blog.csdn.net/qq_38912819/article/details/80636195)
 

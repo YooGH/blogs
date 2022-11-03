@@ -1,29 +1,32 @@
-1. <a href="h1">  [防抖节流](https://blog.csdn.net/m0_48166663/article/details/121144995)  </a>
-2. <a href="h2">  [继承的方法有多少种](https://www.cnblogs.com/gwf93/p/10384352.html)  </a>
-3. <a href="h3">  [深浅拷贝方法（深拷贝数据类型是不是一样](https://www.cnblogs.com/hyns/p/12405328.html)  </a>
-4. <a href="h4">  js为什么万物都是对象（基本类型可以new出来，数组是对象继承的）  </a>
-5. <a href="h5">  循环有多少种(https://www.cnblogs.com/dianzan/p/12898882.html)(https://blog.csdn.net/haochuan9421/article/details/81414532/) </a>
-6. <a href="h6">  数组 </a>
-7. <a href="h7">  闭包 </a>
-8. <a href="h8">  原型链（https://www.cnblogs.com/manhuai/p/14281967.html） </a>
-9. <a href="h9">  eatchart（等比例缩放） </a>
-10. <a href="h10">  页面到服务器输入流程 </a>
-11. <a href="h11">  es6 </a>
-12. <a href="h12">  AMD和CMD的区别 </a>
-13. <a href="h13">  call和apply </a>
-14. <a href="h14">  switch比if快 </a>
-15. <a href="h15">  什么是柯里化？ </a>
-16. <a href="h16">  Js怎么实现一个类，怎么实例化这个类 </a>
-17. <a href="h17">  ES6 </a>
-18. <a href="h18">  介绍JavaScript的数据类型 </a>
-19. <a href="h19">  判断 js 类型的方式 </a>
-20. <a href="h20">  栈和堆的区别？ </a>
-21. <a href="h21">  JS 中的主要有哪几类错误 </a>
-22. <a href="h22"> JS为什么要区分微任务和宏任务 </a>
-23. <a href="h23">  JS延迟加载的方式有哪些？ </a>
-24. <a href="h24">  你如何组织，优化自己的代码？(5分题) </a>
-25. <a href="h25">  描述一下cookies，sessionStorage和localStorage的区别？ </a>
-26. <a href="h26">  prototype </a>
+1. <a href="#h1">  [防抖节流](https://blog.csdn.net/m0_48166663/article/details/121144995)  </a>
+2. <a href="#h2">  [继承的方法有多少种](https://www.cnblogs.com/gwf93/p/10384352.html)  </a>
+3. <a href="#h3">  [深浅拷贝方法（深拷贝数据类型是不是一样](https://www.cnblogs.com/hyns/p/12405328.html)  </a>
+4. <a href="#h4">  判断 JS 类型的方式  </a>
+5. <a href="#h5">  循环有多少种(https://www.cnblogs.com/dianzan/p/12898882.html)(https://blog.csdn.net/haochuan9421/article/details/81414532/) </a>
+6. <a href="#h6">  数组 </a>
+7. <a href="#h7">  闭包 </a>
+8. <a href="#h8">  原型链（https://www.cnblogs.com/manhuai/p/14281967.html） </a>
+9. <a href="#h9">  eatchart（等比例缩放） </a>
+10. <a href="#h10">  页面到服务器输入流程 </a>
+11. <a href="#h11">  ES6 </a>
+12. <a href="#h12">  AMD和CMD的区别 </a>
+13. <a href="#h13">  call和apply </a>
+14. <a href="#h14">  switch比if快 </a>
+15. <a href="#h15">  什么是柯里化？ </a>
+16. <a href="#h16">  JS怎么实现一个类，怎么实例化这个类 </a>
+17. <a href="#h17">   </a>
+18. <a href="#h18">  介绍JavaScript的数据类型 </a>
+19. <a href="#h19">  JS为什么万物都是对象 </a>
+20. <a href="#h20">  栈和堆的区别？ </a>
+21. <a href="#h21">  JS 中的主要有哪几类错误 </a>
+22. <a href="#h22">  JS为什么要区分微任务和宏任务 </a>
+23. <a href="#h23">  JS延迟加载的方式有哪些？ </a>
+24. <a href="#h24">  你如何组织，优化自己的代码？(5分题) </a>
+25. <a href="#h25">  描述一下cookies，sessionStorage和localStorage的区别？ </a>
+26. <a href="#h26">  prototype </a>
+26. <a href="#h27">  垃圾回收机制 </a>
+27. <a href="#tm"> 题目 </a>
+
 ********************
 
 
@@ -49,13 +52,9 @@
 
 ###  <h1 id="h2"> 2. [继承的方法有多少种](https://www.cnblogs.com/gwf93/p/10384352.html) </h1>
 
+class<br/>
+prototype<br/>
 
-
-
-
-<br/><br/><br/>
-
-###  <h1 id="h3"> 3. [深浅拷贝方法（深拷贝数据类型是不是一样](https://www.cnblogs.com/hyns/p/12405328.html) </h1>
 
 
 
@@ -63,16 +62,32 @@
 
 <br/><br/><br/>
 
-###  <h1 id="h4"> 4. js为什么万物都是对象（基本类型可以new出来，数组是对象继承的） </h1>
+###  <h1 id="h3"> 3. 深浅拷贝方法（深拷贝数据类型是不是一样) </h1>
 
+[笔记](https://yoogh.github.io/blogs/view/js/js1.md)
+
+[浅拷贝的几种方法：JSON、Object.assign、concat、slice](https://www.cnblogs.com/hyns/p/12405328.html)
 
 
 
 
 <br/><br/><br/>
 
-###  <h1 id="h5">5. 循环有多少种(https://www.cnblogs.com/dianzan/p/12898882.html)(https://blog.csdn.net/haochuan9421/article/details/81414532/)</h1>
+###  <h1 id="h4"> 4. 判断 JS 类型的方式</h1>
 
+typeof、instanceof、Object.prototype.toString.call()--[Object Array]、constructor
+
+
+
+
+<br/><br/><br/>
+
+###  <h1 id="h5">5. 循环有多少种</h1>
+[笔记](https://www.cnblogs.com/lgyong/p/12704162.html)
+
+[其他1](https://www.cnblogs.com/dianzan/p/12898882.html)
+
+[其他2](https://blog.csdn.net/haochuan9421/article/details/81414532/)
 
 
 
@@ -80,7 +95,19 @@
 <br/><br/><br/>
 
 ###  <h1 id="h6">6. 数组</h1>
-（push/unshift   pop/shift  splice  slice   concat   split）(find(), fill(), flat(), includes, )
+
+push/unshift<br/>
+pop/shift<br/>
+<br/>
+splice<br/>
+slice<br/>
+concat<br/>
+split<br/>
+<br/>
+find()<br/>
+fill()<br/>
+flat()<br/>
+includes<br/>
 
 
 
@@ -89,8 +116,10 @@
 <br/><br/><br/>
 
 ###  <h1 id="h7">7. 闭包</h1>
-（vue里面的data）
+[笔记](https://yoogh.github.io/blogs/view/js/js-closure.md)
 
+（vue里面的data）；外部需要访问内部函数的变量
+ 柯里化(15)
 
 
 
@@ -114,17 +143,38 @@
 <br/><br/><br/>
 
 ###  <h1 id="h10">10. 页面到服务器输入流程</h1>
- 1.DNS域名解析；2.建立TCP连接； 3.http请求；4.服务器处理相关的请求；5.返回响应的结果；6关闭TCP连接；7.浏览器解析HTML；8浏览器渲染
+ 1.DNS域名解析；
 
+ 2.建立TCP连接； 
 
+ 3.http请求；
 
+ 4.服务器处理相关的请求；
+
+ 5.返回响应的结果；
+
+ 6关闭TCP连接；
+
+ 7.浏览器解析HTML；
+
+ 8浏览器渲染
+
+[参1](https://blog.csdn.net/qq_51447436/article/details/124538265)
+
+[参2](https://www.cnblogs.com/bkhdd/p/13877467.html)
 
 
 <br/><br/><br/>
 
-###  <h1 id="h11">11. es6</h1>
-（includes, 箭头函数，解构，扩展运算符，new Set, for...of, filter, find, map     ...，）
+###  <h1 id="h11">11. ES6</h1>
 
+new Promise<br/>
+let/const<br />
+模板字面量：后台删除某项<br />
+箭头函数(this永远来自其上下文,普通函数是运行的上下文收隐式和硬绑定影响)<br />
+解构：用于接口返回、表单接受、函数参数<br />
+扩展运算符（扩展方法）<br/>
+includes/for...of/filter/new Set/map/find/<br />
 
 
 
@@ -143,7 +193,7 @@
 ###  <h1 id="h13">13. call和apply</h1>
     ```
     let arr = [10, 22, 39, 18]
-    Math.max.call(null, arr) // NaN  call不传是就是null环境
+    Math.max.call(null, arr[0]) // NaN  call不传是就是null环境
     Math.max.apply(null, arr) // 39  apply不传是就是window
     
     1 call的语法：函数名.call(obj,参数1,参数2,参数3……); 
@@ -168,14 +218,14 @@
 <br/><br/><br/>
 
 ###  <h1 id="h15">15. 什么是柯里化？</h1>
-
+ > 接受多个参数的函数变换成接受一个单一参数(最初函数的第一个参数)的函数(省市区)
 
 
 
 
 <br/><br/><br/>
 
-###  <h1 id="h16">16. Js怎么实现一个类，怎么实例化这个类</h1>
+###  <h1 id="h16">16. JS怎么实现一个类，怎么实例化这个类</h1>
 Class
 构造函数
 
@@ -185,13 +235,8 @@ Class
 
 <br/><br/><br/>
 
-###  <h1 id="h17">17. ES6</h1>
-  new Promist<br/>
-  let/const<br />
-  模板字面量：后台删除某项<br />
-  箭头函数<br />
-  解构：用于接口返回、表单接受、<br />
-  includes/for...of/filter<br />
+###  <h1 id="h17">17. </h1>
+  
 
 
 
@@ -209,8 +254,10 @@ Class
 
 <br/><br/><br/>
 
-###  <h1 id="h19">19. 判断 js 类型的方式</h1>
-typeof、Object.prototype.toString.call()、instanceof、constructor
+###  <h1 id="h19"> 19. JS为什么万物都是对象 </h1>
+
+基本类型可以new出来或constructor，数组是对象继承的；但null和undefined就不是对象
+
 
 
 
@@ -278,3 +325,23 @@ JS是单线程的，一些响应的需要微任务防止阻塞
 ###  <h1 id="h26">26. prototype</h1>
 https://zhuanlan.zhihu.com/p/113362285
 https://blog.csdn.net/weixin_60684791/article/details/121416611
+
+
+
+
+
+<br/><br/><br/>
+
+###  <h1 id="h27">27. [垃圾回收机制](https://blog.csdn.net/weixin_44653493/article/details/124665921)</h1>
+函数作用域或块作用域执行完成就会释放内存, 全局变量直到浏览器关闭或应用关闭
+回收方式： 标记清除、引用计数(低版本的浏览器)
+
+
+
+<br/><br/><br/>
+
+###  <h1 id="tm">27. 题目</h1>
+[函数优先](https://blog.csdn.net/L2395183536/article/details/120768181)
+
+
+

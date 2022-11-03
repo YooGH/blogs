@@ -21,6 +21,8 @@
 
 <br/><br/><br/>
 ###  <h1 id="h2"> 2.数字 </h1>
+存储是64位的浮点型，所有1===1.0
+
 [Date](https://blog.csdn.net/qq_39759115/article/details/78893853)
 > [toFixed()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed)
 
@@ -220,8 +222,11 @@ arr.sort((a,b)={return a-b}) // 1,3,12,22
  
  <h3>一</h3>
 
+
  - **Object.create()**<br/>
  [{},Object.create(),new Object()区别](https://blog.csdn.net/weixin_45446654/article/details/115296998)
+
+
 
  - **Object.defineProperty()** [例子来源](https://blog.csdn.net/qq_45954420/article/details/123315867)
 
@@ -244,6 +249,7 @@ arr.sort((a,b)={return a-b}) // 1,3,12,22
  })
  ```
 
+
  - **Object.defineProperties()** --（上面的只能操作一个属性，下面则是1变多）
 
  ```
@@ -264,9 +270,13 @@ arr.sort((a,b)={return a-b}) // 1,3,12,22
 
  <br/>
 
+
+
  - **Object.freeze()**
 > 不能修复对象的属性并且是浅操作(需要深层，还需递归冻结)，但可以重新赋值<br>, 与preventExtensions区别是不可以编辑原来的属性
 [参考](https://www.jianshu.com/p/2b4ab7105dbd)
+
+
 
  - **Object.isFrozen()**
  ```

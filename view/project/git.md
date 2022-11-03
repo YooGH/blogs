@@ -21,12 +21,13 @@
   ```
   1 git clone '' // 克隆项目下来
   2 cd 项目目录名
-  3 git add . // 添加本地修改
-  4 git commit -m 'addAll' // git commit -m '注释'  缓存区内容添加到本地仓库
+  3 git add . // 添加本地修改(git reset HEAD)
+  4 git commit -m 'addAll' // git commit -m '注释'  缓存区内容添加到本地仓库(git reset --soft HEAD^)
   5 git pull // 拉去线上代码同步下
   6 git push -u origin master
   ```
 
+git reset --mixed HEAD^(撤销commit，并且撤销git add . 操作)
 
 
 <br/><br/><br/>
