@@ -1,15 +1,109 @@
-﻿2.JavaScript数据结构与算法第3版
+﻿- 1. JavaScript 简介
+- 2. ECMAScript 和 TypeScript 概述
+- 3. 数组（45|62）
+- 4. 栈（67|84）
+- 5. 队列和双端队列（82|99）
+- 6. 链表(94|111)
+- 7. 集合(118|135)
+151
+字典和散列表(134|151)、递归、树
+二叉堆和堆排序、图、排序和搜索算法、算法设计与技巧、算法复杂度
+
+
+
+2.JavaScript数据结构与算法第3版
 [ES浏览器兼容](http://kangax.github.io/compat-table/es5/)
 [babel](https://babeljs.io/repl)
 
 
+
+
+
+
+
+
+
+
 4章：
-①、栈是一种遵从后进先出（LIFO）原则的有序集合。（应用：浏览器历史记录,子弹壳装弹）- 96（4.5）
+①、栈是一种遵从后进先出（LIFO）原则的有序集合。栈顶-新元素，栈底-旧元素（应用：浏览器历史记录,子弹壳装弹，叠书）- 96（4.5）
 仅仅用于线性表
 
 ②、类的私有属性用1. 下划线标识(实际还是能访问) -> 2. yong Symbol(实际getOwnProperty-Symbols可以访问) -> 3.WeakMap真正实现私有属性，但可读性差并且私有属性不能被继承 -> 4. 提案在属性前加#(如ts,c属性前加private)
 
-③、new Stack()
+③、new Stack()-(73|90)
+
+1. 添加：push
+2. 移除：pop
+3. 查看队列头元素: peek() (当前第一个元素)
+4. 队列是否为空: isEmpty() (是否是空)
+5. 长度: size() （length）
+6. 清空: clear() （一直调dequeue直到undefined或初始化）
+7. 转字符串: toString()
+
+class Stack {
+  constructor() {
+    this._count = 0;
+    this._items = [];
+  }
+  push(element) {
+    this._items[this._count] = element;
+    this._count++
+  }
+  pop() {
+    if(this.isEmpty()) { return undefined; };
+    this._count--
+    const result = this._items[this._count];
+    delete this._items[this._count]
+    return result
+  }
+  peek() {  // 栈顶元素、
+    if(this.isEmpty()) { return undefined; };
+    console.log(this._items)
+    console.log(this._count)
+    return this._items[this._count - 1]
+  }
+  isEmpty() {
+    return this._count === 0
+  }
+  size() {
+    return this._count
+  }
+  clear() {
+    this._count = 0;
+    this._items = [];
+  }
+  toString() {
+    if(this.isEmpty()) { return '' }
+    let objString = '';
+    for(let i=0; i<this._count; i++) {
+      objString += `${this._items[i]}`
+    }
+    return objString
+  }
+}
+
+④、属性私有：属性前下划线 -> Symbol -> WeakMap -> [属性前#提案](https://github.com/tc39/proposalclass-fields)
+
+
+const items = new WeakMap();
+class Stack {
+  constructor () {
+    items.set(this, []);
+  }
+  push(element){
+    const s = items.get(this);
+    s.push(element);
+  }
+  pop(){
+    const s = items.get(this);
+    const r = s.pop();
+    return r;
+  }
+} 
+
+
+
+
 
 
 
@@ -19,6 +113,15 @@
 5章：
 队列是遵循先进先出（FIFO，也称为先来先服务）原则的一组有序的项(应用：排队做核酸)
 双端口队列（应用：回文），循环队列（应用：击鼓传花游戏）
+
+
+1. 添加：enqueue（push）
+2. 移除：dequeue（shift）
+3. 查看队列头元素: peek() (当前第一个元素)
+4. 队列是否为空: isEmpty() (是否是空)
+5. 长度: size() （length）
+6. 清空: clear() （一直调dequeue直到undefined或初始化）
+
 
 class Queue {
   constructor() {
@@ -61,12 +164,7 @@ class Queue {
     return objString;
   }
 }
-1. 添加：enqueue（push）
-2. 移除：dequeue（shift）
-3. 查看队列头元素: peek() (当前第一个元素)
-4. 队列是否为空: isEmpty() (是否是空)
-5. 长度: size() （length）
-6. 清空: clear() （一直调dequeue直到undefined或初始化）
+
 
 
 
@@ -97,6 +195,14 @@ class Deque{
 
 5.3.1循环队列
 5.3.2回文检测器: 正反读有一样 -> madam  (比较就是前出和后出比较是否一致)
+
+
+
+
+
+
+
+
 
 
 6章
@@ -226,8 +332,242 @@ export default class LinkedList {
 8. toString()
 
 
-6.2双向链表
-123
+
+6.2双向链表(多了个前节点)
+> 比单链表多了前指针，和对应重写的插入和移除方法
+
+class DoublyNode extends Node {
+  constructor(element, next, prev) {
+    super(element, next);
+    this.prev = prev
+  }
+}
+
+class DoublyLinkedList extends LinkedList {
+  constructor(equalsFn = defaultEquals) {
+    super(equalsFn);
+    this.tail = undefined // 最后元素引用
+  }
+  insert(element, index) {
+    if(index >= 0 && index <= this.count) {
+      const node new DoublyNode(element);
+      let current = this.head;
+      // 头插入
+      if(index === 0) {
+        if(this.head == null) {
+          this.head = node;
+          this.tail = node;
+        } else {
+          node.next = this.head;
+          current.prev = node;
+          this.head = node
+        }
+      // 尾插入
+      } else if (index === this.count) {
+        current = this.tail;
+        current.next = node
+        node.prev = current;
+        this.tail = node
+      } else {
+        const previous = this.getElementAt(index - 1); // 获取插入元素前一个
+        current = previous.next;
+        node.next = current;
+        previous.next = noex;
+        current.prev = node;
+        node.prev = previous;
+      }
+      this.count++
+      return true
+    }
+    return false;
+  }
+  removeAt(index) {
+    if(index >= 0 && index <= this.count) {
+      let current = this.head;
+      if(index === 0) {
+        this.head = current.next;
+        if(this.count === 1) {
+          this.tail = undefined
+        } else {
+          this.haed.prev = undefined;
+        }
+      } else if(index === this.count - 1) {
+        current = this.tail;
+        this.tail = current.prev;
+        this.tail.next = undefined;
+      } else {
+        current = this.getElementAt(index);
+        const previous = current.prev;
+        previous.next = current.next;
+
+        previous.next = current.next;
+        current.next.prev = previous
+      }
+      this.count--;
+      return current.element;
+    }
+    return undefined; // 与insert返回false有区别
+  }
+}
+
+
+
+6.3 循环链表就是将单链或双链最后元素下一个元素的指针（tail.next）指向第一个元素
+
+
+
+6.4 有序链表
+
+
+
+
+
+
+
+
+
+
+7章
+集合: 不允许值重复的顺序数据结构
+
+一、创建集合类
+- add(element)：向集合添加一个新元素。 
+- delete(element)：从集合移除一个元素。 
+- has(element)：如果元素在集合中，返回 true，否则返回 false。 
+- clear()：移除集合中的所有元素。 
+- size()：返回集合所包含元素的数量。它与数组的 length 属性类似。 
+- values()：返回一个包含集合中所有值（元素）的数组。
+
+class Set {
+  constructor() {
+    this.items = {};
+  }
+  has(element) {
+    //方法一,会得到非当前的属性 return element in this.tiems
+    return Object.prototype.hasOwnProperty.call(this.items, element);
+  }
+  add(element) {
+    if(!this.has(element)) {
+      this.items[element] = element;
+      return true;
+    }
+    return false;
+  }
+  delete(element) {
+    if(!this.has(element)) {
+      delete this.items[element];
+      return true;
+    }
+    return false;
+  }
+  clear() {
+    this.items = {};
+  }
+  size() {
+    return Object.keys(this.items).length;
+  }
+  sizeLegacy() {
+   let count = 0;
+   for(let key in this.items) {
+     if(this.items.hasOwnProperty(key)) {
+       count++;
+     }
+   }
+   return count;
+  }
+  values() {
+    return Object.values(this.items)
+  }
+  valuesLegacy() {
+    let values = [];
+    for(let key in this.items) {
+      if(this.items.hasOwnProperty(key)) {
+       values.push(key)
+     }
+    }
+    return values
+  }
+}
+
+
+二、 扩展运算
+- 并集：对于给定的两个集合，返回一个包含两个集合中所有元素的新集合。
+- 交集：对于给定的两个集合，返回一个包含两个集合中共有元素的新集合。
+- 差集：对于给定的两个集合，返回一个包含所有存在于第一个集合且不存在于第二个集
+合的元素的新集合。
+- 子集：验证一个给定集合是否是另一集合的子集。
+class Set {
+  ...
+  union(otherSet) { // 并集，创建新的Set见新旧集合推进去(concat)
+    const unionSet = new Set();
+    this.values.forEach(value => unionSet.add(valuse));
+    otherSet.values.forEach(value => unionSet.add(valuse));
+    return unionSet;
+  }
+  intersection(otherSet) { // 交集，可以优化成判断哪个长度小的遍历哪个(127|144)
+    const intersectionSet = new Set();
+    const values = this.values();
+    otherSet.values.forEach(value => {
+      if(this.has(value)) {
+        intersectionSet.add(value)
+      }
+    })
+    return intersectionSet
+  }
+  difference(otherSet) { // 差集，不和本集合一样的值
+    const differenceSet = new Set();
+    this.values().forEach(value => {
+      if (!otherSet.has(value)) {
+        differenceSet.add(value);
+      }
+    });
+    return differenceSet;
+  }
+  isSubsetOf(otherSet) {  // 子集
+    if (this.size() > otherSet.size()) { // 大于本集合就不是子集合
+      return false;
+    }
+    let isSubset = true;
+    this.values().every(value => {
+      if (!otherSet.has(value)) {
+        isSubset = false;
+        return false;
+      }
+      return true;
+    });
+    return isSubset;
+  } 
+}
+
+
+三、ES2015-Set类
+原来的 Set 不同: values 方法返回 Iterator、size方法ES6是size属性、没有扩展运算(并集等)
+
+用新特性扩展运算符(将集合转化为数组；执行需要的运算；将结果转化回集合)改写扩展运算,主要作用就是将集合转成数组方便运算，例如：
+union(setA, setB) { new Set([...setA, ...setB]) } // 并集
+difference(setA, setB)new Set([...setA].filter(x => !setB.has(x))) // 差集
+
+
+四、[多重集或袋](https://github.com/loiane/javascript-datastructures-algorithms):集合可以添加重复的值
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

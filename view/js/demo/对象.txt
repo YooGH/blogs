@@ -27,8 +27,8 @@ Object.seal()
 
 
 属性		添加   读取   更改    删除
-freeze	❌    ✅   ❌     ❌
-seal    ❌    ✅   ✅     ❌
+freeze	❌    ✅   	 ❌     ❌
+seal    ❌    ✅    ✅     ❌
 
 
 

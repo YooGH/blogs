@@ -227,6 +227,11 @@ arr.sort((a,b)={return a-b}) // 1,3,12,22
  [{},Object.create(),new Object()区别](https://blog.csdn.net/weixin_45446654/article/details/115296998)
 
 
+ ```
+ let a = {b: 1}
+ let c = Object.create(a)
+ console.log(Object.getOwnPropertyNames(c))  // [] -> Object.create() 是将创建的对象继承到原型链上, {}和new Object是继承后在创建对象Object.getOwnPropertyNames(a)
+ ```
 
  - **Object.defineProperty()** [例子来源](https://blog.csdn.net/qq_45954420/article/details/123315867)
 

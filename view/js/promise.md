@@ -38,6 +38,8 @@ function getJSON(url) {
 
     XHR.onreadystatechange = function() {
       console.log(JSON.stringify(XHR))
+      console.dir(XHR.readyState)
+      
       if (XHR.readyState === 4) {
         if(XHR.status == 200) {
 

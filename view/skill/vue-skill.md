@@ -184,13 +184,16 @@ Object.defineProperty  vs  Proxy
 }
 ```
 
-> Object.defineProperty初始化data加入观察者（Observe）;除了观察a和b, 还要递归观察c和d
+> Object.defineProperty -- 对象的属性进行拦截/代理对象属性   初始化data加入观察者（Observe）;除了观察a和b, 还要递归观察c和d
 
-> Proxy只要代理a和b,一层
+> Proxy -- 对象的属性进行拦截/代理对象, 只要代理a和b,一层
 
+[响应2022版](https://mp.weixin.qq.com/s/F2yYqXE_xTHl0d8j03I-UQ)
 
+更新操作
+首先，数据改变会触发 setter，然后调用 Dep.notify(), 并且通过Dep.notify去通知所有订阅者Watcher ， 订阅者们就会调用patch方法 ， 给真实 DOM 打补丁，更新相应的视图。
 
-
+diff: https://mp.weixin.qq.com/s/esHgaLjr6plHxaidFw9iVw（到：此方法就是diff算法的核心部分）
 
 <br/><br/><br/>
 
