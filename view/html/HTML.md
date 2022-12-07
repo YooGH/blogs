@@ -1,4 +1,4 @@
-﻿1. <a href="#h1"> doctype </a>
+1. <a href="#h1"> doctype </a>
 2. <a href="#h2"> WEB 标准以及 W3C 的理解与认识 </a>
 3. <a href="#h3"> xhtml 和 html 有什么区别 </a>
 4. <a href="#h4"> 块级/内联元素</a>
@@ -7,7 +7,7 @@
 7. <a href="#h7"> 编码方式</a>
 8. <a href="#h8"> manifest</a>
 9. <a href="#h9"> 折叠标签<summary> </a>
-   <br/><a href="#ck">  参考 </a>
+   <br/><a href="#ck"> 参考 </a>
 
   
 
@@ -50,7 +50,7 @@ XHTML 1.0 Frameset:允许使用表现性、废弃元素以及 frameset，文档�
 
   ###  <h1 id="h3"> 3. xhtml 和 html 有什么区别</h1>
 
-HTML   是一种基本的 WEB 网页设计语言。
+HTML  是一种基本的 WEB 网页设计语言。
 
 XHTML 是一个基于 XML 的置标语言。
 
@@ -64,9 +64,11 @@ block: div、p、h1、form、ul、hr (header、nav 、aside、section、article�
 
 inline: span、a、b、i、select、lable、 input
 
-空元素: br
+空元素: br、hr、img、input、link、meta <br/>
+空元素指的是没有内容的HTML元素，空元素下是没有子级节点和内容的；空元素是在开始标签中关闭的，也就是说空元素没有闭合标签的
 
-   ```
+
+  ```
 表示页面不同位置的标签：header、nav、article、section、aside、footer
 
 表格：table、colgroup、col、caption、thead、tbody、tfoot、tr、th、td
@@ -89,12 +91,10 @@ inline: span、a、b、i、select、lable、 input
 
 表示不用的或被替换的标签：
 
- 
+  form > lable > input 
 
- form > lable > input 
-
- fremeset > frame、iframe
-   ```
+  fremeset > frame、iframe
+  ```
 
 <br/><br/>
 

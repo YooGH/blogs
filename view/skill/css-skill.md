@@ -71,9 +71,10 @@ display: -webkit-box;
 <br/><br/><br/>
 
 ###  <h1 id="h4"> 4. 清浮动 </h1>
+ - 用一个元素
  - :after/:before(伪元素)
- - clear:both;
- - overflow:hidden;
+ - clear:both;(只在block元素起作用，并且影响上下文元素)
+ - overflow:hidden;(元素需要滚动)
 
 
 
@@ -158,7 +159,7 @@ padding是用来隔开元素与内容的间隔
 ###  <h1 id="h11"> 11. CSS 雪碧图的好处 </h1>
 1.合并多少图片，减少页面请求次数
 2.提高加载速度
-3.方便风格更改
+3.方便风格更改，查找
 
 
 
@@ -188,3 +189,9 @@ relative
 
 
 [ddd](https://mp.weixin.qq.com/s/DOSHry6HLYQk4o9V-DLMOQ)
+
+了解CSS基础语法（如选择器、声明、属性、值），了解CSS常用单位（尺寸、颜色）和字体样式，能够对HTML页面编写简单的CSS样式。
+熟悉CSS Selector（如元素选择器、选择器分组、派生选择器、子元素选择器、相邻兄弟选择器、ID 选择器、类选择器、属性选择器、伪类、伪元素），理解CSS继承原理，能够使用CSS Selector编写复杂样式。
+掌握CSS的Priority(权重)、Specificity(特性)、Box Model(盒模型)，能够根据浏览器盒模型的差异进行CSS样式编写。
+掌握CSS定位（如相对定位、绝对定位、浮动）技巧，能够使用CSS3媒体查询进行响应式编程，能够针对不同终端页面做响应式开发。
+掌握兼容性处理的技巧，理解浏览器回流和重绘原理，理解不同浏览器之间的差异，能够对不同浏览器做兼容器处理。

@@ -66,8 +66,7 @@
   <br/><br/><br/><br/>
 
   ###  <h1 id="ck"> 参考 </h1>
-
-vue2支持到ie9及以上(核心的object.defineProperty ie8及以下不支持，Promise也是)
+  vue2中完全兼容IE10以上,部分兼容IE9及以上(核心的object.defineProperty ie8及以下不支持，Promise也是)
 
   ```
   this.$data.msg = this.msg

@@ -1,0 +1,5 @@
+[关于使用WeUI在IE中提示“font-face 未能完成 OpenType 嵌入权限检查。权限必须是可安装的。”的问题](https://www.cnblogs.com/godbell/p/9471578.html)
+
+
+\n不换行
+https://www.cnblogs.com/axingya/p/16045869.html

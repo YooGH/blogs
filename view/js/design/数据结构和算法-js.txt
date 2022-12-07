@@ -5,9 +5,29 @@
 - 5. 队列和双端队列（82|99）
 - 6. 链表(94|111)
 - 7. 集合(118|135)
-158
+169-177
 字典和散列表(134|151)、递归(162|178)、树
 二叉堆和堆排序、图、排序和搜索算法、算法设计与技巧、算法复杂度
+
+
+
+4章
+栈：./data-structure-js/stack.js
+
+5章
+队列：./data-structure-js/queue.js
+
+
+6章
+链表：./data-structure-js/linkedList.js
+
+7章
+集合：./data-structure-js/set.js({a: 1})
+
+8章
+字典：./data-structure-js/dictionary.js ({a: {a: 1}})
+散列表：./data-structure-js/hashTable.js
+
 
 
 
@@ -40,47 +60,8 @@
 6. 清空: clear() （一直调dequeue直到undefined或初始化）
 7. 转字符串: toString()
 
-class Stack {
-  constructor() {
-    this._count = 0;
-    this._items = [];
-  }
-  push(element) {
-    this._items[this._count] = element;
-    this._count++
-  }
-  pop() {
-    if(this.isEmpty()) { return undefined; };
-    this._count--
-    const result = this._items[this._count];
-    delete this._items[this._count]
-    return result
-  }
-  peek() {  // 栈顶元素、
-    if(this.isEmpty()) { return undefined; };
-    console.log(this._items)
-    console.log(this._count)
-    return this._items[this._count - 1]
-  }
-  isEmpty() {
-    return this._count === 0
-  }
-  size() {
-    return this._count
-  }
-  clear() {
-    this._count = 0;
-    this._items = [];
-  }
-  toString() {
-    if(this.isEmpty()) { return '' }
-    let objString = '';
-    for(let i=0; i<this._count; i++) {
-      objString += `${this._items[i]}`
-    }
-    return objString
-  }
-}
+代码： ./data-structure-js/stack.js
+
 
 ④、属性私有：属性前下划线 -> Symbol -> WeakMap -> [属性前#提案](https://github.com/tc39/proposalclass-fields)
 
@@ -122,76 +103,18 @@ class Stack {
 5. 长度: size() （length）
 6. 清空: clear() （一直调dequeue直到undefined或初始化）
 
+队列：./data-structure-js/queue.js
 
-class Queue {
-  constructor() {
-    this.count = 0;
-    this.lowestCount = 0;
-    this.items = {};
-  }
-  enqueue(element) {
-    this.items[this.count] = element;
-    this.count++
-  }
-  dequeue() {
-    if(this.isEmpty()) { return undefined; };
-    const result = this.items{this.lowestCount};
-    delete this.items{this.lowestCount}
-    this.lowestCount++;
-    return result
-  }
-  peek() {
-    if(this.isEmpty()) { return undefined; };
-    return this.items{this.lowestCount}
-  }
-  isEmpty() {
-    return this.count - this.lowestCount === 0;
-  }
-  size() {
-    return this.count - this.lowestCount
-  }
-  clear() {
-    this.count = 0;
-    this.lowestCount = 0;
-    this.items = {};
-  }
-  toString() {
-    if(this.isEmpty()) { return ''; };
-    let objString = `${this.items{this.lowestCount}}`;
-    for (let i = this.lowestCount + 1; i < this.count; i++) {
-      objString = `${objString},${this.items[i]}`;
-    }
-    return objString;
-  }
-}
+
 
 
 
 
 
 5.2.1双端队列数组结构（与双端队列，就是多少后进和后出操作）
-class Deque{
-  constructor() {
-    this.count = 0;
-    this.lowestCount = 0;
-    this.items = {};
-  }
-  addFront(element) {
-    if (this.isEmpty()) { // 队列空
-      this.addBack(element);
-    } else if (this.lowestCount > 0) { // 队列被删除
-      this.lowestCount--;
-      this.items[this.lowestCount] = element;
-    } else {  // 先把之前的移动后一位，在塞进第一位置
-      for (let i = this.count; i > 0; i--) { // {3}
-        this.items[i] = this.items[i - 1];
-      }
-      this.count++;
-      this.lowestCount = 0;
-      this.items[0] = element; // {4}
-    }
-  } 
-}
+
+队列：./data-structure-js/queue.js
+
 
 5.3.1循环队列
 5.3.2回文检测器: 正反读有一样 -> madam  (比较就是前出和后出比较是否一致)
@@ -206,122 +129,9 @@ class Deque{
 
 
 6章
-export function defaultEquals(a, b) {
-  return a === b;
-}
-class Node {
-  constructor(element) {
-    this.element = element;
-    this.next = undefined;
-  }
-} 
-export default class LinkedList {
-  constructor(equalsFn = defaultEquals) {
-    this.count = 0; // 数组长度
-    this.head = undefined; // 数组头结点(element和next)
-    this.equalsFn = equalsFn; // 两元素是否相同
-  }
-  push(element) {
-    const node = new Node(element); // 
-    let current; // {2}
-    if (this.head == null) { // 空数组
-      this.head = node;
-    } else {
-      current = this.head; //
-      while (current.next != null) { //  获得最后一项
-        current = current.next;
-      }
-      // 将其 next 赋为新元素，建立链接
-      current.next = node; // {6}
-    }
-    this.count++; // {7}
-  }
-  removeAt(index) {
-   // 检查越界值
-    if (index >= 0 && index < this.count) { // 
-      let current = this.head; // 头结点
-      // 移除第一项
-      if (index === 0) { // 移除头指针只要把第二个结点放头部
-        this.head = current.next;
-      } else {
-        let previous; // {4}
-        for (let i = 0; i < index; i++) { // {5}
-        previous = current; // {6}
-        current = current.next; // {7}
-      }
-      // 将 previous 与 current 的下一项链接起来：跳过 current，从而移除它
-      previous.next = current.next; // {8}
-    }
-    this.count--; // {9}
-    return current.element;
-    }
-    return undefined; // {10}
-  }
-  getElementAt(index) {
-    if (index >= 0 && index <= this.count) { // {1}
-      let node = this.head; // {2}
-      for (let i = 0; i < index && node != null; i++) { // {3}
-        node = node.next;
-      }
-      return node; // {4}
-    }
-    return undefined; // {5}
-  }
-  removeAt(index) {  // 重构
-   // 检查越界值
-    if (index >= 0 && index < this.count) { // 
-      let current = this.head; // 头结点
-      // 移除第一项
-      if (index === 0) { // 移除头指针只要把第二个结点放头部
-        this.head = current.next;
-      } else {
-        let previous;
-        const previous = this.getElementAt(index - 1);
-        current = previous.next;
-        previous.next = current.next; 
-      }
-    }
-    this.count--; // {9}
-    return current.element;
-    }
-    return undefined; // {10}
-  }
-  indexOf(element) {
-    let current = this.head;
-    for (let i=0; i < this.count && current != null; i++) {
-      if(this.equalsFn(element, current.element)){ // 判断传入元素与当前元素是否一致
-        return i
-      }
-      current = current.next // 循环指向下一个
-    }
-    return -1
-  }
-  remove(element) {
-    const index = this.indexOf(element);
-    return this.removeAt(index);
-  }
-  isEmpty() {
-    return this.size() === 0;
-  }
-  size() {
-    return this.count;
-  }
-  getHead() {
-    return this.head;
-  }
-  toString() {
-    if(this.head == null) {
-      return '';
-    }
-    let objString = `${this.head.element}`;
-    let current = this.head.next;
-    for(let i=1; i<this.size() && current !=null; i++) {
-      objString += current.element;
-      current = current.next; // 指针 
-    }
-    return objString;
-  }
-}
+链表
+
+
 1. 添加元素 push
 2. index移除元素 removeAt
 3. 循环迭代链表直到目标位置 getElementAt(下标找元素)
@@ -331,84 +141,14 @@ export default class LinkedList {
 7. isEmpty、size 和 getHead 方法 9.27
 8. toString()
 
+代码：./data-structure-js/linkedList.js
 
 
 6.2双向链表(多了个前节点)
 > 比单链表多了前指针，和对应重写的插入和移除方法
 
-class DoublyNode extends Node {
-  constructor(element, next, prev) {
-    super(element, next);
-    this.prev = prev
-  }
-}
 
-class DoublyLinkedList extends LinkedList {
-  constructor(equalsFn = defaultEquals) {
-    super(equalsFn);
-    this.tail = undefined // 最后元素引用
-  }
-  insert(element, index) {
-    if(index >= 0 && index <= this.count) {
-      const node new DoublyNode(element);
-      let current = this.head;
-      // 头插入
-      if(index === 0) {
-        if(this.head == null) {
-          this.head = node;
-          this.tail = node;
-        } else {
-          node.next = this.head;
-          current.prev = node;
-          this.head = node
-        }
-      // 尾插入
-      } else if (index === this.count) {
-        current = this.tail;
-        current.next = node
-        node.prev = current;
-        this.tail = node
-      } else {
-        const previous = this.getElementAt(index - 1); // 获取插入元素前一个
-        current = previous.next;
-        node.next = current;
-        previous.next = noex;
-        current.prev = node;
-        node.prev = previous;
-      }
-      this.count++
-      return true
-    }
-    return false;
-  }
-  removeAt(index) {
-    if(index >= 0 && index <= this.count) {
-      let current = this.head;
-      if(index === 0) {
-        this.head = current.next;
-        if(this.count === 1) {
-          this.tail = undefined
-        } else {
-          this.haed.prev = undefined;
-        }
-      } else if(index === this.count - 1) {
-        current = this.tail;
-        this.tail = current.prev;
-        this.tail.next = undefined;
-      } else {
-        current = this.getElementAt(index);
-        const previous = current.prev;
-        previous.next = current.next;
-
-        previous.next = current.next;
-        current.next.prev = previous
-      }
-      this.count--;
-      return current.element;
-    }
-    return undefined; // 与insert返回false有区别
-  }
-}
+代码：./data-structure-js/linkedList.js
 
 
 
@@ -438,56 +178,7 @@ class DoublyLinkedList extends LinkedList {
 - size()：返回集合所包含元素的数量。它与数组的 length 属性类似。 
 - values()：返回一个包含集合中所有值（元素）的数组。
 
-class Set {
-  constructor() {
-    this.items = {};
-  }
-  has(element) {
-    //方法一,会得到非当前的属性 return element in this.tiems
-    return Object.prototype.hasOwnProperty.call(this.items, element);
-  }
-  add(element) {
-    if(!this.has(element)) {
-      this.items[element] = element;
-      return true;
-    }
-    return false;
-  }
-  delete(element) {
-    if(!this.has(element)) {
-      delete this.items[element];
-      return true;
-    }
-    return false;
-  }
-  clear() {
-    this.items = {};
-  }
-  size() {
-    return Object.keys(this.items).length;
-  }
-  sizeLegacy() {
-   let count = 0;
-   for(let key in this.items) {
-     if(this.items.hasOwnProperty(key)) {
-       count++;
-     }
-   }
-   return count;
-  }
-  values() {
-    return Object.values(this.items)
-  }
-  valuesLegacy() {
-    let values = [];
-    for(let key in this.items) {
-      if(this.items.hasOwnProperty(key)) {
-       values.push(key)
-     }
-    }
-    return values
-  }
-}
+代码： ./data-structure-js/set.js
 
 
 二、 扩展运算
@@ -496,48 +187,8 @@ class Set {
 - 差集：对于给定的两个集合，返回一个包含所有存在于第一个集合且不存在于第二个集
 合的元素的新集合。
 - 子集：验证一个给定集合是否是另一集合的子集。
-class Set {
-  ...
-  union(otherSet) { // 并集，创建新的Set见新旧集合推进去(concat)
-    const unionSet = new Set();
-    this.values.forEach(value => unionSet.add(valuse));
-    otherSet.values.forEach(value => unionSet.add(valuse));
-    return unionSet;
-  }
-  intersection(otherSet) { // 交集，可以优化成判断哪个长度小的遍历哪个(127|144)
-    const intersectionSet = new Set();
-    const values = this.values();
-    otherSet.values.forEach(value => {
-      if(this.has(value)) {
-        intersectionSet.add(value)
-      }
-    })
-    return intersectionSet
-  }
-  difference(otherSet) { // 差集，不和本集合一样的值
-    const differenceSet = new Set();
-    this.values().forEach(value => {
-      if (!otherSet.has(value)) {
-        differenceSet.add(value);
-      }
-    });
-    return differenceSet;
-  }
-  isSubsetOf(otherSet) {  // 子集
-    if (this.size() > otherSet.size()) { // 大于本集合就不是子集合
-      return false;
-    }
-    let isSubset = true;
-    this.values().every(value => {
-      if (!otherSet.has(value)) {
-        isSubset = false;
-        return false;
-      }
-      return true;
-    });
-    return isSubset;
-  } 
-}
+
+代码： ./data-structure-js/set.js
 
 
 三、ES2015-Set类
@@ -605,91 +256,32 @@ class ValuePair {
  - keyValues()：将字典中所有[键，值]对返回。
  - forEach(callbackFn)：迭代字典中所有的键值对。callbackFn 有两个参数：key 和value。该方法可以在回调函数返回 false 时被中止（和 Array 类中的 every 方法相似）。
 
-export default class Dictionary {
-  constructor(toStrFn = defaultToString) {
-   this.toStrFn = toStrFn;
-   this.table = {};
-  }
-  hasKey(key) {
-    return this.table[this.toStrFn(key)] != null;
-  }
-  set(key, value) {
-    if(key != null && value != null) {
-      const tableKey = this.toStrFn(key);
-      this.table[tableKey] = net ValuePair(key, value);
-      return true;
-    }
-    return false;
-  }
-  remove(key) {
-    if(this.hasKey(key)) {
-      delete this.table(this.toStrFn(key))
-      return true
-    }
-    return false
-  }
-  get(key) { // 比下面的同名方法少一次查询table
-    const valuePair = this.table[this.toStrFn(key)];
-    return valuePair == null ? undefined : valuePair.value;
-  } 
-  get(key) {
-    if(this.hasKey(key)) {
-      return this.table(this.toStrFn(key))
-    }
-    return false
-  }
-  keyValues() {
-    const valuePairs = [];
-    for (const k in this.table) {
-      if (this.hasKey(k)) {
-        valuePairs.push(this.table[k]);
-      }
-    }
-    return valuePairs;
-  }
-  keys() {
-    return this.keyValues().map(valuePair => valuePair.key);
-  }
-  values() {
-    return this.keyValues().map(valuePair => valuePair.value);
-  }
-  forEach(callbackFn) {
-    const valuePairs = this.keyValues(); // 获取所有值的数组
-    for(let i = 0; i < valuePairs.length; i++) {
-      const result = callbackFn(valuePairs[i].key, valuePairs[i].value);
-      if(result === false) { break }
-    }
-  }
-  size() {
-    return Object.keys(this.table).length;
-  }
-  isEmpty() {
-    return this.size() === 0;
-  }
-  clear() {
-    this.table = {}
-  }
-  toString() {
-    if(!this.isEmpty) { return '' }
-    const valuePairs = this.keyValues();
-    let objString = `${valuePairs[0].toString()}`
-    for(let i = 1; i < valuePairs.length; i++) {
-      objString =  `${objString},${valuePairs[i].toString()}`;
-    }
-    return objString;
-  }
-} 
+代码： ./data-structure-js/dictionary.js
 
 
 
 
 
+8.2 散列表（142|159）
+HashTable类，也叫HashMap类，是Dictionary 类的一种散列表实现方式
+
+字典的一种实现，常用于数据库索引，JS的对象
+
+ - put(key,value)：向散列表增加一个新的项（也能更新散列表）。
+ - remove(key)：根据键值从散列表中移除值。
+ - get(key)：返回根据键值检索到的特定的值。
+
+代码：[hashTable](./data-structure-js/hashTable.js)
+
+
+问题key用hash表示``hash % 37``余数有可能冲突解决方法：
+1. 分离链接（值相同的建立线性表，但也占空间）、
+2. 线性探查（值相同的,后来者+1直到有空闲位置）、
+3. 和双散列法(不研究)
 
 
 
-
-
-
+ES2015新增了WeakMap类和WeakSet类，弱化的Map和Set，为了性能没有迭代器，key只能是对象，不能是数字，字符串，布尔值等其他基本数据类型
 
 
 

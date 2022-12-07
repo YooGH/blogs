@@ -23,7 +23,7 @@ let reg = /(?<=(<h1[^>]*?>)).*?(?=(<\/h1>))/g;
 let titleList = newStr.match(reg);
 let titleLongTitle = '';
 titleList.forEach((item,index)=>{
-  titleLongTitle += `${index+1}.<a href="h${index+1}"> ${item} </a>\n`
+  titleLongTitle += `${index+1}.<a href="h${index+1}"> ${item.substr(3)} </a>\n`
 })
 
 

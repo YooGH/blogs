@@ -345,3 +345,12 @@ https://blog.csdn.net/weixin_60684791/article/details/121416611
 
 
 
+
+了解JavaScript基本数据类型（如String、Number、Boolean、Object、Null、Undefined）以及对应数据类型字面量表达式，能够正确应用基本数据类型进行JS编程。
+熟悉JavaScript语法结构，熟悉常用的JavaScript内置对象（Array、Date、Math、RegExp、Window、Navigator、Screen、History、Location）以及api，了解Json、JsonP、Ajax原理，能够使用JavaScript进行前端异步编程。
+掌握JavaScript的Scope、Closure、Prototype编程技能，能够使用原型继承进行面向对象编程。
+掌握JavaScript模块化设计、类库封装技能，了解ES6、TS(Generator、Promise)等OOP特性，能够进行前端基于JavaScript的控件开发。
+理解JavaScript的内存和事件原理（如V8、webkit等），能够定位和分析内存溢出、页面加载慢等问题并优化。
+
+
+

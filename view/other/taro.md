@@ -259,3 +259,25 @@ Reducers：一个个的纯函数，用于响应 Action，对 Store 中的状态�
 ### 参考
 [Taro 小程序开发大型实战（一）：熟悉的 React，熟悉的 Hooks](https://blog.csdn.net/huan1043269994/article/details/107539593)
 [微信小程序转 Taro](https://taro-docs.jd.com/taro/docs/taroize)
+[官网](https://taro-ui.jd.com/#/docs/introduction)
+
+
+
+
+
+<!-- 常见问题 -->
+1. taro冒泡
+``onClick={(e) =>policyFn(e,'agreement')}; policyFn(e){e.stopPropagation()}
+2. 分包
+https://blog.csdn.net/qq_42345237/article/details/106823252
+``
+subPackages: [
+  {
+    root: "pages/goods",
+    name: "goods",
+    pages: [
+      "goods-detail/goods-detail",
+    ]
+  }
+],
+``

@@ -37,7 +37,8 @@
 					let newValue = oldValue.replace(/0px /g, "0");
 					newValue = oldValue.replace(/px/g, "rpx");
 					newValue = newValue.replace(/500;/g, "bold;");
-					this.newValue = newValue;
+					newValue = newValue.replace(/ 0px/g, "");
+					this.newValue = newValue.toLocaleLowerCase();
 				}
 			},
 			mounted() {
