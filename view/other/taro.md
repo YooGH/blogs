@@ -96,6 +96,8 @@ https://zhuanlan.zhihu.com/p/256297415?utm_source=wechat_session
 - 销毁&清理期
  + componentwillUnmount
 
+hook
+useShareAppMessage 分享
 
 <br/><br/><br/>
 ###  <h1 id="h5"> 5. 组件(hooks) </h1>
@@ -270,7 +272,8 @@ Reducers：一个个的纯函数，用于响应 Action，对 Store 中的状态�
 ``onClick={(e) =>policyFn(e,'agreement')}; policyFn(e){e.stopPropagation()}
 2. 分包
 https://blog.csdn.net/qq_42345237/article/details/106823252
-``
+
+```
 subPackages: [
   {
     root: "pages/goods",
@@ -280,4 +283,15 @@ subPackages: [
     ]
   }
 ],
-``
+```
+
+
+2. taro3怎么获取传过来的值
+
+```
+import { getCurrentInstance } from '@tarojs/taro'
+console.log(getCurrentInstance().router.params)
+```
+
+taro3以下版本通常使用「this.$router.params.参数名」方法获取入参；<br/>
+taro3开始需要使用「getCurrentInstance().router.params」才能获取到。

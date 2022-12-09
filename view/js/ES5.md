@@ -14,8 +14,8 @@
 
 <br/><br/><br/>
 ###  <h1 id="h1"> 1.类型 </h1>
-> 基本类型: boolean、number、string、null、undefined、Symbol()-6、BigInt-6<br/>
-> 引用类型: Array、Object(深浅拷贝)
+> 值类型(基本类型)：字符串（String）、数字(Number)、布尔(Boolean)、空（Null）、未定义（Undefined）、Symbol、BigInt-6<br/>
+> 引用数据类型（对象类型）：对象(Object)、数组(Array)、函数(Function)，还有两个特殊的对象：正则（RegExp）和日期（Date）、Math
 
 
 

@@ -131,33 +131,39 @@ const FrontEndList = [
 
   {
     id: 5,
-    categoryName: '框架',
+    categoryName: 'wx',
     children: [
-      {name: '微信云开发', href: './view/wx/wxyun.md', done: true, }, 
-      {id: 0, name: '微信小程序', href: './view/wx/wx.md', done: true, },  // href: 'https://www.cnblogs.com/lgyong/p/9959023.html'
-      {id: 1, name: '————————',}, 
-      {id: 1, name: '功能1-map', href: './view/wx/fn-map.md', done: true, }, 
-      {id: 2, name: '功能2-h5跳转', href: './view/wx/fn-h5.md', done: true, }, 
-      {id: 3, name: '功能3-登录授权和手机', href: './view/wx/fn-login.md', done: true, }, 
-      {id: 4, name: '功能4-模板消息接口', href: './view/wx/fn-message.md', done: true, }, 
-      {id: 5, name: '功能5-摄像头', href: './view/wx/fn-camera.md', done: true, }, 
+      { name: '微信小程序', href: './view/wx/wx.md', done: true, },  // href: 'https://www.cnblogs.com/lgyong/p/9959023.html'
+      { name: '微信云开发', href: './view/wx/wxyun.md', done: true, }, 
+      { name: '————————',}, 
+      { name: '功能1-map', href: './view/wx/fn-map.md', done: true, }, 
+      { name: '功能2-h5跳转', href: './view/wx/fn-h5.md', done: true, }, 
+      { name: '功能3-登录授权和手机', href: './view/wx/fn-login.md', done: true, }, 
+      { name: '功能4-模板消息接口', href: './view/wx/fn-message.md', done: true, }, 
+      { name: '功能5-摄像头', href: './view/wx/fn-camera.md', done: true, }, 
 
-      {id: 6, name: '功能6-组件', href: './view/wx/fn-components.md', done: true, }, 
-      {id: 7, name: '功能7-滚动到指定位置', href: './view/wx/fn-scroll.md', done: true, }, 
-      {id: 8, name: '功能8-其他', href: './view/wx/fn-other.md', done: true, }, 
+      { name: '功能6-组件', href: './view/wx/fn-components.md', done: true, }, 
+      { name: '功能7-滚动到指定位置', href: './view/wx/fn-scroll.md', done: true, }, 
+      { name: '功能8-其他', href: './view/wx/fn-other.md', done: true, }, 
 
-      {id: 1, name: '————————',}, 
-      {id: 3, name: 'uniapp', href: 'https://www.cnblogs.com/lgyong/p/11579340.html'}, 
-      {id: 1, name: 'node笔记', href: 'https://www.cnblogs.com/lgyong/p/10421749.html'}, 
-      {name: '框架比较', href: './view/frame/frame.html', done: true, }, 
-      {id: 2, name: 'nuxt （多页面vue）', href: 'https://www.cnblogs.com/lgyong/p/10608214.html'}, 
+      
     ]
   },
   {
     id: 6,
-    categoryName: 'react',
+    categoryName: '其他框架',
     children: [
-      {id: 5, name: 'react/taro', href: './view/other/taro.md', done: true,}, 
+      { name: '————————',}, 
+      { name: 'uniapp', href: 'https://www.cnblogs.com/lgyong/p/11579340.html'}, 
+      { name: '————————',}, 
+      { name: 'node笔记', href: 'https://www.cnblogs.com/lgyong/p/10421749.html'}, 
+      { name: '————————',}, 
+      {name: '框架比较', href: './view/frame/frame.html', done: true, }, 
+      { name: '————————',}, 
+      { name: 'react/taro', href: './view/other/taro.md', done: true,}, 
+// 
+      { name: 'nuxt （多页面vue）', href: 'https://www.cnblogs.com/lgyong/p/10608214.html'}, 
+
     ]
   },
 ];

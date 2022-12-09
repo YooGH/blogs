@@ -7,4 +7,3 @@
 var robot = require('robotjs');
 var screenSize = robot.getScreenSize();
 console.log(screenSize);
-

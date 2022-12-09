@@ -1,15 +1,37 @@
 const fs = require('fs');
+const [
+  oldUrl, // 旧数据路径
+  newUrl, // 旧数据路径
+  rnStr,
+] = [
+  './oldText.txt',
+  './newText.txt',
+  /r/n
+]
 
-const url = './a';
-let dirData = fs.readdirSync(url, 'utf8');
-console.log(dirData)
-let longStr = ''
+
+let dirData = fs.readdirSync(oldUrl, 'utf8');
+console.log('旧数据', dirData);
+
+let longStr = ''; // 写入内容
+
+
+
+
+
 for(item of dirData) {
   longStr += `${item}\n`
 }
 
+
+
+
+
+
+
+
 setTimeout(()=> {
-  fs.writeFile(`./test.txt`, longStr, err => {
+  fs.writeFile(newUrl, longStr, err => {
     if (err) throw err;
     console.log('写入成功');
   });

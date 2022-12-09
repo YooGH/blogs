@@ -11,6 +11,7 @@
 11. <a href="h11">  CSS 雪碧图的好处  </a>
 12. <a href="h12">  position属性用于元素定位有几种方式，相对定位和绝对定位的区别？  </a>
 13. <a href="h13">  有几种像素单位？em和rem有什么区别  </a>
+14. <a href="h14">  如果需要手动写动画，你认为最小时间间隔是多久？  </a>
 ********************
 
 
@@ -33,7 +34,7 @@ white-space: nowrap;        // 超出不换行(no+wrap)
 
 ```
 
-+多行
++ 多行
 
 ```
 width: 宽度;
@@ -49,12 +50,12 @@ display: -webkit-box;
 
 ###  <h1 id="h2"> 2. 选择器级别 </h1>
 
-选择器排序： id选择器 > 类选择器 > 标签选择器  
+选择器排序： id选择器 > 类选择器 > 属性选择器 > 标签选择器 > 通配符选择器
+
 
 !import > 内联样式 > 选择器  
 
-
-
+关系选择符``（后代，子， +, ~）``、伪类选择符、伪对象选择符
 
 
 <br/><br/><br/>
@@ -84,9 +85,8 @@ display: -webkit-box;
 
 ###  <h1 id="h5"> 5. 自适应高度 </h1>
   [自适应高度](https://jingyan.baidu.com/article/37bce2bec2171c5003f3a221.html)
-  
-  [flex](./sameHeight1.html) => 父: display: flex; | 左边: width: 宽度; | 右边： width: 宽度; height: 高度;
-  [position](./sameHeight2.html) => 父: position:relative; | 左边: position:absulote; height: 100%; width: 宽度; | 右边： width: 宽度; margin-left: 左边宽度; height: 100px;(父级高度随右侧兼容，左侧高度设置100%继承父级)
+  [flex](./view/css-sameHeight1.html) => 父: display: flex; | 左边: width: 宽度; | 右边： width: 宽度; height: 高度;
+  [position](./view/css-sameHeight2.html) => 父: position:relative; | 左边: position:absulote; height: 100%; width: 宽度; | 右边： width: 宽度; margin-left: 左边宽度; height: 100px;(父级高度随右侧兼容，左侧高度设置100%继承父级)
 
 
 
@@ -186,6 +186,13 @@ relative
  + em相对于父元素(设置font-size)，rem相对于根元素（htm
 
 
+
+
+
+<br/><br/><br/>
+
+###  <h1 id="h14"> 14. 如果需要手动写动画，你认为最小时间间隔是多久？ </h1>
+  多数显示器默认频率是60Hz，即1秒刷新60次，所以理论上最小间隔为``1/60*1000ms ＝ 16.7ms ``
 
 
 [ddd](https://mp.weixin.qq.com/s/DOSHry6HLYQk4o9V-DLMOQ)
