@@ -28,7 +28,7 @@
 ********************
 
 
-
+闭包、防抖节流、递归、柯里化、回调
 
 
 <br/><br/><br/>
@@ -170,15 +170,15 @@ includes/for...of/filter/new Set/map/find/<br />
 （vue里面的data）；外部需要访问内部函数的变量
  柯里化(15)
 
-
+http://192.168.31.93/blogs/
 
 
 
 <br/><br/><br/>
 
 ### <h1 id="h12"> 12. [防抖节流](https://blog.csdn.net/m0_48166663/article/details/121144995) </h1>
-- 防抖：触发函数后n秒内执行一次，不断触发重新开始（登陆，模糊查询，页面跳转）-- setTiomeout
-- 节流：不断触发只执行一次(吸顶(配合transform和transition)，顶部导航栏吸顶) -- setInterval
+- 防抖：任务频繁触发的情况下,只有任务触发的间隔超过指定间隔的时候,任务才会执行（登陆，模糊查询，页面跳转）-- setTiomeout
+- 节流：当某个操作是连续性执行的时候，我们通过某种方式，降低该操作的执行频率(吸顶(配合transform和transition)，顶部导航栏吸顶) -- setInterval
 
 
 
