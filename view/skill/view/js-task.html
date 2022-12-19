@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS为什么要区分微任务和宏任务？</title>
+
+	<style type="text/css">
+		#div1,#div2 {
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div id="div1">div1</div>
+	<div id="div2">div2</div>
+</body>
+<script type="text/javascript">
+	// 宏任务 -> 微任务 -> 渲染 -> 宏任务(异步回调回来的队列任务) -> 渲染
+	// 所以在页面渲染前，div2已经从red变成了绿色，视觉看到的div2直接成为绿色，而div1先渲染成红后执行异步渲染成绿
+	debugger
+	console.log(div1)
+	div1.style.background = 'red'
+	setTimeout(()=>{
+		div1.style.background = 'pink'
+	}, 0)
+	div2.style.background = 'red'
+	Promise.resolve().then(() => {
+		div2.style.background = 'green'
+  })
+</script>
+</html>

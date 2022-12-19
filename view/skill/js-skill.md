@@ -273,7 +273,22 @@ Class
 <br/><br/><br/>
 
 ### <h1 id="h20"> 20. JS为什么要区分微任务和宏任务 </h1>
-JS是单线程的，一些响应的需要微任务防止阻塞
+[来源](https://www.zhihu.com/question/316514618/answer/2446634118)<br/>
+微任务的出现，使得宏任务执行完，到浏览器渲染之前，可以在这个阶段插入任务的能力<br/>
+JS把异步分为宏任务和微任务，微任务的优先级要比宏任务的优先级高，同步任务js主线程，异步委托给宿主，主线程执行完会调任务队列
+
+- 宏任务（macrotask）又称为 task，宏任务是由宿主发起的
+如：异步Ajax请求、setTimeOut、setInterval、文件操作等
+
+- 微任务（microtask）又称为 jobs，微任务是由 JS 本身发起
+如：Promise.then、Promise.catch、process.nextTick等(Promise是同步，then和catch是异步)
+
+
+[例子js](./view/js-task.js)
+[例子html： 宏任务和微任务](./view/js-task.html)
+[Javascript 同步,异步:微任务和宏任务](https://blog.csdn.net/m0_57135756/article/details/124690260)<br/>
+[宏任务与微任务](https://www.jianshu.com/p/334b0e40b4dd)
+
 
 
 
