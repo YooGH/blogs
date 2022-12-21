@@ -1,0 +1,33 @@
+<html>
+<style>
+	.part-1 {
+		width: 100px;
+
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.part-2 {
+		width: 100px;
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		/*-webkit-line-clamp: 3;*/
+	}
+</style>
+
+
+<body>
+	<div class="part-1">
+		我是单行,我是单行,我是单行,我是单行,我是单行
+	</div>
+	<br />
+	<br />
+	<br />
+	<div class="part-2">
+		我是多行,我是多行,我是多行,我是多行,我是多行
+	</div>
+</body>
+</html>

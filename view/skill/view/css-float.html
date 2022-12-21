@@ -1,0 +1,79 @@
+<html>
+<style>
+  .parent-1,.parent-2,.parent-3,.parent-4,.parent-5 {
+    width: 200px;
+    background: #eee;
+  }
+
+  .son-1,.son-2,.son-3,.son-4,.son-5 {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background: #123456;
+  }
+</style>
+<style>
+  .parent-hidden {
+    overflow: hidden;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  .parent-3::after {
+    display: block;
+    content: '';
+    height:  0;
+    clear: both;
+  }
+
+  .parent-float {
+    float: left;
+  }
+
+</style>
+
+
+<body>
+  1. overflow: hidden设置后父元素高度恢复，缺点不能满足需要滚动元素
+  <div class="parent-1 parent-hidden">
+    <div class="son-1"></div>
+  </div>
+  <div>其他内容</div>
+
+  <br/><br/><br/>
+
+  2.1 空标签
+  <div class="parent-2">
+    <div class="son-2"></div>
+  </div>
+  <div class="clear"></div>
+  <div>其他内容</div>
+
+  <br/><br/><br/>
+
+  2.2 br标签和clear为all属性
+  <div class="parent-2">
+    <div class="son-2"></div>
+  </div>
+  <br clear="all" />
+  <div>其他内容</div>
+
+  <br/><br/><br/>
+
+  3. 伪元素
+  <div class="parent-3">
+    <div class="son-3"></div>
+  </div>
+  <div>其他内容</div>
+
+  <br/><br/><br/>
+
+  3. 父子元素浮动,父元素有高度了，但缺点周围元素影响
+  <div class="parent-4 parent-float">
+    <div class="son-4"></div>
+  </div>
+  <div>其他内容</div>
+</body>
+</html>

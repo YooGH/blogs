@@ -38,12 +38,13 @@ white-space: nowrap;        // 超出不换行(no+wrap)
 
 ```
 width: 宽度;
+overflow: hidden;
 display: -webkit-box;
 -webkit-box-orient: vertical;
 -webkit-line-clamp: 2;            // 多行溢出，需要-webkit-box，因为不是规范内的，有兼容问题
 ```
 
-
+[例子](./view/css-cut.html)
 
 
 <br/><br/><br/>
@@ -63,7 +64,7 @@ display: -webkit-box;
 ###  <h1 id="h3"> 3. 居中 </h1>
  - flex => display: flex; justify-content: center; align-items: center;
  - position: absolute; top: 50%; left: 50%; margin: auto; transform:translate(-50%,-50%)
- - position: absolute; width: 100%; height: 100%; left: 0; top: 0; bottom: 0; right: 0; margin: auto;
+ - position: absolute; width: 100%; height: 100%; left: 0; top: 0; bottom: 0; right: 0; margin: auto;(子元素也会居中)
 
 
 
@@ -72,13 +73,16 @@ display: -webkit-box;
 <br/><br/><br/>
 
 ###  <h1 id="h4"> 4. 清浮动 </h1>
- - 用一个元素
+> 父级没有高度时，父级的高度是由子元素撑开的，但子元素浮动后，父元素的高度无法被撑开，所以需要清浮动；(父元素为0)
+> 新加入的兄弟级标签，希望不受之前浮动元素的影响，则需要清浮动
+ - 空标签(元素)间隔
  - :after/:before(伪元素)
  - clear:both;(只在block元素起作用，并且影响上下文元素)
- - overflow:hidden;(元素需要滚动)
+ - overflow:hidden;(缺点：元素需要滚动不能用)
+ - 父子都浮动（缺点: 父元素周围元素不换行）
 
-
-
+[参考](https://www.jianshu.com/p/84e0e056a3e2)
+[例子](./view/css-float.html)
 
 
 <br/><br/><br/>
@@ -183,7 +187,7 @@ relative
  + rem（相对于根元素html）
  + em (相对于上级元素，没有设置也是根元素)
  + vh和vw 可视区宽高总,共100(vmin,vmax)
- + em相对于父元素(设置font-size)，rem相对于根元素（htm
+ + em相对于父元素(设置font-size)，rem相对于根元素（html）
 
 
 

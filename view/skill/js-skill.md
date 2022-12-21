@@ -150,12 +150,12 @@ includes<br/>
 
 ### <h1 id="h10">10. ES6</h1>
 
-new Promise<br/>
+new Promise<br />
 let/const<br />
 模板字面量：后台删除某项<br />
 箭头函数(this永远来自其上下文,普通函数是运行的上下文收隐式和硬绑定影响)<br />
 解构：用于接口返回、表单接受、函数参数<br />
-扩展运算符（扩展方法）<br/>
+扩展运算符（扩展方法）<br />
 includes/for...of/filter/new Set/map/find/<br />
 
 

@@ -1,0 +1,17 @@
+const htmlList = [
+  { id: 1, sort: 1, type: 'html', question: '块级元素、非块级元素(内联)和空元素', answer: 'header、nav、footer、aside、section、div、article、p(ul、ol)\nspan、a\nhr、br(不能加样式)\n\nli(display: list-item)'},
+  { id: 2, sort: 2, type: 'html', question: '语义化和h5标签', answer: '方便被pc浏览器识别内容、方便交接、方便重构、'},
+  { id: 3, sort: 3, type: 'html', question: '动态网页和静态网页有什么区别？', answer: '静态：数据是固定，没有数据库连接\n动态：数据可以跟进后端接口连数据库做动态更改和交互，如提交表单'},
+  { id: 4, sort: 4, type: 'html', question: '熟悉HTML、XHTML和HTML5的概念', answer: 'HTML：超文本标记语言\nXHTML：可扩展超文本标记语言，是更严谨的HTML\nHTML5：是HTML的下一代，增加新特性画布(canvas)、媒体(video/audio)等\n总：HTML指的是HTML4.01，XHTML是HTML的过渡版，HTML5是HTML的升级版(https://blog.csdn.net/weixin_43272781/article/details/98488492)', details: '        正确嵌套  属性值双引号    特殊字符(实体表示)    标签以及属性小写     XHTML 用 id 属性代替 name 属性\nXHTML   ✅       ✅            ✅                  ✅ \nHTML5   ❌       ❌            ❌                  ❌\n(✅表示必须，❌表示非必须(可以有也可以没有))'},
+  { id: 5, sort: 5, type: 'html', question: '浏览器工作原理', answer: '浏览器工作的流程大体就是这样：DNS查找，TCP(TLS)握手，发送http请求，构建DOM，构建CSS，CSS构建DOM，布局，绘制等', details: '浏览器在解析html的时候是一个单线程，在扫描代码过程中，如果遇到script标签，浏览器会加载script文件，并执行其代码，此时html暂停解析,所以才把脚本放html后面；像css和图片是异步的可以先加载，html会先渲染后样式回来会回流重绘'},
+  { id: 6, sort: 6, type: 'html', question: 'donctype的作用和模式区别', answer: '浏览器的解析器使用哪种HTML规范\n\n严格模式：又称标准模式，是指浏览器按照W3C标准来解析代码，呈现页面\n混杂模式：又称为怪异模式或者兼容模式，是指浏览器按照自己的方式来解析代码，使用一种比较宽松的向后兼容的方式来显示页面  '},
+  { id: 7, sort: 7, type: 'html', question: '倒三角', answer: '宽高0,boder-top: 6px solid #f00;其他边的背景颜色transparent'},
+  { id: 8, sort: 8, type: 'html', question: '像素', answer: 'px\nrem（相对于根元素html）\nem (相对于上级元素，没有设置也是根元素)\nvh和vw 可视区宽高总,共100(vmin,vmax)'},
+  { id: 9, sort: 9, type: 'html', question: 'HTML 全局属性有哪些？', answer: 'lang，title，id，class，style'},
+  { id: 10, sort: 10, type: 'html', question: 'HTML5 的新特性-自定义属性有哪些？什么是自定义属性？', answer: 'canvas、语义化标签（header、nav、article、section、footer、）、video和audio、\ndata-\n自定义属性目的∶是为了保存并使用数据'},
+  { id: 11, sort: 11, type: 'html', question: 'html中div+css 的布局较 table 布局有什么优点？', answer: '页面加载速度更快、结构化清晰、页面显示简洁'},
+  { id: 12, sort: 12, type: 'html', question: 'HTML5 的离线储存怎么使用，工作原理能不能解释一下？（5分题）', answer: 'manifest在file.appcache文件里编写离线存储的资源\n原理：\n在线时，浏览器发现html头部有manifest属性，就会请求manifest文件，如果是第一次访问，浏览器就会根据manifest文件进行相应资源的下载，如果已经访问过并且已经有资源了，就会使用离线下载的资源。然后对新旧的manifest文件进行比较，如果有改变则重新下载文件中的资源，没有改变就不进行任何操作\n离线时：直接使用离线下载的资源'},
+  { id: 13, sort: 13, type: 'html', question: '前端页面有哪三层构成，分别是什么？作用是什么？', answer: '结构层、表示层、行为层', details: '结构层：由 HTML 或 XHTML 之类的标记语言负责创建。标签，也就是那些出现在尖括号里的单词，对网页内容的语义含义做出了描述，但这些标签不包含任何关于如何显示有关内容的信息。例如，P 标签表达了这样一种语义：“这是一个文本段。”\n表示层：由 CSS 负责创建。 CSS 对“如何显示有关内容”的问题做出了回答\n行为层：负责回答“内容应该如何对事件做出反应”这一问题。这是 Javascript 语言和 DOM 主宰的领域。'},
+  { id: 14, sort: 14, type: 'html', question: 'DOM事件的执行顺序', answer: 'onBlur > onChange > onClick > onFocus > onKeyDown'},
+  { id: 15, sort: 15, type: 'html', question: '浏览器加载的事件执行顺序', answer: 'js代码是自上而下执行，遇到setTimeout等异步创建微任务，函数会对变量进行提升\nhtml 和 js, css和图片是异'},
+]
