@@ -5,5 +5,5 @@ const xyList = [
   { id: 4, sort: 4, type: 'xy', question: 'TCP和UDP的区别', answer: 'TCP是基于连接的协议，在正式手法数据前，必须和对方建立可靠的连接。一个TCP连接必须要经过三次“对话”才能建立起来；\nUDP是与TCP相对应的协议。它是面向非连接的协议，它不与对方建立连接，而是直接就把数据包发送过去，UDP适用于一次只传送少量数据、对可靠性要求不高的应用环境。'},
   { id: 5, sort: 5, type: 'xy', question: '资源加载过程发生了什么？', answer: 'DNS解析、TCP链接、发送http请求、服务器收到、处理请求并返回、浏览器得到返回内容'},
   { id: 6, sort: 6, type: 'xy', question: '什么是同源策略？', answer: '所谓同源是指"协议+域名+端口"三者相同，即便两个不同的域名指向同一个ip地址，也非同源。'},
-  { id: 7, sort: 7, type: 'xy', question: '什么是跨域？如何解决跨域？同一域名不同目录算不算跨域？', answer: '1. 所谓同源是指"协议+域名+端口"三者相同，即便两个不同的域名指向同一个ip地址，也非同源；\n2. 跨域资源共享（CORS）:普通跨域请求只服务端设置Access-Control-Allow-Origin即可，前端无须设置，若要带cookie请求：前后端都需要设置。'},
+  { id: 7, sort: 7, type: 'xy', question: '什么是跨域？如何解决跨域？同一域名不同目录算不算跨域？', answer: '1. 所谓同源是指"协议+域名+端口"三者相同，即便两个不同的域名指向同一个ip地址，也非同源；\n2. 跨域资源共享（CORS）:普通跨域请求只服务端设置Access-Control-Allow-Origin即可，前端无须设置，若要带cookie请求：前后端都需要设置。', details: '前端解决跨域问题的8种方案：https://blog.csdn.net/joyhen/article/details/21631833'},
 ]
