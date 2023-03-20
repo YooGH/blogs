@@ -5,6 +5,7 @@ const BackEndList = [
     children: [
       { id: 0, name: 'webpack1.0~2.0笔记', href: 'https://www.cnblogs.com/lgyong/p/9192650.html'}, 
       { id: 1, name: 'webpack', href: 'https://www.cnblogs.com/lgyong/p/9823545.html'}, 
+      { id: 1, name: 'webpack本地', href: './view/project/webpack.md',}, 
       { id: 2, name: 'git', href: './view/project/git.md', done: true}, 
       { id: 3, name: 'vite', href: './view/project/vite.md' },
       { id: 4, name: 'ESLint', href: './view/project/ESLint.md' },

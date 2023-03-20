@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>uni转小程序</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<textarea :style="`width:${width}px;height:${height}px`" v-model="oldValue"></textarea>
+		<textarea :style="`width:${width}px;height:${height}px`" v-model="newValue"></textarea>
+	</div>
+
+	<script type="text/javascript">
+		let a = {b: 1}
+		Object.freeze(a)
+		a.b = 99
+		a = 66
+		console.log(a)
+
+
+
+		// function a(d,a) {
+		//     console.log(d)
+		//     if(a) {
+		//         a()
+		//     }
+		// }
+
+		// a(
+		// 	'k',
+		// 	()=>{setTimeout(()=>{
+		//     	console.log('kk')
+		// 	},1000)}
+		// )
+	</script>
+	<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.14/vue.min.js"></script>
+	<script>
+		new Vue({
+			el: '#app',
+			data() {
+				return {
+					width: '500',
+					height: '500',
+					oldValue: '',
+					newValue: '',
+				}
+			},
+			watch: {
+				oldValue() {
+
+
+
+					// 一、图片问题
+					// 二、路由更改 （app有没有这个变量）
+					// 三、考虑this 转 this.setData
+					// 四、:key="item.id" ==> wx:key="id"
+					// 五、一些动态class不支持，要用三元
+					// 六、v-show
+					// 七、：src => src"{{}}"
+
+
+
+					let [
+					  oldValue,
+					  newValue
+					] = 
+					[
+					  this.oldValue,
+					  this.oldValue,
+					]
+
+					// 样式(SCSS层级拍遍)
+					// rpx转px
+					// newValue = oldValue.replace(/px/g, "rpx")
+
+
+
+
+
+					/* js(uni.转wx.)
+						uni. 转 wx.
+						手动this.xxx 转 this.setData
+						手动api
+					*/
+					newValue = newValue.replace(/uni./g, "wx.")
+
+
+					/* html
+					 1、v-if="转wx:if="{{/  需要手动加}}，搜索wx一个个加
+					 2、@click转catchtap
+					*/
+					// v- 转 wx
+					newValue = newValue.replace(/v-if="/g, 'wx:if="{{')
+					newValue = newValue.replace(/v-for="/g, 'wx:for="{{')
+					// newValue = newValue.replace(/"{{/g, '"')
+					// newValue = newValue.replace(/}}"/g, '"')
+
+
+
+					// @click 转 catchtap
+					newValue = newValue.replace(/@click/g, 'catchtap')
+
+
+					// newValue = newValue.replace(/<!--/g, '{/*')
+					// newValue = newValue.replace(/-->/g, '*/}')
+
+
+					this.newValue = newValue;
+				}
+			},
+			mounted() {
+				this.width = window.screen.availWidth/2*0.9;
+				this.height = window.screen.availHeigh;
+				console.log(this.width)
+			}
+			
+		})
+	</script>
+</body>
+</html>

@@ -19,7 +19,7 @@
 
 ### <h1 id="h1"> 1. 基本流程 </h1>
   ```
-  1 git clone '' // 克隆项目下来
+  1 git clone '' // 克隆项目下来   （git clone -b 分支名称 git地址）
   2 cd 项目目录名
   3 git add . // 添加本地修改(git reset HEAD)
   4 git commit -m 'addAll' // git commit -m '注释'  缓存区内容添加到本地仓库(git reset --soft HEAD^)

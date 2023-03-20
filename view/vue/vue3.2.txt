@@ -19,6 +19,30 @@ npm i @vue/compiler-sfc -D
 > 服务器渲染
 
 
+
+
+
+
+
+
+
+2.7版本支持 <script setup>,但 vue-router 3.6.5 和 vuex 3.6.2 版本并不支持组合式API的写法
+props -> [Vue3 props的使用详解--defineProps](https://blog.csdn.net/qq_45662523/article/details/126671079)
+computed -> import { computed } from 'vue';
+defineProps和defineEmits -> https://blog.csdn.net/qq_37768929/article/details/125682445(defineEmits需先声明在用)
+const emit = defineEmits(['get']); emit('get', value)
+响应式: reactive和ref(语法糖$ref()), reactive在template需要.value,ref则不需要
+this.msg => msg.value ($ref语法糖还在实验阶段)
+nextTick/watch通过vue引入,函数形式接受参数
+[watch -- props](https://blog.csdn.net/weixin_46683645/article/details/125481381)
+this.$route -> https://blog.csdn.net/g1437353759/article/details/122358846
+Element
+1. 表单校验 -> https://www.jianshu.com/p/016527a41e09
+2. this.$message.success('')因为没有this,需要单独引入import { Message } from 'element-ui';
+
+
+
+
 [在线写vue](https://sfc.vuejs.org
 
 [3.2官方](https://blog.vuejs.org/posts/vue-3.2.html)

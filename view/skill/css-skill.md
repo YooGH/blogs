@@ -1,6 +1,7 @@
 1. <a href="h1">  文字超出  </a>
 2. <a href="h2">  选择器级别  </a>
 3. <a href="h3">  居中  </a>
+3. <a href="h15">  换行  </a>
 4. <a href="h4">  清浮动  </a>
 5. <a href="h5">  自适应高度  </a>
 6. <a href="h6">  两边固定，中间自适应；左边固定，右边自适应  </a>
@@ -67,8 +68,20 @@ display: -webkit-box;
  - position: absolute; width: 100%; height: 100%; left: 0; top: 0; bottom: 0; right: 0; margin: auto;(子元素也会居中)
 
 
+<br/><br/><br/>
 
+###  <h1 id="h15"> 15. 换行 </h1>
+中文： 这是英语书本
+英文单词：this is a English text
+字母：aaaaaaaaaaaaaaaaaaa
 
+强制换行： word-wrap: break-word
+word-break: 
+normal：不拆分字母, 会拆分中文和英文单词
+break-all：强制换行
+keep-all：拆分英文单词，中文文本和字母不换行
+
+[参考](https://blog.csdn.net/The_Light_/article/details/97618386)
 
 <br/><br/><br/>
 
@@ -105,6 +118,7 @@ display: -webkit-box;
 
 - ***position***: 父--position: relative;   左右两边--position: absolute;top: 0;left/right: 0; width: 100px;   中--width: 100%;padding: 0 100px;box-sizing: border-box;
 - ***float***: 父--清浮动；左右两边--float: left/right; 中间: width: 100%;padding: 0 100px;box-sizing: border-box;    （中间元素标签放最后）
+- ***vertical-align***: 父--text-align: center; display: block; 子都设置： display: inline-block; vertical-align: middle;（vertical-align需配合行内元素使用）
 - ***table***
 
 

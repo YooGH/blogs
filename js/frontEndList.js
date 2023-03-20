@@ -27,7 +27,7 @@ const FrontEndList = [
       { name: 'SCSS', href: './view/css/scss.md', grade: 1, done: true}, 
       { name: '————————',}, 
       { name: '样式属性', href: 'https://www.cnblogs.com/lgyong/p/8617501.html',}, 
-      { name: '选择器', href: 'https://www.cnblogs.com/lgyong/p/8617055.html',}, 
+      { name: '选择器', href: './view/css/selector.md', grade: 1, done: true}, 
       { name: '————————',}, 
       { name: 'BOOTSTRAP', href: 'https://www.cnblogs.com/lgyong/p/8810832.html',}, 
       { name: 'ELEMENTUI', href: 'https://www.cnblogs.com/lgyong/p/10583988.html',}, 

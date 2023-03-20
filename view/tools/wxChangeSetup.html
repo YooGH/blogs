@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		html
+		<div>
+			<textarea :style="`width:${width}px;height:${height}px`" v-model="oldValue2"></textarea>
+			<textarea :style="`width:${width}px;height:${height}px`" v-model="newValue2"></textarea>
+		</div>
+		方法
+		<div>
+			<textarea :style="`width:${width}px;height:${height}px`" v-model="oldValue"></textarea>
+			<textarea :style="`width:${width}px;height:${height}px`" v-model="newValue"></textarea>
+		</div>
+		data
+		<div>
+			<textarea :style="`width:${width}px;height:${height}px`" v-model="oldValue3"></textarea>
+			<textarea :style="`width:${width}px;height:${height}px`" v-model="newValue3"></textarea>
+		</div>
+	</div>
+
+	<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.14/vue.min.js"></script>
+	<script>
+		new Vue({
+			el: '#app',
+			data() {
+				return {
+					width: '500',
+					height: '500',
+					oldValue: '',
+					newValue: '',
+					oldValue2: '',
+					newValue2: '',
+					oldValue3: '',
+					newValue3: '',
+				}
+			},
+			watch: {
+				oldValue() {
+					// let oldValue = this.oldValue.trim();
+					let oldValue = this.oldValue;
+					console.log(oldValue)
+					oldValue = oldValue.replaceAll("wx.", "uni.")
+
+					let newValue = '';
+					let ccc = oldValue.split(/\n/);  // 识别逗号结尾的
+					ccc.forEach(item=>{
+						newValue += `let ${item.trim().replace(/,/g, "); ").replace(/: /g, " = ref(")}\n`;
+					})
+					// newValue = oldValue.replace(/,/g, ";");
+					// newValue = newValue.replace(/:/g, " =");
+					// newValue = newValue.replace(/500;/g, "bold;");
+					// newValue = newValue.replace(/ 0px/g, "");
+					this.newValue = newValue
+				},
+				oldValue2(oldVal) {
+					let newValue2 = oldVal;
+					/* js(uni.转wx.)
+						uni. 转 wx.
+						手动this.xxx 转 this.setData
+						手动api
+					*/
+
+
+					/* html
+					 1、v-if="转wx:if="{{/  需要手动加}}，搜索wx一个个加
+					 2、@click转catchtap
+					*/
+					// v- 转 wx
+					newValue2 = newValue2.replace(/wx:if="{{/g, 'v-if="')
+					newValue2 = newValue2.replace(/wx:for="{{/g, 'v-for="')
+					newValue2 = newValue2.replace(/wx:else/g, 'v-else')
+					// newValue2 = newValue2.replace(/"{{/g, '"')
+					// newValue2 = newValue2.replace(/}}"/g, '"')
+
+
+
+					// @click 转 catchtap
+					newValue2 = newValue2.replace(/catchtap/g, '@click')
+					newValue2 = newValue2.replace(/bindtap/g, '@click')
+
+
+					// newValue2 = newValue2.replace(/<!--/g, '{/*')
+					// newValue2 = newValue2.replace(/-->/g, '*/}')
+
+
+					this.newValue2 = newValue2;
+				},
+				oldValue3(oldVal) {
+					let newValue3 = oldVal;
+
+					
+					newValue3 = newValue3.replace(/,/g, '; ')
+					newValue3 = newValue3.replace(/:/g, ' =')
+
+					this.newValue3 = newValue3
+				}
+			},
+			mounted() {
+				this.width = window.screen.availWidth/2*0.9;
+				this.height = window.screen.availHeigh / 2;
+				console.log(this.width)
+			}
+			
+		})
+	</script>
+</body>
+</html>

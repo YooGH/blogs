@@ -11,7 +11,7 @@
 2.
 [ip和dns配置](https://blog.csdn.net/teisite/article/details/81196244)
 
-
+[使用git提交代码如何关闭eslint校验](https://betheme.net/news/txtlist_i137519v.html?action=onClick)
 
 
 

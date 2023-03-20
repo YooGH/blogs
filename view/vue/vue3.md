@@ -1,4 +1,4 @@
-﻿﻿> 1. <a href="#h1"> 框架安装 </a>
+﻿> 1. <a href="#h1"> 框架安装 </a>
 > 2. <a href="#h2"> 引入vuex </a>
 > 3. <a href="#h3"> 引入router </a>
 > 引入router有问题待解决

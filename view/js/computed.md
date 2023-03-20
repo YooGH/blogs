@@ -34,11 +34,9 @@
 
 <br/><br/><br/>
 ###  <h1 id="h3"> 单位 </h1>
-bit（比特，位）
+bit（比特，位，计算机最小单位）
 
-byte（字节,B）
-
-1B（byte，字节）= 8 bit（见下文）
+1B（byte，字节，B）= 8 bit（见下文）
 
 1KB（Kibibyte，千字节）=1024B= 2^10 B
 
