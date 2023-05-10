@@ -9,52 +9,58 @@
   <link rel="stylesheet" type="text/css" href="./css/index.css" />
 </head>
 <body>
-  <div id="app">
+  <div id="app" class="theme-black">
     <!-- 上半部分 -->
-    <article class="flex">
+    <article class="flex" v-show="showFrontEnd">
       <div class="col-4 col-sm" v-for="(item, index) of FrontEndList" :key="index">
-        <!-- 标题 -->
-        <h1>
-          <a :href="item.href">{{ item.categoryName }}{{showLongName}}</a>
-          <span @click="openItem(item)">+</span>
-        </h1>
-        <!-- 内容 -->
-        <section class="category" :style="`height: ${availHeight-40}px`">
-          <a
-            target="_blank"
-            class="text-a"
-            :class="{
-              'text-done': itemSon.done,
-              'text-b': itemSon.href
-            }"
-            :href="itemSon.href"
-            v-for="(itemSon, indexSon) of item.children"
-            :key="indexSon">
-            {{ itemSon.name }}
-          </a>
-          <a
-            target="_blank"
-            class="text-a"
-            :class="{
-              'text-done': itemSon.done,
-              'padding-bottom': (1+indexSon)%5 == 0
-            }"
-            :href="itemSon.href"
-            v-for="(itemSon, indexSon) of item.itemsChildren"
-            :key="indexSon">
-            {{ `${1+indexSon}. ${itemSon.name}` }}
-          </a>
-        </section>
+        <block v-show="!item.show">
+        <!-- <block v-show="item.show"> -->
+          <!-- 标题 -->
+          <h1>
+            <a :href="item.href">{{ item.categoryName }}{{showLongName}}</a>
+            <span @click="openItem(item)">+</span>
+          </h1>
+          <!-- 内容 -->
+          <section class="category" :style="`height: ${availHeight-40}px`">
+            <a
+              target="_blank"
+              class="text-a"
+              :class="{
+                'text-done': !itemSon.done,
+                'text-b': itemSon.href
+              }"
+              :href="itemSon.href"
+              v-for="(itemSon, indexSon) of item.children"
+              :key="indexSon">
+              {{ itemSon.name }}
+            </a>
+            <a
+              target="_blank"
+              class="text-a"
+              :class="{
+                'text-done': !itemSon.done,
+                'padding-bottom': (1+indexSon)%5 == 0
+              }"
+              :href="itemSon.href"
+              v-for="(itemSon, indexSon) of item.itemsChildren"
+              :key="indexSon">
+              {{ `${1+indexSon}. ${itemSon.name}` }}
+            </a>
+          </section>
+        </block>
       </div>
     </article>
 
     <!-- 下半部分 -->
-    <article class="flex">
-      <div class="col-4 col-sm" v-for="(item, index) of BackEndList" :key="index"> 
-        <h1> {{ item.categoryName }} </h1>  
-        <section class="category" :style="`height: ${availHeight/2-30}px`">
-          <a class="text-a" target="_blank" :class="{'text-b': itemSon.grade}" :href="itemSon.href" v-for="(itemSon, indexSon) of item.children" :key="indexSon"> {{ itemSon.name }} </a>
-        </section>
+    <article class="flex" v-show="showBackEnd">
+      <div class="col-4 col-sm" v-for="(item, index) of BackEndList" :key="index">
+        <block v-show="!item.show">
+        <!-- <block v-show="item.show"> -->
+          <h1> {{ item.categoryName }} </h1>  
+          <section class="category" :style="`height: ${availHeight/2-30}px`">
+            <a class="text-a" target="_blank" :class="{'text-b': itemSon.grade}" :href="itemSon.href" v-for="(itemSon, indexSon) of item.children" :key="indexSon"> {{ itemSon.name }} </a>
+          </section>
+        </block>
       </div>
     </article>
   </div>
@@ -69,6 +75,8 @@
       setup() {
         const availHeight = window.screen.availHeight;
         return {
+          showFrontEnd: true,
+          showBackEnd: true,
           FrontEndList,
           BackEndList,
           availHeight,

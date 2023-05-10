@@ -297,7 +297,14 @@ JS把异步分为宏任务和微任务，微任务的优先级要比宏任务的
 <br/><br/><br/>
 
 ### <h1 id="h21"> 21. JS延迟加载的方式有哪些？ </h1>
+1. script的defer属性
+2. script的async属性
+3. 动态创建DOM方法（createElement）
+4. 使用jQuery的getScript()方法
+5. 使用setTimeout延迟方法
+6. 让JS最后加载(放在body后面)
 
+[js延迟加载的六种方式](https://juejin.cn/post/6863289198704033800)
 
 
 

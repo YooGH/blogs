@@ -2,6 +2,7 @@ const BackEndList = [
   {
     id: 1,
     categoryName: '工程',
+    show: true,
     children: [
       { id: 0, name: 'webpack1.0~2.0笔记', href: 'https://www.cnblogs.com/lgyong/p/9192650.html'}, 
       { id: 1, name: 'webpack', href: 'https://www.cnblogs.com/lgyong/p/9823545.html'}, 
@@ -29,6 +30,7 @@ const BackEndList = [
   {
     id: 2,
     categoryName: '功能和bug',
+    show: true,
     children: [
       { id: 0, name: '功能0 -- fullscreen', href: 'https://www.cnblogs.com/lgyong/p/10406197.html'}, 
       { id: 1, name: '功能1 -- 顶部导航栏和返回顶部效果', href: 'https://www.cnblogs.com/lgyong/p/10531979.html'}, 
@@ -59,6 +61,7 @@ const BackEndList = [
   { 
     id: 3,
     categoryName: '非逻辑',
+    show: true,
     children: [
       {id: 5, name: 'face', href: 'https://www.cnblogs.com/lgyong/p/11604172.html'}, 
       {id: 7, name: 'face', href: './view/skill/skill.md'}, 
@@ -92,6 +95,7 @@ const BackEndList = [
   {
     id: 5,
     categoryName: '脑图',
+    show: true,
     children: [
       // {id: 0, name: '脑图', href: 'https://naotu.baidu.com/'}, 
       {id: 0, name: '脑图', href: 'https://naotu.baidu.com/file/b2c14b8301fe08e11db283b2b3788935'}, 

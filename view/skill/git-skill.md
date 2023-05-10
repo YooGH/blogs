@@ -20,7 +20,7 @@
 ### <h1 id="h1"> 1. 开发工具(5) </h1>
 1）列举工作中常用的几个git命令？
 git init（初始化本地仓库）
-git clone
+git clone（git clone -b 分支名称 git地址）
 git add(加到git暂存区; git reset HEAD)
 git pull
 git commit（提交到本地分支）

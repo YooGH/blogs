@@ -42,10 +42,24 @@ const FRAME = [
 			''
 		]
 	},
-	{id: 8, name: '生命周期', values:
+	{id: 8, name: '类选择器', values:
+		[
+			'class',
+			'class',
+			'className'
+		]
+	},
+	{id: 9, name: '生命周期', values:
 		[
 			'onLoad--监听页面加载 \nonReady--监听页面初次渲染完成 \nonShow--监听页面显示 \nonHide--监听页面隐藏 \nonUnload--监听页面卸载 \n\nonPullDownRefresh--监听用户下拉动作 \nonReachBottom--页面上拉触底事件的处理函数 \nonShareAppMessage--用户点击右上角转发 \nonPageScroll--页面滚动触发事件的处理函数 \nonTabItemTap--当前是 tab 页时，点击 tab 时触发 \n其他--Any开发者可以添加任意的函数或数据到 object 参数中，在页面的函数中用 this 可以访问 \nhttps://blog.csdn.net/u014360817/article/details/52650973',
 			'beforeCreate--创建前 \ncreated--创建后 \nbeforeMount--载入前 \nmounted--载入后 \nbeforeUpdate--更新前 \nupdated--更新后 \nbeforeDestroy--销毁前 \ndestroyed--销毁后',
+			''
+		]
+	},
+	{id: 10, name: '组件接收', values:
+		[
+			'properties:{\n  number: {\n   type: Number,\n   optionalTypes: [String], // 除了Number类型还可以是String\n   value: 0,\n  }\n}',
+			'props:{\n  number: {\n   type: [Number, String],\n   default: 0,\n  }\n}',
 			''
 		]
 	},

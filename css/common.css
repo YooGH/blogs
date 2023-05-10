@@ -30,16 +30,28 @@ a {
 
 
 
-#app{
+#app {
   position: absolute;
   width: 100%;
   height: 100vh;
   overflow: auto;
-  background: #434a50;
-  background: #405165;
+  /*background: #434a50;*/
+  /*background: #405165;*/
   background: #f4e7c7;
   /*background: #f9f9f9;*/
 }
+
+/*微信pc端侧边栏的黑色*/
+#app.theme-black {
+  background: #2e2e2e;
+}
+#app.theme-black h1 {
+  color: #828282;
+}
+#app.theme-black .text-a {
+  color: #828282;
+}
+
 
 /*栅格布局*/
 .flex {

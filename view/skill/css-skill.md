@@ -53,9 +53,8 @@ display: -webkit-box;
 ###  <h1 id="h2"> 2. 选择器级别 </h1>
 
 选择器排序： id选择器 > 类选择器 > 属性选择器 > 标签选择器 > 通配符选择器
-
-
-!import > 内联样式 > 选择器  
+ 
+权重优先级： !important > 行内样式 > ID > 类、伪类、属性 > 标签名 > 继承 > 通配符
 
 关系选择符``（后代，子， +, ~）``、伪类选择符、伪对象选择符
 
@@ -118,7 +117,7 @@ keep-all：拆分英文单词，中文文本和字母不换行
 
 - ***position***: 父--position: relative;   左右两边--position: absolute;top: 0;left/right: 0; width: 100px;   中--width: 100%;padding: 0 100px;box-sizing: border-box;
 - ***float***: 父--清浮动；左右两边--float: left/right; 中间: width: 100%;padding: 0 100px;box-sizing: border-box;    （中间元素标签放最后）
-- ***vertical-align***: 父--text-align: center; display: block; 子都设置： display: inline-block; vertical-align: middle;（vertical-align需配合行内元素使用）
+- ***vertical-align***: 父--text-align: center; display: block; 子都设置： display: inline-block; vertical-align: middle;// 子元素文本display: inline;（vertical-align需配合行内元素使用）
 - ***table***
 
 
@@ -144,21 +143,24 @@ keep-all：拆分英文单词，中文文本和字母不换行
 <br/><br/><br/>
 
 ###  <h1 id="h9"> 9. 重绘和回流的概念 </h1>
-  回流(重排): 当浏览器必须重新处理和绘制部分或全部页面时，回流就会发生。  
-  重绘: 不影响布局, 只是标签页面发生变化, 重新绘制。  
-  注意: 回流(重排)必引发重绘, 重绘不一定引发回流(重排)。  
-
-重绘(repaint)：当元素样式改变而不影响元素在页面中的位置时，浏览器对元素进行更新这就是重绘；
-回流(reflow)：当元素样式改变而影响到其在页面中的位置和大小时，浏览器将对页面重新计算渲染树，这就是回流
-二者之间的关系：发生回流一定会触发重绘，但是触发重绘不一定会发生回流；
-举个简单的例子：
-因为元素的颜色的改变会导致元素的样式改变此时就触发了重绘，但是其并没有影响其在页面的位置和大小所以就没有触发回流；
-但是元素通过定位或者改变大小导致样式的改变此时即符合重绘的定义也符合回流的定义；因而即触发了重绘又触发了回流；
-DOM 样式发生了变化，但没有影响到页面布局时，会触发重绘，而不会触发回流。
-重绘由于 DOM 位置信息不需要更新，省去了布局过程，因而性能上优于回流
-（https://zhuanlan.zhihu.com/p/391932368）
+回流(重排):当节点样式发生改变影响到页面布局时，会产生回流。相当于刷新页面（比如宽高、边框大小、内外边距等）。<br>
+js对 DOM 元素的增、删、改也会产生回流。改变 DOM 容易导致整体布局发生变化。<br>
+<br>
+重绘: 当节点样式发生改变但是不影响布局时，会产生重绘。只会动态更新样式（比如颜色、透明度、背景）。<br>
+重绘相对于回流性能影响较小<br>
+<br>
+重绘不一定引发回流，回流一定会引发重绘<br>
 
 
+[你真的了解回流和重绘吗](https://juejin.cn/post/6844903779700047885)
+
+[Dom树 CSS树 渲染树(render树) 规则、原理]（https://blog.csdn.net/weixin_45820444/article/details/1090139961）
+
+[回流和重绘](https://juejin.cn/post/7013187112849637407)
+
+[为什么获取DOM元素某些属性会触发回流重绘？](https://juejin.cn/post/7201668416171802683)
+
+[触发浏览器回流的属性方法一览表](https://cloud.tencent.com/developer/article/1498678)
 
 
 

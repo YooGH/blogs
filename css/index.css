@@ -65,7 +65,7 @@ h1 {
 }
 
 .text-done:after {
-  content: '-';
+  content: ' x';
 }
 .padding-bottom {
   padding-bottom: 16px;

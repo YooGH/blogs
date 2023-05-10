@@ -3,8 +3,24 @@
 [入户流程](https://www.thea.cn/zdg_px_2650415-1.htm)
 [指南，手机号码](http://rsj.gz.gov.cn/ywzt/rcgz/rcyjrh/tzgg/content/post_2412419.html)
 [UA](http://k.sina.com.cn/article_1823348853_6cae18750200143gt.html)
-[解决图片和文字水平方向居中对齐](https://juejin.cn/post/6865096170511794189) -- 父: text-align: center; 子都加: vertical-align:middle;（子都不是块级元素）
-
+[解决图片和文字水平方向居中对齐](https://juejin.cn/post/6865096170511794189) -- 父: text-align: center; 子都加: vertical-align:middle;（子都不是块级元素,文字都不能是inline-block）
+[axios的替代方案的思考和实践](https://mp.weixin.qq.com/s/upeMXffOhdhIStcYF-pI8g) -- alova读作“阿洛娃”(支持vue3的setup写法； 数据缓存：请求过的数据缓存，下次不请求；)
 
 
 12.19docker复习
+
+miniprogram-to-uniapp
+
+
+
+
+
+
+
+
+
+
+
+
+
+[微信小程序上传本地文件](https://www.cnblogs.com/nicoz/p/16991603.html)

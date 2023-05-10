@@ -43,8 +43,18 @@ Element
 
 
 
+app.component() 方法可以被链式调用
+setup的组件只要引用就可以用，不同显式注册，optionsAPI就要；
+
+
+
 [在线写vue](https://sfc.vuejs.org
 
 [3.2官方](https://blog.vuejs.org/posts/vue-3.2.html)
 [3.2中文解析](https://mp.weixin.qq.com/s/-PCCt3s2aA2aKY72bu-qwA)
 [杨村长的视频](https://www.bilibili.com/video/BV1sU4y1E7fF?from=search&seid=6172818381661672102&spm_id_from=333.337.0.0)
+
+
+
+
+[Vue 3.x 相对于 Vue 2.x 做了那些额外的性能优化?](https://juejin.cn/post/7179117510359253053#heading-9)

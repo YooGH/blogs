@@ -3,4 +3,5 @@ const dataList = [
   { id: 2, sort: 2, type: 'data', question: '介绍下什么是时间复杂度，什么是空间复杂度？', answer: '时间复杂度：时间复杂度实际上是一个函数，代表基本操作重复执行的次数；\n空间复杂度：是对一个算法在运行过程中临时占用存储空间的度量；'},
   { id: 3, sort: 3, type: 'data', question: '递归算法的时间复杂度是多少？', answer: '程序调用自身的编程技巧\n递归算法的空间复杂度：递归深度N* \n每次递归所要的辅助空间,如果每次递归所需的辅助空间是常数，则递归的空间复杂度是 O(N)\n(深拷贝，路由比对二级路由)'},
   { id: 4, sort: 4, type: 'data', question: '常见的加密算法有几种？他们在使用上有什么区别？', answer: '对称加密：对称加密密钥一样（加密解码一个钥匙，AES首次还是明文的）\n非对称加密: 分公钥和私钥（SSH身份验证）\nMD5：加密不能解密。。(数字摘要/摘要算法)\nbcrypt(加盐)\n[「密码」这种敏感信息，到底该如何存储？](https://mp.weixin.qq.com/s/-ATK2ciPTQM_ySjq35mvdg)'},
+  { id: 5, sort: 5, type: 'data', question: '', answer: 'https://visualgo.net/zh'}
 ]
