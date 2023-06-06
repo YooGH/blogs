@@ -26,3 +26,6 @@ CSS （Cascading Style Sheets，层叠样式表）是用来控制网页在浏览
 
 ### 其他、
 [2022：CSS新特性](https://mp.weixin.qq.com/s/2kqorHVPq7BT3oQYGrJLMQ)
+
+[Google I/O 2023：最新 CSS 特性解读！](https://www.zhihu.com/question/583047477)
+[Google I/O 2023：最新 CSS 特性解读！](https://developer.chrome.com/blog/whats-new-css-ui-2023/)

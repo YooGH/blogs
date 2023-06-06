@@ -47,3 +47,23 @@ shutdown -h now
 
 reboot 重启
 
+
+
+
+export 环境变量 --> 可新增，修改或删除环境变量，供后续执行的程序使用(export 的效力仅限于该次登陆操作。)
+
+
+
+
+
+
+
+
+
+
+
+
+window
+
+系统文件修复``sfc /scannow``,需用管理员权限
+

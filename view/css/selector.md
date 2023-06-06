@@ -7,6 +7,7 @@
 7. <a href="#h7">伪类选择器</a>
 8. <a href="#h8">伪对象选择符</a>
 9. <a href="#h9">深度选择器</a>
+10. <a href="#h10">选择器权重</a>
 
 <br/><br/><br/>
 
@@ -128,3 +129,11 @@ E::selection<br/>
 ::v-deep ::-webkit-scrollbar-thumb:active {background-color: #ddd;}/* 点击时滚动条的颜色 */
 ```
 
+
+<br/><br/><br/>
+
+<h4 id="h10"> 10.选择器权重 </h4>
+
+!import>内联>id>class>标签
+
+css定义的权重：!import(10000)、内联(style)(1000)、id(100)、class(10)、标签(1)

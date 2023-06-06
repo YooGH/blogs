@@ -168,13 +168,16 @@
 7. text-transform: none、capitalize、uppercase、lowercase、inherit
 
 
-word-wrap: normal、break-word;(长单词)
+字母换行：word-wrap: break-word; (长单词,其他值normal)
 
-word-break: normal、break-word、keep-all;(长单词)
+单词换行：word-break: break-all; (其他值normal、break-word、keep-all;）
+
+文字换行：white-space: pre-wrap;
 
 text-overflow: clip、ellipsis; ( overflow: hidden; white-space: nowrap;不换行 text-overflow: ellipsis;。。。 )
 
 ```
+
 
 
 
@@ -186,7 +189,11 @@ text-overflow: clip、ellipsis; ( overflow: hidden; white-space: nowrap;不换�
   list-style-type | list-style-image | list-style-position
 
 ```
-list-style-type: disc、circle、square、decimal、lower-roman、upper-roman、lower-alpha、upper-alpha、none、armenian、cjk-ideographic、georgian、lower-greek、hebrew、hiragana、hiragana-iroha、katakana-iroha、lower-latin、upper-latin;
+list-style-type: 
+  disc、circle、square、decimal、lower-roman、
+  upper-roman、lower-alpha、upper-alpha、none、armenian、
+  cjk-ideographic、georgian、lower-greek、hebrew、hiragana、
+  hiragana-iroha、katakana-iroha、lower-latin、upper-latin;
 
 list-style-image: none、url(url);
 
@@ -246,51 +253,47 @@ list-style-position: inside、outside、inherit;
 <h5 id="h8">八、其他</h5>
 [object-fit](https://developer.mozilla.org/zh-CN/docs/Web/CSS/object-fit): fill(填充,不保证比例)/contain（保证比例填充，留边）/cover（原比例裁剪，object-position）/none/scale-down
 
+
 [object-position](https://developer.mozilla.org/zh-CN/docs/Web/CSS/object-position): 类background-position
+
+
+[pointer-events](https://developer.mozilla.org/zh-CN/docs/Web/CSS/pointer-events)
+
+
 
 
 
 <br/><br/><br/>
 
-
-
-
 [简单比较display、visibility、opacity](https://blog.csdn.net/qq_15626693/article/details/54619334)
 
-比较  display:none  opacity:0 visibility:hidden
-占据空间  否 是 是
-回流与渲染 是 否 否
-子代继承性 不继承 继承  继承
-子代反继承 否 否 能
-transition效果  无效  有效  有效
-绑定的事件 不响应 能响应 不响应
- 
+```
+比较           display:none  opacity:0   visibility:hidden
+占据空间         否           是          是
+回流与渲染       是           否          否
+子代继承性       不继承        继承        继承
+子代反继承       否           否          能
+transition效果  无效          有效        有效
+绑定的事件       不响应        能响应      不响应
+```
+
+
+
+
+
+<br/><br/><br/>
 
 [css样式的书写顺序及原理1](https://blog.csdn.net/qq_36060786/article/details/79311244)
 
 [css样式的书写顺序及原理2](https://www.shejidaren.com/css-written-specifications.html)
 
- 
-
 [勿用_](https://www.cnblogs.com/kaiye/archive/2011/06/13/3039046.html)
 
- 
 
-①.字体设置为10px
 
-chrome浏览器最小字体12px，firefox和IE没有限制;
 
-如果都设置成10px,可用css3的缩放属性：transform:scale(0.90)， 其他浏览器创建新的样式设置font-size:10px即可；
 
-[来源](https://www.cnblogs.com/boanyi/p/NewBigGod.html)
-
- 
-
- 
-
-字母换行：word-wrap: break-word;
-单词换行：word-break: break-all;   （￥1111111111111）
-文字换行：white-space:pre-wrap;
+<br/><br/><br/>
 
 [line-height多行和单行](https://blog.csdn.net/sillies_3/article/details/100023507)
 ### 其他、

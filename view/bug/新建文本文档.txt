@@ -3,3 +3,11 @@
 
 \n不换行
 https://www.cnblogs.com/axingya/p/16045869.html
+
+
+
+
+
+
+[nodejs新版本引起的：digital envelope routines::unsupported](https://blog.csdn.net/fengyuyeguirenenen/article/details/128319228)
+> export NODE_OPTIONS=--openssl-legacy-provider

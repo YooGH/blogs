@@ -13,8 +13,8 @@
     <!-- 上半部分 -->
     <article class="flex" v-show="showFrontEnd">
       <div class="col-4 col-sm" v-for="(item, index) of FrontEndList" :key="index">
-        <block v-show="!item.show">
-        <!-- <block v-show="item.show"> -->
+        <!-- <block v-show="!item.show"> -->
+        <block v-show="item.show">
           <!-- 标题 -->
           <h1>
             <a :href="item.href">{{ item.categoryName }}{{showLongName}}</a>
@@ -54,8 +54,8 @@
     <!-- 下半部分 -->
     <article class="flex" v-show="showBackEnd">
       <div class="col-4 col-sm" v-for="(item, index) of BackEndList" :key="index">
-        <block v-show="!item.show">
-        <!-- <block v-show="item.show"> -->
+        <!-- <block v-show="!item.show"> -->
+        <block v-show="item.show">
           <h1> {{ item.categoryName }} </h1>  
           <section class="category" :style="`height: ${availHeight/2-30}px`">
             <a class="text-a" target="_blank" :class="{'text-b': itemSon.grade}" :href="itemSon.href" v-for="(itemSon, indexSon) of item.children" :key="indexSon"> {{ itemSon.name }} </a>

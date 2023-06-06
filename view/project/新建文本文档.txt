@@ -16,3 +16,16 @@
 
 
 https://www.cnblogs.com/wangzhichao/p/12692188.html
+
+
+
+
+
+
+
+
+
+
+linux查看信息
+
+[Linux命令之sar](https://blog.csdn.net/xu710263124/article/details/117437977)

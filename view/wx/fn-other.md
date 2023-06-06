@@ -11,6 +11,7 @@
 11. <a href="#h11"> 生成小程序二维码 </a>
 12. <a href="#h12"> 获取小程序登录失效前的页面信息 </a>
 13. <a href="#h13"> 跳转小程序链接 </a>
+14. <a href="#h14"> 其他 </a>
 100. <a href="#h100"> 。。。 </a>
 
 
@@ -239,6 +240,11 @@ routeObj.options
 [获取 URL Scheme](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/url-scheme.html)
 [限制公告](https://developers.weixin.qq.com/community/develop/doc/000aeab88a4ea0c5c89d81fde5b801?source=templateb&page=9)
   
+
+<br/><br/>
+###  <h1 id="h14"> 其他 </h1>
+[微信小程序显示空格几种方式](https://blog.csdn.net/e1172090224/article/details/105459400)
+
 
 <br/><br/>
 ###  <h1 id="h100"> 。。。 </h1>

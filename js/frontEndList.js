@@ -22,7 +22,7 @@ const FrontEndList = [
     id: 2,
     categoryName: 'CSS',
     href: './view/skill/css-skill.md',
-    show: false,
+    show: true,
     children: [
       { name: 'CSS', href: './view/css/css.md', grade: 1, done: true, beforeHref:'https://www.cnblogs.com/lgyong/p/8617044.html'},
       { name: '选择器', href: './view/css/selector.md', grade: 1, done: true, },
@@ -36,19 +36,20 @@ const FrontEndList = [
       { name: '————————',},
     ],
     itemsChildren: [
-      { name: '浏览器原理与兼容等', href: 'https://www.cnblogs.com/lgyong/p/8617620.html', },
-      { name: '静态、自适应、流式、响应式', href: 'https://www.cnblogs.com/lgyong/p/8544938.html', },
+      { name: '浏览器原理与兼容等', href: './view/css/compatibility.md', done: true, },
+      { name: '静态、自适应、流式、响应式', href: './view/css/css1.md', done: true, },
       { name: '整体布局、兼容、移动端的适口viewport @media响应', href: 'https://www.cnblogs.com/lgyong/p/8545134.html', },
-      { name: '垂直居中', href: 'https://www.cnblogs.com/lgyong/p/9968670.html', },
-      { name: 'display:flex', href: 'https://www.cnblogs.com/lgyong/p/9231735.html', },
-      { name: '@font-face', href: 'https://www.cnblogs.com/lgyong/p/9537291.html', },
+      { name: '@font-face', href: './view/css/font-face.md', done: true, },
+      { name: '像素', href: './view/css/pixel.md', done: true, },
+
+      { name: '垂直居中', href: './view/css/vertical-center.md', done: true, },
+      { name: 'vertical-align', href: './view/css/vertical-align.md', done: true, },
+      { name: 'display-flex', href: './view/css/display-flex.md', done: true, },
+      { name: 'display-grid', href: 'https://www.cnblogs.com/lgyong/p/13293059.html', },
+      { name: 'sass和less', href: './view/css/cssPlus.md', done: true, },
+      { name: 'BFC', href: './view/css/bfc.md', done: true, },
+      { name: '三角形', href: './view/css/triangle.md', done: true, },
       { name: '颜色', href: 'https://www.cnblogs.com/lgyong/p/10365754.html', },
-      { name: 'vertical-align', href: 'https://www.cnblogs.com/lgyong/p/10488254.html', },
-      { name: 'grid', href: 'https://www.cnblogs.com/lgyong/p/13293059.html', },
-      { name: 'sass和less', href: 'https://www.cnblogs.com/lgyong/p/13724140.html', },
-      { name: '像素', href: 'https://www.cnblogs.com/lgyong/p/13744011.html', },
-      { name: 'BFC', href: 'https://www.cnblogs.com/lgyong/p/13807107.html', },
-      { name: '三角形', href: './view/css/triangle.md', },
     ]
   },
 
@@ -139,6 +140,7 @@ const FrontEndList = [
     children: [
       { name: '微信小程序', href: './view/wx/wx.md', done: true, },  // href: 'https://www.cnblogs.com/lgyong/p/9959023.html'
       { name: '微信云开发', href: './view/wx/wxyun.md', done: true, }, 
+      { name: '微信公众号', href: './view/wx/official-account.md', done: true, }, 
       { name: '————————',}, 
       { name: '功能1-map', href: './view/wx/fn-map.md', done: true, }, 
       { name: '功能2-h5跳转', href: './view/wx/fn-h5.md', done: true, }, 

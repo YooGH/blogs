@@ -1,0 +1,51 @@
+tinify
+API： zMwGcWLYHpvCvWGkhVjv6zkJd1DVSdfr
+教程：https://blog.csdn.net/xutongbao/article/details/126836323
+官网：https://tinypng.com/developers/reference/nodejs
+
+
+
+
+
+
+const tinify = require('tinify');
+const fs = require('fs');
+tinify.key = '';
+
+// 直接images目录遍历图片压缩
+// const toolsTinyImg = async (req, res) => {
+//   const dirPath = 'E:/a/ai_mdt_h5/src/static/images/';
+//   const dirArr = fs.readdirSync(dirPath);
+//   console.log(dirArr);
+//   dirArr.forEach(itemDir => {
+//     let imgDirPath = dirPath + itemDir;
+//     const imgArr = fs.readdirSync(imgDirPath);
+//     console.log('dirArrdirArrdirArrdirArrdirArrdirArr', itemDir);
+
+//     imgArr.forEach(item => {
+//       console.log(item);
+//       const source = tinify.fromFile(`${imgDirPath}/${item}`);
+//       source.toFile(`${imgDirPath}/${item}`);
+//     });
+//   });
+// };
+
+// 直接单独目录遍历图片压缩
+const toolsTinyImg = async (req, res) => {
+  const dirPath = 'E:/a/ai_mdt_h5/src/static/images/';
+  let imgDirPath = dirPath + 'common';
+  const imgArr = fs.readdirSync(imgDirPath);
+
+  imgArr.forEach(item => {
+    console.log(item);
+    const source = tinify.fromFile(`${imgDirPath}/${item}`);
+    source.toFile(`${imgDirPath}/${item}`);
+  });
+};
+
+// res . send(f
+// code: 200,
+// data: (
+// imgDirPath
+// message:成功
+toolsTinyImg();
