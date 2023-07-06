@@ -20,6 +20,13 @@
 
 
 
+说明：
+1. 在设置中分为用户和工作区，区别在于在用户中的配置的对改用户的所有项目都有效，工作区的是针对指定项目。
+
+2. 会和veter/Prettier等冲突
+
+
+
 
 
 [ESLint创建规则配置](https://blog.csdn.net/shenxianhui1995/article/details/81213555)

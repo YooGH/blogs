@@ -35,6 +35,7 @@ console.log(b instanceof Object);   // false
 ### 深拷贝
 > JSON.parse(JSON.stringify(obj)); 遍历;
 
+[弊端](https://blog.csdn.net/weixin_44194217/article/details/111192652)
 
 
 <br/><br/><br/>
@@ -84,6 +85,6 @@ console.log(obj2.a.b.d.e);
 
 
 <br/><br/><br/>
-[我](https://www.cnblogs.com/lgyong/p/12710862.html)
+[博客](https://www.cnblogs.com/lgyong/p/12710862.html)
 
 [参考](https://www.cnblogs.com/hyns/p/12405328.html)

@@ -1,0 +1,38 @@
+[关于使用WeUI在IE中提示“font-face 未能完成 OpenType 嵌入权限检查。权限必须是可安装的。”的问题](https://www.cnblogs.com/godbell/p/9471578.html)
+
+
+\n不换行
+https://www.cnblogs.com/axingya/p/16045869.html
+
+
+
+
+
+
+[nodejs新版本引起的：digital envelope routines::unsupported](https://blog.csdn.net/fengyuyeguirenenen/article/details/128319228)
+> export NODE_OPTIONS=--openssl-legacy-provider
+
+
+
+
+
+bug4: uniapp h5"image"组件在ios长按图片会拖拽
+1. H5 3.1.1+、App（iOS15+）环境下可以用image的属性draggable设置为false
+2. 不用image组件用原生img的属性draggable设置为false
+
+
+
+
+
+
+
+bug5: ios H5没有适配的网页直接用zoom缩放，字体不会缩放
+
+ - 原理： 因为许多网站还没有适配屏幕较小的设备，移动设备的浏览器和桌面浏览器在渲染网页时可能会有不同。他们不是以设备屏幕宽度布局网页，而是用比屏幕宽一些的 视窗 去布局网页，通常是 800 到 1000 像素。为了将视窗上的布局映射到原始设备屏幕上，手机浏览器要么只渲染整个页面的一部分，要么将视窗缩放至原始屏幕大小。
+因为缩放适配小屏幕而导致文字会变得很小，许多手机浏览器会使用文本溢出算法放大文本，改善可读性。当一个包含文本的元素使用了 100% 的屏幕宽度，该算法会增加文本大小，但是不会修改布局。text-size-adjust 这个属性允许开发者去除或者修改浏览器的这种行为，比如，当网页已经适配了小屏幕之后，就不需要这么做了。
+
+ - bug原因：许多手机浏览器会使用文本溢出算法放大文本，改善可读性; text-size-adjust属性可以修改浏览器行为（如zoom: 50%;text-size-adjust属性可以设置auto兼容，需要加前缀-webkit-等做兼容）``-webkit-text-size-adjust: auto;text-size-adjust:100%;-webkit-, -moz-, -o-, -ms-``
+
+
+块元素有些没效果，可以加display: inline-block;属性
+

@@ -100,8 +100,6 @@ const BackEndList = [
       // {id: 0, name: '脑图', href: 'https://naotu.baidu.com/'}, 
       {id: 0, name: '脑图', href: 'https://naotu.baidu.com/file/b2c14b8301fe08e11db283b2b3788935'}, 
       {id: 1, name: '后台资料', href: './view/tools/backstageSystem.md'},
-      {id: 2, name: 'px转rpx', href: './view/tools/pxChangeRpx.html'},
-      {id: 2, name: 'uni转wx', href: './view/tools/uniChangewx.html'},
       {id: 3, name: 'English', href: './view/window/english.md'},
 
       {id: 4, name: 'Linux', href: './view/tools/linux.md'},
@@ -109,6 +107,16 @@ const BackEndList = [
       {id: 6, name: 'CMD', href: './view/window/cmd.md'},
       {id: 7, name: '黑魔法', href: './view/other/other.md'},
       
+    ]
+  },
+  {
+    id: 6,
+    categoryName: '工具',
+    show: true,
+    children: [
+      {id: 0, name: '脑图', href: 'https://naotu.baidu.com/file/b2c14b8301fe08e11db283b2b3788935'}, 
+      {id: 2, name: 'px转rpx', href: './view/tools/pxChangeRpx.html'},
+      {id: 2, name: 'uni转wx', href: './view/tools/uniChangewx.html'},
     ]
   }
 ];

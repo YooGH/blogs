@@ -37,17 +37,36 @@
 			watch: {
 				oldValue() {
 					let oldValue = this.oldValue;
+
+					if(oldValue.includes('deep')) {
+						alert('有deep!')
+					}
 					let newValue = oldValue.replace(/0px /g, "0");
-					newValue = oldValue.replace(/px/g, "rpx");
+
+					newValue = this.pxToRpx(oldValue);
 					newValue = newValue.replace(/500;/g, "bold;");
 					newValue = newValue.replace(/ 0px/g, "");
-					this.newValue = newValue.toLocaleLowerCase();
+					// this.newValue = newValue.toLocaleLowerCase();
+					this.newValue = newValue
 				}
 			},
 			mounted() {
 				this.width = window.screen.availWidth/2*0.9;
 				this.height = window.screen.availHeigh;
 				console.log(this.width)
+			},
+			methods: {
+				pxToRpx(str) {
+				  if(!str) {return ''}
+				  let r = /(0|1|2|3|4|5|6|7|8|9)px*/g
+				  let index = str.search(r);
+				  if(index != -1) {
+				    let newVal = `${str.slice(0,index+1)}r${str.slice(index+1)}`
+				    return this.pxToRpx(newVal)
+				  } else {
+				    return str
+				  }  
+				}
 			}
 			
 		})

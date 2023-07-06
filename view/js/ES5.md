@@ -131,22 +131,26 @@ console.log(`${six} = ${sum}(总和)`)  // 10+20+40+80+160+320+640+1280+2560+512
   
 <br/><br/><br/>
 ###  <h1 id="h4"> 4.数组 </h1>
-> 声明
-```
-var arr = new Array()
-var arr = []
-```
 
-<br/>
-
-> 长度: length(同字符串)
+> 声明和长度（）
 ```
-[1,2].length // 2
+- 三种声明方式
+var arrO = new Array()  // 实例化创建``var arrObj = new Array([1,2])`` => [[1,2]] 会是二位数组，正常赋值是arrObj[0]=1;arrObj[1]=2;
+var arrT = Array()
+var arrI = []              // 字面量创建（literal syntax）
+
+
+- 长度
+[1,2].length // 2（长度: length(同字符串)）
+
 ```
+[[]和new的区别比较： []比new快](https://www.cnblogs.com/shcrk/p/9280343.html)
 
-<br/>
 
-> ①. 增
+<br/><br/>
+
+
+> 增
  - **unshift()**
  - **push()**
  - **splice()**
@@ -156,9 +160,9 @@ push(num1,numb2,...)        // 返新数组长度
 splice(键、删除个数(0)、替换)  // 返删除的数组,如果有
 ```
 
-<br/>
+<br/><br/>
 
-> ②. 删
+> 删
  - **shift()**
  - **pop()**
  - **splice()**
@@ -168,21 +172,22 @@ pop()                       // 返删除的数字
 splice(键、删除个数)          // 返删除的数组,如果有
 ```
 
-<br/>
+<br/><br/>
 
-> ③. 数组累加器[reduce](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
- - **reduce()**
- > 可用于get请求，代码对象写法，在通过如下转化<br/>``array.reduce((total, currentValue, currentIndex, arr), initialValue)``
-
+> 数组累加器
+ - **[reduce()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)**
+ > 可用于get请求，代码对象写法，在通过如下转化<br/>``array.reduce((total, currentValue, currentIndex, arr), initialValue)<br/>参1: callback函数
+参2：初始值,不传则数组的第一个,不改变原数组``
+```
   let array1 = [1,2,3]
-  array1.reduce(
+  let totalNumber = array1.reduce(
     (pre, cur) => pre + cur,   // (pre, cur) => { return pre + cur }
     0
   );
+  console.log(totalNumber) // 6
 ```
-参1: callback函数
-参2：初始值,不传则数组的第一个
-
+```
+应用例子： 将对象参数参数转为浏览器地址
 let longStr = Object.entries({
     id: 666,
     name: 'reduce'
@@ -195,24 +200,30 @@ let longStr = Object.entries({
 console.log(longStr) // &id=666&name=reduce
 ```
 
+<br/><br/>
+
+> 其他
+
+- slice(键1、键2)  // 切，返原数组键1到键2 - 1的数组，不改变原数组
+- concat()        // 合，返原合并数组，不改变原数组
+- reverse()       // 倒，返原反转后的数组，改原数组（应用：第三方的物流信息）
+
 <br/>
 
-> ④. ... 其他
-```
-slice(键1、键2)  // 切，返原数组键1到键2 - 1的数组，不改变原数组
-concat()        // 合，返原合并数组，不改变原数组
-reverse()       // 倒，返原反转后的数组，改原数组（应用：第三方的物流信息）
+- join()          // Arr => Str
+- split(',')      // Str => Arr
+- Array.isArray([]) // 返回布尔值 
 
-join()          // Arr => Str
-split(',')      // Str => Arr
-Array.isArray([]) // 返回布尔值 
-```
-sort(function(a,b){return a-b}) 
+<br/>
+
+- 排序<strong>[sort()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)</strong>
 
 ```
 let arr = [1,22,3,12]
-arr.sort() // 1,12,3,22
-arr.sort((a,b)={return a-b}) // 1,3,12,22
+
+arr.sort()                      // 1,12,3,22（参数为空时，会将数组转为字符串，根据字符串的）
+arr.sort((a,b)={return a-b})    // 1,3,12,22
+[{number:2},{number:1}].sort((a,b)=> {return a.number - b.number})  // [{number:1},{number:2}] （数组对象排序）
 ```
 
 

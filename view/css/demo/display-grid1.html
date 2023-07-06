@@ -3,19 +3,66 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>JS Bin</title>
+  <title>排序</title>
   <style>
     span {
       font-size: 2em;
     }
 
+    /*1. px写法*/
     #container{
       display: grid;
-      grid-template-columns: 50px 50px 50px;
+      grid-template-columns: 50px 50px 50px 50px;
       grid-template-rows: 50px 50px 50px;
     }
 
-    .item {
+    /*2. repeat()函数写法*/
+    /*#container{
+      display: grid;
+      grid-template-columns: repeat(4, 10%);
+      grid-template-rows: 50px 50px 50px;
+    }*/
+
+    /*2. repeat()函数写法*/
+    /*#container{
+      display: grid;
+      grid-template-columns: repeat(4, 10%);
+      grid-template-rows: 50px 50px 50px;
+    }*/
+
+    /*3. fr写法*/
+    /*#container{
+      display: grid;
+      grid-template-columns: 1fr 3fr 6fr;
+      grid-template-rows: 2fr 200px 6fr;
+    }*/
+
+    /*4. minmax写法：最小不会小于100px*/
+    /*#container{
+      display: grid;
+      grid-template-columns: 1fr 3fr minmax(1000px, 1fr);
+      grid-template-rows: 2fr 200px 6fr;
+    }*/
+
+
+    /*2.1 grid-auto-flow: row */
+    /*#container{
+      display: grid;
+      grid-template-columns: 50px 50px 50px 50px;
+      grid-template-rows: 50px 50px 50px;
+      grid-auto-flow: row;
+    }*/
+
+    /*2.2 grid-auto-flow: column */
+    /*#container{
+      display: grid;
+      grid-template-columns: 50px 50px 50px 50px;
+      grid-template-rows: 50px 50px 50px;
+      grid-auto-flow: column;
+    }*/
+
+
+    .item { 
       font-size: 2em;
       text-align: center;
       border: 1px solid #e5e4e9;
