@@ -13,7 +13,7 @@
     #container{
       display: grid;
       grid-template-columns: 50px 50px 50px 50px;
-      grid-template-rows: 50px 50px 50px;
+      grid-template-rows: 100px 50px 50px;
     }
 
     /*2. repeat()函数写法*/
@@ -61,6 +61,16 @@
       grid-auto-flow: column;
     }*/
 
+    /*3. area*/
+    /* 子元素设置grid-area: a/b/c; */
+    /* #container{
+      display: grid;
+      grid-template-areas:
+      "b b a"
+      "b b c"
+      "b b c";
+    }*/
+
 
     .item { 
       font-size: 2em;
@@ -70,10 +80,15 @@
 
     .item-1 {
       background-color: #ef342a;
+      /*c来源grid-template-areas*/
+      /*grid-area: c; */
     }
 
     .item-2 {
       background-color: #f68f26;
+      /*b来源grid-template-areas*/
+      /*grid-area: b;*/
+
     }
 
     .item-3 {

@@ -24,3 +24,25 @@ miniprogram-to-uniapp
 
 
 [微信小程序上传本地文件](https://www.cnblogs.com/nicoz/p/16991603.html)
+
+
+
+
+1. 设备id
+```
+let infoObj = uni.getSystemInfoSync();
+console.log('infoObj', infoObj);
+// model和platform在电脑是无效的，移动端有效
+
+uni.showToast({
+  icon: 'none',
+  title: `${infoObj.model ? infoObj.model.replace(/\s/g, '') : ''}-${
+    infoObj.platform ? infoObj.platform : ''
+  }-${infoObj.deviceId}`
+});
+
+
+// iPhone-ios-设备id
+// M2102J2SC-android-设备id
+
+```

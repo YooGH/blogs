@@ -98,7 +98,8 @@ E:target<br/>
 
 
 
-:focus-within  自己及子元素聚焦
+:focus-within  自己及子元素聚焦<br/>
+:has  父级包含子级 （p:has(span), p标签里面有span，p才展示样式）<br/>
 
 <br/><br/><br/>
 
