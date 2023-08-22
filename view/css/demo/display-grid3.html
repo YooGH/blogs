@@ -9,45 +9,13 @@
       font-size: 2em;
     }
 
-    /*1. 单独写法*/
-   /* #container{
-      display: grid;
-      grid-template-columns: 50px 50px 50px 50px;
-      grid-template-rows: 50px 50px 50px;
-      grid-row-gap: 10px;
-      grid-column-gap: 200px;
-    }*/
-
-    /*1. 合并写法*/
-    /*#container{
-      display: grid;
-      grid-template-columns: 50px 50px 50px 50px;
-      grid-template-rows: 50px 50px 50px;
-      grid-gap: 20px 200px;
-    }*/
-
-    /*2.1 居中（整体）*/
- /*   #container{
-      display: grid;
-      grid-template-columns: 50px 50px 50px 50px;
-      grid-template-rows: 50px 50px 50px;
-      grid-gap: 20px 200px;
-      justify-content: center;
-      align-conter: center;
-      height: 50vh;
-    }*/
-
-    /*2.2 居中（整体）合并写法*/
     #container{
       display: grid;
-      grid-template-columns: 50px 50px 50px 50px;
-      grid-template-rows: 50px 50px 50px;
-      grid-gap: 20px 200px;
-      place-content: flex-start center;
-      height: 50vh;
+      grid-template-columns: 100px 100px 100px 100px;
+      grid-template-rows: 100px 100px 100px;
+      justify-items: start;
     }
 
- 
     .item { 
       font-size: 2em;
       text-align: center;
@@ -56,14 +24,17 @@
 
     .item-1 {
       background-color: #ef342a;
+      width: 50%;
     }
 
     .item-2 {
       background-color: #f68f26;
+      width: 20%;
     }
 
     .item-3 {
       background-color: #4ba946;
+      width: 30%;
     }
 
     .item-4 {

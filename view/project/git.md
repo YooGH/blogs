@@ -35,11 +35,19 @@ git reset --mixed HEAD^(撤销commit，并且撤销git add . 操作)
 ### <h1 id="h2"> 2. 账号设置 </h1>
 
 - 暂时账号
-  <br/>不更新全局就去掉``--global``
 
   ```
+  全局
   git config --global user.name '你的用户名'githubo
   git config --global user.email '你的邮箱'
+
+  局部
+  git config user.name '你的用户名'githubo
+  git config user.email '你的邮箱'
+  
+  查看
+  git config (--global) user.name
+  git config (--global) user.email
   ```
 
 - 永久账号(生成ssh公钥, 设置公钥 在提交的时候不用每次都输入)
@@ -158,6 +166,8 @@ clone某个分支： git clone -b 分支名 远程git仓库地址
 <br/><br/><br/>
 
 ### <h1 id="h8"> 8. git 提交规范 </h1>
+
+- 忽略git提交校验：``--no-verify``
 
 - feat：新功能/需求（feature）
 

@@ -46,3 +46,15 @@ uni.showToast({
 // M2102J2SC-android-设备id
 
 ```
+
+
+
+2. [uniapp搜索组件 ios多了个授权icon](https://blog.csdn.net/wx_wx_ll/article/details/120724480)
+
+```
+::v-deep .uni-searchbar {
+  [type='search']::-webkit-search-decoration {
+    display: none;
+  }
+}
+```

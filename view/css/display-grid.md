@@ -44,7 +44,7 @@ grid: 网格布局
 
  - <h3>grid-row-gap</h3>
  - <h3>grid-column-gap</h3>
- - <h3>grid-gap</h3>
+ - <h3>grid-gap: grid-row-gap grid-column-gap;</h3>
 
 [demo2](./demo/display-grid2.html)<br/><br/><br/><br/>
 
@@ -52,15 +52,20 @@ grid: 网格布局
 
  - <h3>justify-content</h3>
  - <h3>align-content</h3>
- - <h3>place-content: space-around space-evenly</h3>
+ - <h3>place-content: align-content justify-content;</h3>
+
+[demo2](./demo/display-grid2.html)<br/><br/><br/><br/>
+
 
 <br/><br/><br/><br/>
 
-<h2>居中（项目）</h2>
+<h2>居中（子项目）</h2>
 
 - <h3>justify-items</h3>
 - <h3>align-items</h3>
 - <h3>place-items: align-items justify-items</h3>
+
+[demo3](./demo/display-grid3.html)<br/><br/><br/><br/>
 
 <br/><br/><br/><br/>
 <h3>合并属性</h3>

@@ -8,6 +8,7 @@ const FrontEndList = [
       { name: 'HTML', href: './view/html/HTML.md', done: true, },
       { name: 'img', href: './view/html/img.md', done: true, },
       { name: 'video', href: './view/html/video.md', done: true, },
+      { name: '————————',  done: true, showSort: false},
     ],
     itemsChildren: [
       { name: 'shortcuticon和bookmark', href: './view/html/html1--shortcuticon和bookmark.md', done: true, },
@@ -15,6 +16,14 @@ const FrontEndList = [
       { name: '恩，布局', href: './view/html/html3--恩，布局.md', done: true, },
       { name: '列表flex布局', href: './view/html/list-flex.md', done: true, },
       { name: '商品布局', href: './view/layout/index.html', done: true, },
+
+      { name: '————————',  done: true, showSort: false},
+      
+      { name: '数据结构和算法1', href: './view/js/design/数据结构和算法1.md', done: true, showSort: false},
+      { name: '数据结构和算法2', href: './view/js/design/数据结构和算法2.md', done: true,  showSort: false},
+      { name: '1. 设计模型--单例', href: './view/js/design/singleton.md', done: true, showSort: false},
+      { name: '2. 设计模型--工厂', href: './view/js/design/factory.md', done: true,  showSort: false},
+      { name: '3. 设计模型--builder', href: './view/js/design/builder.md', done: true,  showSort: false},
     ]
   },
 
@@ -88,8 +97,6 @@ const FrontEndList = [
       { name: '跨域', href: 'https://www.cnblogs.com/lgyong/p/9928062.html', done: false, },
       { name: 'switch', href: './view/js/switch.md', done: true, },
       { name: 'url问号后的数据', href: './view/js/url-data.md', done: true, },
-
-
       { name: 'promise', href: './view/js/promise.md', done: true },
       { name: 'break', href: './view/js/break.md', done: true },
 
@@ -102,13 +109,7 @@ const FrontEndList = [
       { name: '深拷贝', href: './view/js/js1.md', done: true },
       { name: '数字转汉数字', href: 'https://www.cnblogs.com/lgyong/p/13921834.html', done: false, },
       { name: '计算机', href: './view/js/computed.md', done: true, },
-      { name: '————————',  done: true},
-      { name: '————————',  done: true},
       
-      { name: '数据结构和算法', href: './view/js/design/数据结构和算法.txt', done: true, },
-      { name: '1. 设计模型--单例', href: './view/js/design/singleton.md', done: true, },
-      { name: '2. 设计模型--工厂', href: './view/js/design/factory.md', done: true, },
-      { name: '2. 设计模型--builder', href: './view/js/design/builder.md', done: true, },
     ]
   },
 
@@ -166,7 +167,7 @@ const FrontEndList = [
       { name: '————————',  done: true}, 
       { name: 'uniapp', href: 'https://www.cnblogs.com/lgyong/p/11579340.html'}, 
       { name: '————————',  done: true}, 
-      { name: 'node笔记', href: 'https://www.cnblogs.com/lgyong/p/10421749.html'}, 
+      { name: 'node笔记', href: './view/project/node.md', done: false}, 
       { name: '————————',  done: true}, 
       {name: '框架比较', href: './view/frame/frame.html', done: true, }, 
       { name: '————————',  done: true}, 

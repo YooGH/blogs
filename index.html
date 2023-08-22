@@ -44,7 +44,7 @@
               :href="itemSon.href"
               v-for="(itemSon, indexSon) of item.itemsChildren"
               :key="indexSon">
-              {{ `${1+indexSon}. ${itemSon.name}` }}
+              {{ itemSon.showSort === false ?  itemSon.name :  `${1+indexSon}. ${itemSon.name}` }}
             </a>
           </section>
         </block>
@@ -58,7 +58,7 @@
         <block v-show="item.show">
           <h1> {{ item.categoryName }} </h1>  
           <section class="category" :style="`height: ${availHeight/2-30}px`">
-            <a class="text-a" target="_blank" :class="{'text-b': itemSon.grade}" :href="itemSon.href" v-for="(itemSon, indexSon) of item.children" :key="indexSon"> {{ itemSon.name }} </a>
+            <a class="text-a" target="_blank" :class="{'text-b': itemSon.grade, 'text-done': !itemSon.done,}" :href="itemSon.href" v-for="(itemSon, indexSon) of item.children" :key="indexSon"> {{ itemSon.name }} </a>
           </section>
         </block>
       </div>
