@@ -12,8 +12,7 @@
 <br/><br/><br/>
 
 [git安装](https://www.git-scm.com/download/win)
-
-
+[node安装](https://nodejs.org/dist/v16.13.0/)（window7最高支持Node.js 14.x，LTS长期支持）
 
 <br/><br/><br/>
 
@@ -222,7 +221,13 @@ clone某个分支： git clone -b 分支名 远程git仓库地址
   
 [git简易指南网址](https://www.bootcss.com/p/git-guide/)
 
+[git commit为什么会触发vue-cli-service lint] => package.json的钩子函数配置如下
 
+```
+"gitHooks": {
+  "pre-commit": "yarn lint"
+}
+```
 
 
 <br/><br/><br/>

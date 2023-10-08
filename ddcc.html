@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Code and Barcode Scanner</title>
+</head>
+<body>
+    <h1>QR Code and Barcode Scanner</h1>
+    <div id="reader"></div>
+
+    <!-- 导入 HTML5-QRCodeScanner 库 -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
+    <script>
+        // 创建 HTML5-QRCodeScanner 实例
+        const html5QrcodeScanner = new Html5QrcodeScanner('reader');
+
+        // 启动扫描
+        html5QrcodeScanner.render(onScanSuccess, onScanFailure);
+
+        // 扫描成功时的回调函数
+        function onScanSuccess(qrCodeMessage) {
+            console.log('扫描成功:', qrCodeMessage);
+            // 处理扫描结果，例如在页面上显示结果
+            const resultDiv = document.createElement('div');
+            resultDiv.textContent = qrCodeMessage;
+            document.body.appendChild(resultDiv);
+        }
+
+        // 扫描失败时的回调函数
+        function onScanFailure(error) {
+            console.error('扫描错误:', error);
+            // 处理扫描错误，例如在页面上显示错误消息
+            const errorDiv = document.createElement('div');
+            errorDiv.textContent = '扫描出错：' + error;
+            document.body.appendChild(errorDiv);
+        }
+    </script>
+</body>
+</html>
